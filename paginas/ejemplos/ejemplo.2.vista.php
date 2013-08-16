@@ -1,11 +1,11 @@
 <?php
-	require("../seguridad/usuario.sesion.class.php");
+	require("../../clases/usuario.sesion.class.php");
 	session_start();
 	print_r($_SESSION['objeto']);
 	$objUsuarioSesion = $_SESSION['objeto'];
 	if($objUsuarioSesion->existeUsuario()){
-		echo 'Existe';
+		echo '<br>Existe';
 	}
 	else
-		echo 'No existe';
+		echo '<br>No existe';
 ?>

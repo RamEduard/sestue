@@ -8,7 +8,7 @@ class Formulario{
 	private $cadenaHtml = "";
 	private $nombre, $pagAccion, $metodoAplicado;
 	//Funcion del constructor de la clase
-	public function __construct( $nombre, $accion, $metodo, $clase, $id, $htmlExtra ){
+	public function __construct( $nombre, $accion, $metodo, $clase, $id, $atributosExtra ){
 		if(!$nombre) $nombre = "formulario";
 		if(!$accion or !$metodo){
 			$this->cadenaHtml .= '<font color="red">Formulario sin pagina de accion o sin metodo</font>';
@@ -17,18 +17,104 @@ class Formulario{
 			$this->nombre = $nombre;
 			$this->pagAccion = $accion;
 			$this->metodoAplicado = $metodo;
+			$this->cadenaHtml .= '<form name="'.$this->nombre.'" action="'.$this->pagAccion.'" method="'.$this->metodoAplicado.'" ';
 			if($clase)
-				$this->cadenaHtml .= '<form name="'.$this->nombre.'" action="'.$this->pagAccion.'" method="'.$this->metodoAplicado.'" class="'.$clase.'" ';
-			else if($id)
+				$this->cadenaHtml .= 'class="'.$clase.'" ';
+			if($id)
 				$this->cadenaHtml .= 'id="'.$id.'" ';
-			else if($htmlExtra)
-				$this->cadenaHtml .= $htmlExtra;
+			if($atributosExtra)
+				$this->cadenaHtml .= $atributosExtra;
 			$this->cadenaHtml .= '>';
 		}
 	}
-	public function agregarHtml($html){
-		$this->cadenaHtml .= $html;
+	public function cerrarFormulario(){
+		$this->cadenaHtml .= '</form>';
 	}
+	public function agregarLeyenda($titulo, $clase, $id, $alineacion){
+		if(!$titulo)
+			$this->cadenaHtml .= '<font color="red">Leyenda sin titulo</font>';
+		else{
+			$this->cadenaHtml .= "\n\t\t\t<fieldset ";
+			if($clase)
+				$this->cadenaHtml .= 'class="'.$clase.'" ';
+			if($id)
+				$this->cadenaHtml .= 'id="'.$id.'" ';
+			$this->cadenaHtml .= ">";
+			if($alineacion)
+				$this->cadenaHtml .= " <legend align='".$alineacion."'>".$titulo."</legend> \n";
+			else 
+				$this->cadenaHtml .= " <legend>".$titulo."</legend>\n ";
+		}
+	}
+	public function cerrarLeyenda(){
+		$this->cadenaHtml .= "</fieldset>\n";
+	}
+	public function agregarEtiqueta1($mensaje, $clase, $id){
+		if(!$mensaje)
+			$this->cadenaHtml .= '<font color="red">Etiqueta sin mensaje</font>';
+		else{
+			$this->cadenaHtml .= '<label';
+			if($clase)
+				$this->cadenaHtml .= ' class="'.$clase.'"';
+			if($id)
+				$this->cadenaHtml .= ' id="'.$id.'"';
+			$this->cadenaHtml .= '>'.$mensaje.'</label> ';
+		}
+	}
+	public function agregarEtiqueta($mensaje, $clase, $id){
+		if(!$mensaje)
+			$this->cadenaHtml .= '<font color="red">Etiqueta sin mensaje</font>';
+		else{
+			$this->cadenaHtml .= '<div';
+			if($clase)
+				$this->cadenaHtml .= ' class="'.$clase.'"';
+			if($id)
+				$this->cadenaHtml .= ' id="'.$id.'"';
+			$this->cadenaHtml .= '>'.$mensaje.'</div> ';
+		}
+	}
+	public function agregarInput($tipo, $nombre, $valor, $mensaje, $clase, $id, $atributosExtra){
+		if (!$nombre or !$tipo)
+			$this->cadenaHtml .= '<font color="red">Campo sin nombre o sin tipo</font>';
+		else{
+			$this->cadenaHtml .= '<input type="'.$tipo.'" name="'.$nombre.'" ';
+			if($valor)
+				$this->cadenaHtml .= 'value="'.$valor.'" ';
+			if ($mensaje)
+				$this->cadenaHtml .= 'placeholder="'.$mensaje.'" ';
+			if($clase) 
+				$this->cadenaHtml .= 'class="'.$clase.'" ';
+			if($id)
+				$this->cadenaHtml .= 'id="'.$id.'"';
+			if($atributosExtra)
+				$this->cadenaHtml .= ' '.$atributosExtra.' ';
+		}
+		$this->cadenaHtml .= '/>';
+	}
+	public function agregarSelect($nombre, $tipo, $clase, $id, $atributosExtra){
+		if (!$nombre)
+			$this->cadenaHtml .= '<font color="red">Select sin nombre</font>';
+		else{
+			$this->cadenaHtml .= '<select name="'.$nombre.'" ';
+			if($tipo=="multiple")
+				$this->cadenaHtml .= 'multiple ';
+			if($clase) 
+				$this->cadenaHtml .= 'class="'.$clase.'" ';
+			if($id)
+				$this->cadenaHtml .= 'id="'.$id.'" ';
+			if($atributosExtra)
+				$this->cadenaHtml .= $atributosExtra;
+		}
+		$this->cadenaHtml .= '>';
+	}
+	public function cerrarSelect(){
+		$this->cadenaHtml .= '</select>';	
+	}
+	public function agregarOpcSel($valor, $mensaje){
+		$this->cadenaHtml .= '<option value="'.$valor.'">'.$mensaje;
+	}
+	public function agregarRadioButton($nombre, $valor, $clase, $id, $atributosExtra){}
+	public function agregarCheckBox($nombre, $valor, $clase, $id, $atributosExtra){}
 	public function ln($valor){
 		if(!$valor)
 			$this->cadenaHtml .= "<br>\n";
@@ -43,59 +129,10 @@ class Formulario{
 			$this->cadenaHtml .= "\t";
 		}	
 	}
-	public function agregarLeyenda(){
-		
+	public function agregarHtmlExtra($html){
+		$this->cadenaHtml .= $html;
 	}
-	public function agregarInput($tipo, $nombre, $valor, $mensaje, $clase, $id, $htmlExtra){
-		if (!$nombre or !$tipo)
-			$this->cadenaHtml .= '<font color="red">Campo sin nombre o sin tipo</font>';
-		else{
-			$this->cadenaHtml .= '<input type="'.$tipo.'" name="'.$nombre.'" ';
-			if($valor)
-				$this->cadenaHtml .= 'value="'.$valor.'" ';
-			else if ($mensaje)
-				$this->cadenaHtml .= 'placeholder="'.$mensaje.'" ';
-			else if($clase) 
-				$this->cadenaHtml .= 'class="'.$clase.'" ';
-			else if($id)
-				$this->cadenaHtml .= 'id="'.$id.'" ';
-			else if($htmlExtra)
-				$this->cadenaHtml .= $htmlExtra;
-		}
-		$this->cadenaHtml .= '/>';
-	}
-	public function agregarSelect($nombre, $tipo, $clase, $id, $htmlExtra){
-		if (!$nombre)
-			$this->cadenaHtml .= '<font color="red">Select sin nombre</font>';
-		else if($tipo=="multiple")
-			$this->cadenaHtml .= '<select name="'.$nombre.'" multiple ';
-		else if($clase) 
-			$this->cadenaHtml .= 'class="'.$clase.'" ';
-		else if($id)
-			$this->cadenaHtml .= 'id="'.$id.'" ';
-		else if($htmlExtra)
-			$this->cadenaHtml .= $htmlExtra;
-		else
-			$this->cadenaHtml .= '>';
-	}
-	public function agregarOpcSel($valor, $mensaje){
-		if(!$valor)
-			$this->cadenaHtml .= '<font color="red">Opcion sin valor o mensaje</font>';
-		else if(!$mensaje)
-			$this->cadenaHtml .= '<option value="'.$valor.'">'.$mensaje;
-		else
-			$this->cadenaHtml .= '<option value="'.$valor.'">'.$mensaje;
-	}
-	public function agregarRadioButton($nombre, $valor, $clase, $id, $htmlExtra){
-
-	}
-	public function agregarCheckBox($nombre, $valor, $clase, $id, $htmlExtra){
-
-	}
-	public function cerrarFormulario(){
-		$this->cadenaHtml .= '</form>';
-	}
-	public function obtenerHtmlFormulario(){
+	public function obtenerHtml(){
 		return $this->cadenaHtml;
 	}
 }

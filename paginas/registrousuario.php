@@ -1,148 +1,83 @@
 <?php
-	usleep(200000);
 	//No ver errores
-	error_reporting(E_ALL);
-	//Requerimiento de archivos de consulta y html
-	require("bd/db_consultas.class.php");
-	require("vista/salida_html/html.class.php");
-	//Hago instancia las clases Db y Html
+	error_reporting(0);
+
+	//Requerimiento de archivos de clases
+	require("../clases/db.class.php");
+	require("../clases/index.class.php");
+	require("../clases/formulario.class.php");
+
+	//Objetos que seran usados en el archivo
 	$db = Db::getInstance();
-	$html = Html::getInstance();
-	
-	$mensaje = '
-	<form method="post" action="">				
-		<center>
-		<table border="0" cellspacing=0 cellpadding=2 bordercolor="666633" rules="no">
-			<tr>
-				<td align="right">
-					Usuario: 
-				</td>
-				<td>
-					<input type="text" name="user" size=30  placeholder="Solo letras. Ej.: UsuarioEjemplo" onkeypress="return permite(event, 2)" autofocus required />
-					<font color="red">*</font>
-				</td>
-			</tr>
-			<tr>
-				<td align="right">
-					Clave: 
-				</td>
-				<td>
-					<input type="password" id="p" name="password" size=30 maxlength=8 required placeholder="Solo letras y numeros. Ej.: Usu4r1o0" onkeypress="return permite(event, 3)"/>
-					<font color="red">*</font>
-				</td>
-			</tr>
-			<tr>
-				<td align="right">
-					Confirme su clave: 
-				</td>
-				<td>
-					<input type="password" id="p2" name="password2" size=30 required maxlength=8 placeholder="Introduzca su clave nuevamente" onkeypress="return permite(event, 3)" onchange="validaPass()"/>
-					<font color="red">*</font>
-				</td>
-			</tr>
-			<tr>
-				<td align="right">
-					Palabra secreta: 
-				</td>
-				<td>
-					<input type="text" name="psecreta" size=30 placeholder="Palabra sin simbolos para recordar su clave" required onkeypress="return permite(event, 2)"/>
-					<font color="red">*</font>
-				</td>
-			</tr>
-			<tr>
-				<td align="right">
-					Nombres: 
-				</td>
-				<td>
-					<input type="text" name="names" size=30 required placeholder="Introduzca su(s) nombre(s)" onkeypress="return permite(event, 2)"/>
-					<font color="red">*</font>
-				</td>
-			</tr>
-			<tr>
-				<td align="right">
-					Apellidos: 
-				</td>
-				<td>
-					<input type="text" name="lastname" size=30 required placeholder="Introduzca su(s) apellido(s)" onkeypress="return permite(event, 2)"/>
-					<font color="red">*</font>
-				</td>
-			</tr>
-			<tr>
-				<td align="right">
-					Cédula: 
-				</td>
-				<td>
-					<input type="text" name="ci" size=30 required placeholder="Introduzca su numero de cedula" onkeypress="return permite(event, 1)"/>
-					<font color="red">*</font>
-				</td>
-			</tr>
-			<tr>
-				<td align="right">
-					Carnet: 
-				</td>
-				<td>
-					<input type="text" name="carnet" size=30 required placeholder="Introduzca su numero de carnet" onkeypress="return permite(event, 1)"/>
-					<font color="red">*</font>
-				</td>
-			</tr>
-			<tr>
-				<td align="right">
-					Rol: 
-				</td>
-				<td>
-					<select name="rol" required>
-						<option value=""> Seleccione </option>
-						<option value="3"> Estudiante </option>
-						<option value="4"> Profesor </option>
-					</select>
-					<font color="red">*</font>
-				</td>
-		 	</tr>
-		 	<tr>
-				<td></td>
-				<td>
-					<input type="submit" name="guardar" Value="      Guardar      " />
-				</td>
-		 	</tr>
-		 </table>					 	
-	</form>
-	';
+	$index = Index::getInstance();
+	//Construccion del formulario de Registro de usuario
+	$formRegistroUser = new Formulario("registro-usuario","../accion-form/registro.usuario.accion.php","post",0,"registro-usuario",0);
+	$formRegistroUser->tab(3);
+	$formRegistroUser->agregarLeyenda("<h3>Registrar nuevo usuario</h3>",0,0,"center");
+	$formRegistroUser->tab(3);
+	$formRegistroUser->agregarEtiqueta("Usuario: ", 0, "label");
+	$atributosExtraUser = 'onkeypress="return permite(event, 2)" autofocus required';
+	$formRegistroUser->agregarInput("text", "user", "", "Solo letras. Ej.: UsuarioEjemplo", 0, "input-text", $atributosExtraUser);
+	$formRegistroUser->ln(1);
+	$formRegistroUser->tab(4);
+	$formRegistroUser->agregarEtiqueta("Clave: ", 0, "label");
+	$atributosExtraPass = 'maxlength=8  onkeypress="return permite(event, 3)" required';
+	$formRegistroUser->agregarInput("password", "password", "", "Solo letras y numeros. Ej.: Usu4r1o0", 0, "p", $atributosExtraPass);
+	$formRegistroUser->ln(1);
+	$formRegistroUser->tab(4);
+	$formRegistroUser->agregarEtiqueta("Confirme su clave: ", 0, "label");
+	$formRegistroUser->agregarInput("password", "password2", "", "Introduzca su clave nuevamente", 0, "p2", $atributosExtraPass);
+	$formRegistroUser->ln(1);
+	$formRegistroUser->tab(4);
+	$formRegistroUser->agregarEtiqueta("Palabra secreta: ", 0, "label");
+	$atributosExtraInputs = 'onkeypress="return permite(event, 2)" required';
+	$formRegistroUser->agregarInput("text", "psecreta", "", "Palabra sin simbolos para recordar su clave", 0, "input-text", $atributosExtraInputs);
+	$formRegistroUser->ln(1);
+	$formRegistroUser->tab(4);
+	$formRegistroUser->agregarEtiqueta("Nombre(s): ", 0, "label");
+	$formRegistroUser->agregarInput("text", "names", "", "Introduzca su(s) nombre(s)", 0, "input-text", $atributosExtraInputs);
+	$formRegistroUser->ln(1);
+	$formRegistroUser->tab(4);
+	$formRegistroUser->agregarEtiqueta("Apellido(s): ", 0, "label");
+	$formRegistroUser->agregarInput("text", "lastname", "", "Introduzca su(s) apellido(s)", 0, "input-text", $atributosExtraInputs);
+	$formRegistroUser->ln(1);
+	$formRegistroUser->tab(4);
+	$formRegistroUser->agregarEtiqueta("Cedula/Pasaporte: ", 0, "label");
+	$atributosExtraCiCarnet = 'onkeypress="return permite(event, 1)" required';
+	$formRegistroUser->agregarInput("text", "ci", "", "Introduzca su numero de cedula/pasaporte", 0, "input-text", $atributosExtraCiCarnet);
+	$formRegistroUser->ln(1);
+	$formRegistroUser->tab(4);
+	$formRegistroUser->agregarEtiqueta("Carnet: ", 0, "label");
+	$formRegistroUser->agregarInput("text", "carnet", "", "Introduzca su numero de carnet", 0, "input-text", $atributosExtraCiCarnet);
+	$formRegistroUser->ln(1);
+	$formRegistroUser->tab(4);
+	$formRegistroUser->agregarEtiqueta("Rol: ", 0, "label");
+	$formRegistroUser->agregarSelect("rol","",0,0,"required");
+	$formRegistroUser->ln(1);
+	$formRegistroUser->tab(5);
+	$formRegistroUser->agregarOpcSel("","Seleccione");
+	$formRegistroUser->ln(1);
+	$formRegistroUser->tab(5);
+	$formRegistroUser->agregarOpcSel("3","Estudiante");
+	$formRegistroUser->ln(1);
+	$formRegistroUser->tab(5);
+	$formRegistroUser->agregarOpcSel("4","Profesor");
+	$formRegistroUser->ln(1);
+	$formRegistroUser->tab(4);
+	$formRegistroUser->cerrarSelect();
+	$formRegistroUser->ln(1);
+	$formRegistroUser->tab(4);
+	$formRegistroUser->agregarInput("submit","guardar","Guardar",0,0,"boton",0);
+	$formRegistroUser->ln(1);
+	$formRegistroUser->tab(4);
+	$formRegistroUser->cerrarLeyenda();
+	$formRegistroUser->ln(1);
+	$formRegistroUser->tab(3);
+	$formRegistroUser->cerrarFormulario();
+
+	//Se obtiene el Html del Formulario
+	$formRegistroUserHtml = $formRegistroUser->obtenerHtml();
+
 	//Salida del html
-	$html->constuirHtml("SESTUE | Registrarse", 2, $mensaje, "");
-	
-	if(isset($_POST['guardar'])){
-		$sql = "INSERT INTO `t_usuarios` VALUES ('".$_POST['ci']."','".$_POST['carnet']."','".$_POST['names']."','".$_POST['lastname']."','".$_POST['user']."',MD5('".$_POST['password']."'),'".$_POST['psecreta']."', '".$_POST['rol']."')";
-		$sqlAlias = "SELECT c_alias_pk FROM t_usuarios WHERE c_alias_pk='".$_POST['user']."'";
-		$sqlCedula = "SELECT c_cedula_pk FROM t_usuarios WHERE c_cedula_pk='".$_POST['ci']."'";
-		$sqlCarnet = "SELECT c_cedula_pk FROM t_usuarios WHERE c_carnet_pk='".$_POST['carnet']."'";
-		//echo $sqlAlias."<br>".$sqlCedula."<br>".$sqlCarnet."<br>";
-		if($db->select($sqlAlias)){
-			echo "<script>
-					alert('Nombre de usuario ya existente.'); 
-					location.href='registrousuario.php'
-				  </script>";
-		}
-		else if($db->select($sqlCedula)){
-			echo "<script> 
-					alert('Cedula de usuario ya registrada.'); 
-					location.href='registrousuario.php'
-				  </script>";
-		}
-		else if($db->select($sqlCarnet)){
-			echo "<script> 
-					alert('Carnet de usuario ya registrado.'); 
-					location.href='registrousuario.php'
-				  </script>";
-		}
-		else if ($db->ejecutarSql($sql)){
-			echo "<script> 
-					alert('Registro exitoso');
-					location.href='./';
-				  </script>";
-		}
-		else{
-			echo "<script>alert('Ocurrio un problema en la base de datos y no se guardaron sus datos');</script>
-				";
-		}
-	}
+	$index->construirHtml("SESTUE | Registrarse", 2, $formRegistroUserHtml, "");
 ?>

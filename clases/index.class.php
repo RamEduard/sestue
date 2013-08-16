@@ -24,7 +24,7 @@ class Index{
 		}
 		else if ($numMenu==2){
 			$this->menu = '
-		<li><a href="login.php">Entrar a SESTUE</a></li>
+		<li><a href="inicio.sesion.php">Entrar a SESTUE</a></li>
 			';
 		}
 		else if ($numMenu==3){ 
@@ -55,7 +55,7 @@ class Index{
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>'.$tituloPag.'</title>
-	<style type="text/css">@import url('.$this->host.'/sestue/css/css.css)</style>
+	<style type="text/css">@import url('.$this->host.'/sestue/css/estilo1.css)</style>
 	<script type="text/javascript" src="'.$this->host.'/sestue/js/restringirCaracteres.js"></script>
 <body>
 <div id="wrapper">
@@ -70,8 +70,8 @@ class Index{
 			$this->html .= '
 	<div id="foot">
 		<p color="black">'.$piePag.' 
-		<a id="reg" href="'.$host.'/sestue/vista/editInfoUser.php"> Editar datos </a>&nbsp;
-		<a id="reg" href="'.$host.'/sestue/logout.php"> Cerrar Sesión </a>
+		<a id="reg" href="'.$this->host.'/sestue/paginas/editInfoUser.php"> Editar datos </a>&nbsp;
+		<a id="reg" href="'.$this->host.'/sestue/paginas/cerrar.sesion.php"> Cerrar Sesión </a>
 	</div>
 			';
 		}

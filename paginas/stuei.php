@@ -1,43 +1,40 @@
 <?php
 	//No ver errores
-	error_reporting("E_ALL");
-
-	//Requerimiento de los ficheros de las clases que se usaran en el archivo
+	error_reporting(0);
+	//Requerimiento de archivos de consulta y html
 	require("../clases/db.class.php");
 	require("../clases/index.class.php");
 	require("../clases/usuario.sesion.class.php");
 
-	//Iniciar variables de sesion
+	//iniciar variables de sesion
 	session_start();
 
-	//Objetos a usar en el archivo
+	//Hago instancia las clases Db y Html
 	$db = Db::getInstance();
 	$index = Index::getInstance();
 	if ($_SESSION['objeto'])
 		$usuarioSesion = $_SESSION['objeto'];
-
-	//Consultar si existen usuarios nuevos ademas del administrador
-	$sql = "SELECT c_alias_pk FROM t_usuarios";
-	$usuarios = $db->select($sql);
 	
-	if (!$usuarios[1]){
-		header('location:registrousuario.php');
-	}
-	else if(!$_SESSION['objeto']){
+	if(!$_SESSION['objeto']){
 		header("location:inicio.sesion.php");
 	}
 	else if($usuarioSesion->existeUsuario()){
 		//Obtener array con datos del usuario
 		$datosUser = $usuarioSesion->getUsuarioSesion();
-		//Armar el index principal
+		//Armar el html
 		$mensaje = '
-		<h2>Bienvenido!</h2>
+        <h2>Soporte técnico a usuarios y equipos I</h2>
         <p>Hola! Bienvenidos al Software Educativo: Soporte Tecnico a Usuarios y Equipos (SESTUE).</p>
         <p>En esta aplicacion aprendera como realizar un trabajo de investigacion, a traves de las normas mas conocidas para trabajos de investigacion y tesis UPEL y APA, y el Manual del Colegio Universitario Francisco de Miranda.</p>
         <p>En el menu de arriba contiene de manera general lo que integra y aborda SESTUE </p>
 		';
-		//Mostrar Html
-		$index->construirHtml("SESTUE | Principal", $datosUser[1], $mensaje, $datosUser[2]);
+		//salida html
+		$index->construirHtml("SESTUE | Soporte Técnico a Usuarios y Equipos I", $datosUser[1], $mensaje, $datosUser[2]);
 	}
-
+	else
+	{
+		echo "<script>
+				location.href='inicio.sesion.php';
+			 </script>";
+	}
 ?>

@@ -5,11 +5,11 @@
 	//Iniciar variables de sesion
 	session_start();
 	//Requerimiento de archivos de consulta y html
-	require("bd/db_consultas.class.php");
-	require("vista/salida_html/html.class.php");
+	require("../clases/db.class.php");
+	require("../clases/index.class.php");
 	//Objetos Db y Html
 	$db = Db::getInstance();
-	$html = Html::getInstance();
+	$index = Index::getInstance();
 	//Consultar si existen usuarios nuevos ademas del administrador
 	$sql = "SELECT c_alias_pk FROM t_usuarios";
 	$usuarios = $db->select($sql);
@@ -17,9 +17,9 @@
 	if (!$usuarios[1]){
 		header('location:registrousuario.php');
 	}
-	else if ($_SESSION['user']){
+	else if ($_SESSION['objeto']){
 		header('location:index.php');
-	}
+	}	
 	else if($_GET["user"] && $_GET["ps"]){
 		$mensaje .= '    	
 			<h2 align="center">Nueva contraseña</h2>
@@ -72,7 +72,7 @@
 			</center>
 		';
 	}
-	$html->constuirHtml("SESTUE | Recordar", 0, $mensaje, "");
+	$index->construirHtml("SESTUE | Recordar", 0, $mensaje, "");
 	//*************************************************************
 	//print_r($usuarios);
 
@@ -105,7 +105,7 @@
 			if($db->ejecutarSql("UPDATE t_usuarios SET c_clave = MD5( '".$pass."' ) WHERE `c_alias_pk` = '".$_GET['user']."'")){
 				echo "<script>
 						alert('Contraseña nueva con éxito.');
-						location.href='login.php';
+						location.href='inicio.sesion.php';
 					 </script>";	
 			}
 		}
