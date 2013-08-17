@@ -1,0 +1,53 @@
+#marco #encabezado h1{
+    position: absolute;
+    left:100px;
+    top: 10px;
+}
+#marco #pie-pagina {
+	margin: 10px auto;
+	color: gray;
+	text-align: center;
+	width: 760px;
+	height:40px;
+	position: relative;
+	/*border:1px solid black;*/
+}
+.login, #login{
+	width:310px;
+	text-align: center;
+	margin:auto;
+}
+.login #user, .login #password{
+	height: 30px;
+	width:300px;
+	padding: 1px;
+	font-style: italic;
+	font-size: 16px;
+}
+.login #boton, #registro-usuario #boton {
+	position: relative;
+	height: 32px;
+	margin-top:10px;
+}
+#registro-usuario #boton{left:40%;}
+#registro-usuario{
+	width:510px;
+	margin:auto;
+}
+#registro-usuario #label{
+	margin-top: 4px;
+	margin-right: -1px;
+	padding: 2px;
+	box-shadow: 0px 0px 0px 1px gray;
+	width:150px;
+	float: left;
+	text-align: right;
+	border-radius: 5px 0px 0px 5px;
+}
+#registro-usuario #input-text, #registro-usuario #p, #registro-usuario #p2 {
+	height: 20px;
+	width:315px;
+	padding: 1px;
+	font-style: italic;
+	font-size: 16px;
+}

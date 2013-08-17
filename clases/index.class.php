@@ -45,6 +45,11 @@ class Index{
 		<li><a href="#">Menu administrador</a></li>
 			';
 		}
+		else if($numMenu==6){
+			$this->menu = '
+		<li><a href="inicio.sesion.php">Volver</a></li>
+			';
+		}
 		return $this->menu;
 	}
 	public function construirHtml($tituloPag, $numMenu, $contenido, $piePag){
@@ -55,20 +60,29 @@ class Index{
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>'.$tituloPag.'</title>
-	<style type="text/css">@import url('.$this->host.'/sestue/css/estilo1.css)</style>
+	<style type="text/css">@import url('.$this->host.'/sestue/css/azul.css)</style>
+	<style type="text/css">@import url('.$this->host.'/sestue/css/marcos.css)</style>
 	<script type="text/javascript" src="'.$this->host.'/sestue/js/restringirCaracteres.js"></script>
 <body>
-<div id="wrapper">
-	<ul id="nav">
+<div id="marco">
+	<div id="encabezado">
+		<h1>sestue</h1>
+	</div>
+	<div id="menu">
 		'.$menu.'
-	</ul>
-	<div id="content">
-		'.$contenido.'
+	</div>
+	<div id="contenido">
+		<div id="esquina-der">
+			<div id="esquina-izq"></div>
+		</div>
+		<div id="contenido-central">
+			'.$contenido.'
+		</div>
 	</div>
 		';
 		if ($piePag){
 			$this->html .= '
-	<div id="foot">
+	<div id="pie-pagina">
 		<p color="black">'.$piePag.' 
 		<a id="reg" href="'.$this->host.'/sestue/paginas/editInfoUser.php"> Editar datos </a>&nbsp;
 		<a id="reg" href="'.$this->host.'/sestue/paginas/cerrar.sesion.php"> Cerrar Sesión </a>
