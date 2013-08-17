@@ -60,9 +60,12 @@ class Index{
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>'.$tituloPag.'</title>
-	<style type="text/css">@import url('.$this->host.'/sestue/css/azul.css)</style>
-	<style type="text/css">@import url('.$this->host.'/sestue/css/marcos.css)</style>
+	<style type="text/css">@import url('.$this->host.'/sestue/css/azul.css);</style>
+	<style type="text/css">@import url('.$this->host.'/sestue/css/marcos.css);</style>
+	<style type="text/css">@import url('.$this->host.'/sestue/css/css.css);</style>
 	<script type="text/javascript" src="'.$this->host.'/sestue/js/restringirCaracteres.js"></script>
+	<script type="text/javascript" src="'.$this->host.'/sestue/js/jquery.js"></script>
+	<script type="text/javascript" src="'.$this->host.'/sestue/js/js.js"></script>
 <body>
 <div id="marco">
 	<div id="encabezado">
