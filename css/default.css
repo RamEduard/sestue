@@ -22,6 +22,7 @@ body {
 	margin: 0;
 	padding: 0;
 }
+#encabezado{display: none;}
 #marco {
 	width: 850px;
 	min-height:475px;

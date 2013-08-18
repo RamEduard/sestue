@@ -1,9 +1,4 @@
 <?php
-	usleep(200000);
-	//No ver errores
-	error_reporting(null);
-	//Iniciar variables de sesion
-	session_start();
 	//Requerimiento de archivos de consulta y html
 	require("../clases/db.class.php");
 	require("../clases/index.class.php");
@@ -21,7 +16,7 @@
 		header('location:index.php');
 	}	
 	else if($_GET["user"] && $_GET["ps"]){
-		$mensaje .= '    	
+		$mensaje = '    	
 			<h2 align="center">Nueva contraseña</h2>
 			<center>
 			<form method="post" action="">
@@ -47,7 +42,7 @@
 		';
 	}
 	else{
-		$mensaje .= '    	
+		$mensaje = '    	
 			<h2 align="center">Recordar contraseña</h2>
 			<center>
 			<form method="post" action="">

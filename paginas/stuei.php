@@ -1,13 +1,8 @@
 <?php
-	//No ver errores
-	error_reporting(0);
 	//Requerimiento de archivos de consulta y html
 	require("../clases/db.class.php");
-	require("../clases/index.class.php");
 	require("../clases/usuario.sesion.class.php");
-
-	//iniciar variables de sesion
-	session_start();
+	require("../clases/index.class.php");
 
 	//Hago instancia las clases Db y Html
 	$db = Db::getInstance();

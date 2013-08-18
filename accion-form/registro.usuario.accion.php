@@ -12,7 +12,7 @@
 	$db = Db::getInstance();
 
 	if(isset($_POST['guardar'])){
-		$sql = "INSERT INTO `t_usuarios` VALUES ('".$_POST['ci']."','".$_POST['carnet']."','".$_POST['names']."','".$_POST['lastname']."','".$_POST['user']."',MD5('".$_POST['password']."'),'".$_POST['psecreta']."', '".$_POST['rol']."')";
+		$sql = "INSERT INTO `t_usuarios` VALUES ('".$_POST['ci']."','".$_POST['carnet']."','".$_POST['names']."','".$_POST['lastname']."','".$_POST['user']."',MD5('".$_POST['password']."'),'".$_POST['psecreta']."', '".$_POST['rol']."', '')";
 		$sqlAlias = "SELECT c_alias_pk FROM t_usuarios WHERE c_alias_pk='".$_POST['user']."'";
 		$sqlCedula = "SELECT c_cedula_pk FROM t_usuarios WHERE c_cedula_pk='".$_POST['ci']."'";
 		$sqlCarnet = "SELECT c_cedula_pk FROM t_usuarios WHERE c_carnet_pk='".$_POST['carnet']."'";
@@ -42,7 +42,10 @@
 				  </script>";
 		}
 		else{
-			echo "<script>alert('Ocurrio un problema en la base de datos y no se guardaron sus datos');</script>
+			echo "<script>
+					alert('Ocurrio un problema en la base de datos y no se guardaron sus datos');
+					location.href='../paginas/registrousuario.php'
+				</script>
 				";
 		}
 	}

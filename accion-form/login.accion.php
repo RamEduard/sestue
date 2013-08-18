@@ -18,7 +18,7 @@
 		$user = $_POST["user"];
 		$pass = $_POST["password"];
 
-		$session = "SELECT c_alias_pk, c_clave, c_nombres, c_apellidos, c_rol FROM t_usuarios WHERE c_alias_pk='".$user."' AND c_clave=MD5('".$pass."')";
+		$session = "SELECT c_alias_pk, c_clave, c_nombres, c_apellidos, c_rol, c_estilo_css_pag FROM t_usuarios WHERE c_alias_pk='".$user."' AND c_clave=MD5('".$pass."')";
 		$result_session = $db->select($session);
 
 		if (!$result_session){
@@ -31,6 +31,10 @@
 		{
 			$usuarioSesion->setUsuarioSesion($result_session[0][0], $result_session[0][4], $result_session[0][2]." ".$result_session[0][3]);
 			$_SESSION['objeto'] = $usuarioSesion;
+			if($result_session[0][5])
+				$_SESSION['estilo'] = $result_session[0][5];
+			else
+				$_SESSION['estilo'] = 'default';
 			echo "<script>
 					location.href='../paginas/index.php';
 				 </script>";

@@ -1,7 +1,4 @@
 <?php
-	//No ver errores
-	error_reporting(0);
-
 	//Requerimiento de archivos de clases
 	require("../clases/db.class.php");
 	require("../clases/index.class.php");

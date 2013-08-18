@@ -15,7 +15,7 @@ body{
 }
 #marco #menu{
     margin-bottom: 5em;
-    margin-left-value: 0px;
+    margin-left: 10px;
 	width: 16%;
     min-width: 217px;
 	float: left;
@@ -49,10 +49,10 @@ body{
     min-height: 400px;
 }
 #marco #contenido #contenido-central{
-    top:10px;
+    top:40px;
+    margin: 0px 30px;
     position:absolute;
     background: transparent;
     min-width: 99%;
     min-height: 380px;
-    margin: 5px;
 }

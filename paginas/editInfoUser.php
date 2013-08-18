@@ -1,15 +1,10 @@
 <?php
 //editar elementos de logica en el archivo
-	//No ver errores
-	error_reporting(E_ALL);
 
 	//Requerimiento de archivos de consulta y html
 	require("../clases/db.class.php");
-	require("../clases/index.class.php");
 	require("../clases/usuario.sesion.class.php");
-
-	//iniciar variables de sesion
-	session_start();
+	require("../clases/index.class.php");
 
 	//Hago instancia las clases Db y Html
 	$db = Db::getInstance();
@@ -64,7 +59,7 @@
 			</table>
         </form>
 		';
-		$index->construirHtml("SESTUE| Principal", $datosUser[1], $mensaje, "");
+		$index->construirHtml("SESTUE| Principal", $datosUser[1], $mensaje, $datosUser[2]);
 	}
 	else
 	{

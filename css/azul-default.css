@@ -55,10 +55,10 @@ body{
     width:50px;
 }
 #marco #contenido #contenido-central{
-    top: 0px;
+    top:40px;
+    margin: 0px 30px;
     position:absolute;
     background: transparent;
     min-width: 99%;
     min-height: 380px;
-    margin: 5px;
 }

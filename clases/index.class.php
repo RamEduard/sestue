@@ -1,10 +1,13 @@
 <?php
+include_once '../config/config.disp.err.php';
+include_once '../config/config.css.php';
 class Index{
-	private $host, $html,$menu;
+	private $host, $html,$menu, $estilo;
 	static $_instance;
 	/*La función construct es privada para evitar que el objeto pueda ser creado mediante new*/
 	private function __construct(){
 		$this->host = "http://".$_SERVER["HTTP_HOST"];
+		$this->estilo = ESTILO_CSS;
 	}
 	/*Evitamos el clonaje del objeto. Patrón Singleton*/
 	private function __clone(){ }
@@ -52,7 +55,7 @@ class Index{
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>'.$tituloPag.'</title>
-	<style type="text/css">@import url('.$this->host.'/sestue/css/azul.css);</style>
+	<style type="text/css">@import url('.$this->host.'/sestue/css/'.$this->estilo.'.css);</style>
 	<style type="text/css">@import url('.$this->host.'/sestue/css/marcos.css);</style>
 	<style type="text/css">@import url('.$this->host.'/sestue/css/css.css);</style>
 	<script type="text/javascript" src="'.$this->host.'/sestue/js/restringirCaracteres.js"></script>
@@ -61,7 +64,8 @@ class Index{
 <body>
 <div id="marco">
 	<div id="encabezado">
-		<h1>sestue</h1>
+		<!---<h1>sestue</h1>--->
+		<img src="/sestue/img/sestue.png">
 	</div>
 	<div id="menu">
 		'.$menu.'
@@ -79,8 +83,9 @@ class Index{
 			$this->html .= '
 	<div id="pie-pagina">
 		<p color="black">'.$piePag.' 
-		<a id="reg" href="'.$this->host.'/sestue/paginas/editInfoUser.php"> Editar datos </a>&nbsp;
-		<a id="reg" href="'.$this->host.'/sestue/paginas/cerrar.sesion.php"> Cerrar Sesión </a>
+		<a id="reg" href="'.$this->host.'/sestue/paginas/config.estilo.php"> Cambiar tema</a> 
+		<a id="reg" href="'.$this->host.'/sestue/paginas/editInfoUser.php"> Editar datos</a> 
+		<a id="reg" href="'.$this->host.'/sestue/paginas/cerrar.sesion.php"> Cerrar Sesión</a>
 	</div>
 			';
 		}

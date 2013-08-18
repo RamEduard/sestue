@@ -1,9 +1,10 @@
 <?php
+include_once '../config/config.bd.php';
 class Db{
-	private $servidor='localhost';
-    private $usuario='root';
-    private $password='ramon';
-    private $base_datos='sestuebd';
+	private $servidor= SERVIDOR_BD;
+    private $usuario= USUARIO_BD;
+    private $password= PASS_BD;
+    private $base_datos= BD;
     private $link, $query, $arreglo, $registros, $columnas,$filas;
 
     static $_instance;
