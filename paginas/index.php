@@ -24,7 +24,14 @@
 		header('location:registrousuario.php');
 	}
 	else if(!$_SESSION['objeto']){
-		header("location:inicio.sesion.php");
+		$mensaje = '
+		<h2>Bienvenido!</h2>
+        <p>Hola! Bienvenidos al Software Educativo: Soporte Tecnico a Usuarios y Equipos (SESTUE).</p>
+        <p>En esta aplicacion aprendera como realizar un trabajo de investigacion, a traves de las normas mas conocidas para trabajos de investigacion y tesis UPEL y APA, y el Manual del Colegio Universitario Francisco de Miranda.</p>
+        <p>En el menu de arriba contiene de manera general lo que integra y aborda SESTUE </p>
+		';
+		//Mostrar Html
+		$index->construirHtml("SESTUE | Principal", 1, $mensaje, 0);
 	}
 	else if($usuarioSesion->existeUsuario()){
 		//Obtener array con datos del usuario
@@ -39,5 +46,4 @@
 		//Mostrar Html
 		$index->construirHtml("SESTUE | Principal", $datosUser[1], $mensaje, $datosUser[2]);
 	}
-
 ?>

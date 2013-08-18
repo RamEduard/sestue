@@ -72,7 +72,7 @@
 			</center>
 		';
 	}
-	$index->construirHtml("SESTUE | Recordar", 6, $mensaje, "");
+	$index->construirHtml("SESTUE | Recordar", 1, $mensaje, "");
 	//*************************************************************
 	//print_r($usuarios);
 

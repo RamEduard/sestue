@@ -19,16 +19,13 @@ class Index{
 	private function construirMenu($numMenu){
 		if ($numMenu==1){
 			$this->menu = '
+		<li><a href="inicio.sesion.php">Iniciar sesion</a></li>
 		<li><a href="registrousuario.php">Registrar otro usuario</a></li>
-			';
-		}
-		else if ($numMenu==2){
-			$this->menu = '
-		<li><a href="inicio.sesion.php">Entrar a SESTUE</a></li>
 			';
 		}
 		else if ($numMenu==3){ 
 			$this->menu = '
+		<li><a href="index.php">Inicio</a></li>
 		<li><a href="stuei.php">Soporte Técnico a Usuarios y Equipos I</a></li>
         <li><a href="stueii.php">Soporte Técnico a Usuarios y Equipos II</a></li>
         <li><a href="stueiii.php">Soporte Técnico a Usuarios y Equipos III</a></li>
@@ -43,11 +40,6 @@ class Index{
 		else if($numMenu==5){
 			$this->menu = '
 		<li><a href="#">Menu administrador</a></li>
-			';
-		}
-		else if($numMenu==6){
-			$this->menu = '
-		<li><a href="inicio.sesion.php">Volver</a></li>
 			';
 		}
 		return $this->menu;

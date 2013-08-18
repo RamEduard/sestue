@@ -79,5 +79,5 @@
 	$formRegistroUserHtml = $formRegistroUser->obtenerHtml();
 
 	//Salida del html
-	$index->construirHtml("SESTUE | Registrarse", 2, $formRegistroUserHtml, "");
+	$index->construirHtml("SESTUE | Registrarse", 1, $formRegistroUserHtml, "");
 ?>
