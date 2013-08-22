@@ -65,7 +65,9 @@ class Index{
 <div id="marco">
 	<div id="encabezado">
 		<!---<h1>sestue</h1>--->
-		<img src="/sestue/img/sestue.png">
+		<img src="/sestue/img/gobierno.png" id="GobiernoBolivariano">
+		<img src="/sestue/img/campana_admirable.png" id="CampanaAdmirable" height="40">
+		<img src="/sestue/img/sestue.png" id="titulosestue">
 	</div>
 	<div id="menu">
 		'.$menu.'

@@ -22,11 +22,29 @@ body {
 	margin: 0;
 	padding: 0;
 }
-#encabezado{display: none;}
+#encabezado{
+	background-color: #fff;
+	width:850px;
+	height: 40px;
+	position: absolute;
+	top:-45px;
+}
+#encabezado #GobiernoBolivariano{
+	margin-top: -10px;
+    margin-left: -100px;
+}
+#encabezado #CampanaAdmirable{
+	margin-top: -10px;
+	margin-left: 700px;
+	float: right;
+}
+#encabezado #titulosestue{
+	display: none;
+}
 #marco {
 	width: 850px;
 	min-height:475px;
-	margin: 30px auto;
+	margin: 50px auto;
 	background: #FFFFFF url(../img/default/header2.png) 47px 4px no-repeat;
 	padding: 100px 4px 0px 4px;
 	border-radius: 10px;
