@@ -1,6 +1,7 @@
 <?php
 	//Requerimiento de archivos de consulta y html
-	require("../clases/db.class.php");
+	require("../config/config.php");
+        require("../clases/db.class.php");
 	require("../clases/index.class.php");
 	//Objetos Db y Html
 	$db = Db::getInstance();

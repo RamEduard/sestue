@@ -1,6 +1,7 @@
 <?php
 	//Requerimiento de los ficheros de las clases que se usaran en el archivo
-	require("../clases/db.class.php");
+        require("../config/config.php");
+        require("../clases/db.class.php");
 	require("../clases/usuario.sesion.class.php");
 	require("../clases/index.class.php");
 

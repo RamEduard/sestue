@@ -1,5 +1,6 @@
 <?php
 	//Requerimiento de archivos de clases
+        require("../config/config.php");
 	require("../clases/db.class.php");
 	require("../clases/index.class.php");
 	require("../clases/formulario.class.php");

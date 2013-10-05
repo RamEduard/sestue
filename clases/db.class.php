@@ -1,7 +1,11 @@
 <?php
-include_once '../config/config.bd.php';
+/*
+ * Descripcion de Db
+ * @autor Ramon Serrano
+ * @email <ramon_calle-88@hotmail.com>
+ */
 class Db{
-	private $servidor= SERVIDOR_BD;
+    private $servidor= SERVIDOR_BD;
     private $usuario= USUARIO_BD;
     private $password= PASS_BD;
     private $base_datos= BD;

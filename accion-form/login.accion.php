@@ -6,6 +6,7 @@
 	session_start();
 	
 	//Requerimiento de archivos de consulta y html
+        require("../config/config.php");
 	require("../clases/db.class.php");
 	require("../clases/usuario.sesion.class.php");
 

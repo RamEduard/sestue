@@ -1,6 +1,5 @@
 <?php
-include_once '../config/config.disp.err.php';
-include_once '../config/config.css.php';
+
 class Index{
 	private $host, $html,$menu, $estilo;
 	static $_instance;
