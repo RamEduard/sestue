@@ -5,3 +5,6 @@ ____
 *Estado: En desarrollo*
 ____
 Estudiantes del Colegio Universitario Francisco de Miranda
+
+___
+Cuando descargue cambiar el nombre de la carpeta a sestue
