@@ -1,9 +1,8 @@
 <?php
-	//Requerimiento de archivos de clases
-        require("../config/config.php");
-	require("../clases/db.class.php");
-	require("../clases/index.class.php");
-	require("../clases/formulario.class.php");
+	//Requerimiento de archivos de consulta y html
+	# Con este archivo se evita requerir las clases desde los archivos
+	# y hacer session_start()
+    require("../config/config.php");
 
 	//Objetos que seran usados en el archivo
 	$db = Db::getInstance();

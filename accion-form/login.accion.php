@@ -1,14 +1,9 @@
 <?php
-	//No ver errores
-	error_reporting(0);
-
-	//Iniciar variables de sesion
-	session_start();
-	
 	//Requerimiento de archivos de consulta y html
-        require("../config/config.php");
-	require("../clases/db.class.php");
-	require("../clases/usuario.sesion.class.php");
+	# Con este archivo se evita requerir las clases desde los archivos
+	# y hacer session_start()
+    require("../config/config.php");
+	
 
 	//Objetos que seran usados en el archivo
 	$db = Db::getInstance();
@@ -36,9 +31,7 @@
 				$_SESSION['estilo'] = $result_session[0][5];
 			else
 				$_SESSION['estilo'] = 'default';
-			echo "<script>
-					location.href='../paginas/index.php';
-				 </script>";
+			header("location:../paginas/index.php");
 		}
 		
 	}

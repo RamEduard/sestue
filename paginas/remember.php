@@ -1,8 +1,8 @@
 <?php
 	//Requerimiento de archivos de consulta y html
-	require("../config/config.php");
-        require("../clases/db.class.php");
-	require("../clases/index.class.php");
+	# Con este archivo se evita requerir las clases desde los archivos
+	# y hacer session_start()
+    require("../config/config.php");
 	//Objetos Db y Html
 	$db = Db::getInstance();
 	$index = Index::getInstance();

@@ -1,12 +1,10 @@
 <?php
 //editar elementos de logica en el archivo
 
-	//Requerimiento de archivos de consulta y html
-	require("../config/config.php");
-        require("../clases/db.class.php");
-	require("../clases/usuario.sesion.class.php");
-	require("../clases/index.class.php");
-
+	///Requerimiento de archivos de consulta y html
+	# Con este archivo se evita requerir las clases desde los archivos
+	# y hacer session_start()
+    require("../config/config.php");
 	//Hago instancia las clases Db y Html
 	$db = Db::getInstance();
 	$index = Index::getInstance();
