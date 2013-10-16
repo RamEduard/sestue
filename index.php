@@ -1,7 +1,6 @@
 <?php
 	//Requerimiento de los ficheros de las clases que se usaran en el archivo
 	include_once "config/config.php";
-	require("clases/db.class.php");
 
 	//Objetos a usar en el archivo
 	$db = Db::getInstance();
