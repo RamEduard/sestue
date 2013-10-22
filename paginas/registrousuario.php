@@ -40,12 +40,13 @@
 	$formRegistroUser->ln(1);
 	$formRegistroUser->tab(4);
 	$formRegistroUser->agregarEtiqueta("Cedula/Pasaporte: ", 0, "label");
-	$atributosExtraCiCarnet = 'onkeypress="return permite(event, 1)" required';
-	$formRegistroUser->agregarInput("text", "ci", "", "Introduzca su numero de cedula/pasaporte", 0, "input-text", $atributosExtraCiCarnet);
+	$atributosExtraCiPp = 'onkeypress="return permite(event, 1)" required';
+	$formRegistroUser->agregarInput("text", "ci", "", "Introduzca su numero de cedula/pasaporte", 0, "input-text", $atributosExtraCiPp);
 	$formRegistroUser->ln(1);
 	$formRegistroUser->tab(4);
 	$formRegistroUser->agregarEtiqueta("Carnet: ", 0, "label");
-	$formRegistroUser->agregarInput("text", "carnet", "", "Introduzca su numero de carnet", 0, "input-text", $atributosExtraCiCarnet);
+	$atributosExtraCarnet = 'maxlength=9 onkeypress="return permite(event, 1)" required';
+	$formRegistroUser->agregarInput("text", "carnet", "", "Introduzca su numero de carnet", 0, "input-text", $atributosExtraCarnet);
 	$formRegistroUser->ln(1);
 	$formRegistroUser->tab(4);
 	$formRegistroUser->agregarEtiqueta("Rol: ", 0, "label");
