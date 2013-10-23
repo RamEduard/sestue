@@ -11,7 +11,7 @@ function permite(elEvento, permitidos) {
   var numeros = "0123456789";
   var letras = " abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
   var numeros_letras = numeros + letras;
-  var teclas_especiales = [8, 9, 13, 46];
+  var teclas_especiales = [8, 9, 13];
   // 8 = BackSpace, 9 = Tabular, 46 = Supr, 13 = Enter
  
  
