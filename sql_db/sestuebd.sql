@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 3.4.10.1deb1
+-- version 3.5.1
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 21-08-2013 a las 22:29:04
--- Versión del servidor: 5.5.31
--- Versión de PHP: 5.3.10-1ubuntu3.7
+-- Tiempo de generación: 23-10-2013 a las 14:49:07
+-- Versión del servidor: 5.5.24-log
+-- Versión de PHP: 5.4.3
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -60,9 +60,9 @@ CREATE TABLE IF NOT EXISTS `t_proy_activ` (
   `c_id_pk` int(100) NOT NULL AUTO_INCREMENT COMMENT 'Campo para guardar el identificador de cada actividad',
   `c_cap_perteneciente` int(1) NOT NULL COMMENT 'Campo para guardar al capitulo que pertenece la actividad',
   `c_actividad` varchar(20) COLLATE utf8_spanish_ci NOT NULL COMMENT 'Campo para guardar la actividad',
-  `c_contenido` varchar(10000) COLLATE utf8_spanish_ci NOT NULL COMMENT 'Campo para guardar el contenido de la actividad',
+  `c_contenido` text COLLATE utf8_spanish_ci NOT NULL COMMENT 'Campo para guardar el contenido de la actividad',
   PRIMARY KEY (`c_id_pk`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci ROW_FORMAT=COMPACT COMMENT='Tabla para guardar las propiedades del proyecto' AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci ROW_FORMAT=COMPACT COMMENT='Tabla para guardar las propiedades del proyecto' AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -83,6 +83,14 @@ CREATE TABLE IF NOT EXISTS `t_usuarios` (
   PRIMARY KEY (`c_cedula_pk`,`c_carnet_pk`,`c_alias_pk`),
   KEY `c_carnet_pk` (`c_carnet_pk`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci COMMENT='Tabla para guardar los estudiantes del SESTUE';
+
+--
+-- Volcado de datos para la tabla `t_usuarios`
+--
+
+INSERT INTO `t_usuarios` (`c_cedula_pk`, `c_carnet_pk`, `c_nombres`, `c_apellidos`, `c_alias_pk`, `c_clave`, `c_palabra_secreta`, `c_rol`, `c_estilo_css_pag`) VALUES
+(1, 1, 'Administrador', 'del Sistema', 'admin', '21232f297a57a5a743894a0e4a801fc3', 'admin', 5, ''),
+(23658013, 110300775, 'ramon', 'ramon', 'ramon', '266575d3c2b8a34f83817458f96152b1', 'ramon', 3, 'gris');
 
 --
 -- Restricciones para tablas volcadas
