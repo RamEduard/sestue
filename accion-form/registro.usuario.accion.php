@@ -1,13 +1,8 @@
 <?php
-	//No ver errores
-	error_reporting(0);
-
-	//Iniciar variables de sesion
-	session_start();
 	
 	//Requerimiento de archivos de consulta y html
-        require("../config/config.php");
-	require("../clases/db.class.php");
+    require("../config/config.php");
+	
 
 	//Objetos que seran usados en el archivo
 	$db = Db::getInstance();

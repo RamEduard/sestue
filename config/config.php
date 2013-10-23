@@ -8,12 +8,12 @@
  */
     
     //No ver errores de PHP
-    error_reporting(0);
+    error_reporting(1);
     //Variables de Base de Datos
-    define('DIR',"/var/www/sestue/");
+    define('DIR',"c:/wamp/www/sestue/");
     define("SERVIDOR_BD", "localhost");
     define("USUARIO_BD", "root");
-    define('PASS_BD', 'ramon');
+    define('PASS_BD', '');
     define('BD', 'sestuebd');
     define ('CLASS_DB', DIR.'clases/db.class.php');
     define ('CLASS_UsuarioSesion',DIR.'clases/usuario.sesion.class.php');
