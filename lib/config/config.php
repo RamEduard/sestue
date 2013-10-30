@@ -19,10 +19,12 @@
     define ('CLASS_UsuarioSesion',  DIR.'/lib/clases/usuario.sesion.class.php');
     define ('CLASS_Index',          DIR.'/lib/clases/index.class.php');
     define ('CLASS_Formulario',     DIR.'/lib/clases/formulario.class.php');
+    define ('CLASS_Template',     DIR.'/lib/clases/template.class.php');
     require(CLASS_DB);
 	require(CLASS_UsuarioSesion);
 	require(CLASS_Index);
 	require(CLASS_Formulario);
+    require (CLASS_Template);
 	
 	//Iniciar variables de sesion
 	# Siempre se debera hacer despues de requerir los archivos
