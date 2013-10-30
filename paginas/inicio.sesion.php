@@ -1,6 +1,6 @@
 <?php
 	//Requerimiento de archivos de clases
-    require("../config/config.php");
+    require("../lib/config/config.php");
 	
 
 	//Objetos que seran usados en el archivo
@@ -22,7 +22,7 @@
 	else{
 		//Caracteristicas del formulario
 		$nombreForm = "login";
-		$accionForm = "../accion-form/login.accion.php";
+		$accionForm = "../controllers/login.accion.php";
 		$metodoForm = "post";
 		$claseForm = "login";
 		$idForm = "login";

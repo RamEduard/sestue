@@ -3,7 +3,7 @@
 	//Requerimiento de archivos de consulta y html
 	# Con este archivo se evita requerir las clases desde los archivos
 	# y hacer session_start()
-    require("../config/config.php");
+    include_once "../lib/config/config.php";
 
 	//Objetos a usar en el archivo
 	$db = Db::getInstance();

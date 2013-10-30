@@ -2,13 +2,13 @@
 	//Requerimiento de archivos de consulta y html
 	# Con este archivo se evita requerir las clases desde los archivos
 	# y hacer session_start()
-    require("../config/config.php");
+    require("../lib/config/config.php");
 
 	//Objetos que seran usados en el archivo
 	$db = Db::getInstance();
 	$index = Index::getInstance();
 	//Construccion del formulario de Registro de usuario
-	$formRegistroUser = new Formulario("registro-usuario","../accion-form/registro.usuario.accion.php","post",0,"registro-usuario",0);
+	$formRegistroUser = new Formulario("registro-usuario","../controllers/registro.usuario.accion.php","post",0,"registro-usuario",0);
 	$formRegistroUser->tab(3);
 	$formRegistroUser->agregarLeyenda("<h3>Registrar nuevo usuario</h3>",0,0,"center");
 	$formRegistroUser->tab(3);
