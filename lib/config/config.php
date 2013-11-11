@@ -8,7 +8,7 @@
  */
     
     //No ver errores de PHP
-    error_reporting(1);
+    error_reporting(E_ALL);
     //Variables de Base de Datos
     define('DIR',$_SERVER['DOCUMENT_ROOT']."/sestue/");
     define("SERVIDOR_BD", "localhost");
@@ -37,5 +37,4 @@
     else{
 	define('ESTILO_CSS', $_SESSION['estilo']);
     }
-
 ?>
