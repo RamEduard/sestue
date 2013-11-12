@@ -211,7 +211,7 @@ class BootstrapSestue extends Templates {
     }
 
     public function getPage($pageTitle = null, $contentPage = null, $exception = null) {
-        if(empty($this->objUser) or $this->objUser == NULL or $exception == null){
+        if(empty($this->objUser) or $this->objUser == NULL){
             $this->__mainBootstrap();
             $this->setTitle($pageTitle);
             $this->setHeaders();
@@ -230,7 +230,7 @@ class BootstrapSestue extends Templates {
             $this->__endBootstrap();
             return $this->html;
         }
-        elseif (( !empty($pageTitle) and !empty($contentPage) ) and $exception == true){
+        elseif (( !empty($pageTitle) and !empty($contentPage) ) or $exception == true){
             $this->__mainBootstrap();
             $this->setTitle($pageTitle);
             $this->setHeaders();
