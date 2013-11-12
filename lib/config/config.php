@@ -6,35 +6,38 @@
  * @author Ramon Serrano
  * @email <ramon_calle-88@hotmail.com
  */
-    
-    //No ver errores de PHP
-    error_reporting(E_ALL);
-    //Variables de Base de Datos
-    define('DIR',$_SERVER['DOCUMENT_ROOT']."/sestue/");
-    define("SERVIDOR_BD", "localhost");
-    define("USUARIO_BD", "root");
-    define('PASS_BD', 'ramon');
-    define('BD', 'sestuebd');
-    define ('CLASS_DB',             DIR.'/lib/clases/db.class.php');
-    define ('CLASS_UsuarioSesion',  DIR.'/lib/clases/usuario.sesion.class.php');
-    define ('CLASS_Index',          DIR.'/lib/clases/index.class.php');
-    define ('CLASS_Formulario',     DIR.'/lib/clases/formulario.class.php');
-    define ('CLASS_Template',     DIR.'/lib/clases/template.class.php');
-    require(CLASS_DB);
-	require(CLASS_UsuarioSesion);
-	require(CLASS_Index);
-	require(CLASS_Formulario);
-    require (CLASS_Template);
-	
-	//Iniciar variables de sesion
-	# Siempre se debera hacer despues de requerir los archivos
-    session_start();
-    
-    //Configuracion de CSS
-    if (!$_SESSION['estilo']){
-	define('ESTILO_CSS','default');
-    }
-    else{
-	define('ESTILO_CSS', $_SESSION['estilo']);
-    }
+//No ver errores de PHP
+error_reporting(E_ALL);
+
+//Variables de Base de Datos
+define('DIR', $_SERVER['DOCUMENT_ROOT'] . "/sestue/");
+define("SERVIDOR_BD", "sql102.eshost.es");
+define("USUARIO_BD", "eshos_13988615");
+define('PASS_BD', 'ramoncit');
+define('BD', 'eshos_13988615_sestuebd');
+/* defined("SERVIDOR_BD")            || define("SERVIDOR_BD", $_SERVER['HTTP_HOST']);
+  defined("USUARIO_BD")             || define("USUARIO_BD", "root");
+  defined("PASS_BD")                || define('PASS_BD', 'ramon');
+  defined("BD")                     || define('BD', 'sestuebd'); */
+defined("CLASS_DB") || define('CLASS_DB', DIR . '/lib/clases/db.class.php');
+defined("CLASS_UsuarioSesion") || define('CLASS_UsuarioSesion', DIR . '/lib/clases/usuario.sesion.class.php');
+defined("CLASS_Index") || define('CLASS_Index', DIR . '/lib/clases/index.class.php');
+defined("CLASS_Formulario") || define('CLASS_Formulario', DIR . '/lib/clases/formulario.class.php');
+defined("CLASS_Templates") || define('CLASS_Templates', DIR . '/lib/clases/templates.class.php');
+defined("CLASS_BOOTSTRAP_SESTUE") || define('CLASS_BOOTSTRAP_SESTUE', DIR . '/themes/bootstrap/bootstrap.sestue.class.php');
+require(CLASS_DB);
+require(CLASS_UsuarioSesion);
+require(CLASS_Index);
+require(CLASS_Formulario);
+require (CLASS_Templates);
+require(CLASS_BOOTSTRAP_SESTUE);
+//Iniciar variables de sesion
+# Siempre se debera hacer despues de requerir los archivos
+session_start();
+//Configuracion de CSS
+if (!$_SESSION['estilo']) {
+    define('ESTILO_CSS', 'default');
+} else {
+    define('ESTILO_CSS', $_SESSION['estilo']);
+}
 ?>
