@@ -128,14 +128,41 @@ class BootstrapSestue extends Templates {
 							        </div>
 							        <div class="collapse navbar-collapse">
 							          <ul class="nav navbar-nav">
-							            <li title="Soporte Técnico a Usuarios y Equipos I"><a href="'.DIR_PAGES.'stuei.php">STUE I</a></li>
-							            <li title="Soporte Técnico a Usuarios y Equipos II"><a href="'.DIR_PAGES.'stueii.php">STUE II</a></li>
-							            <li title="Soporte Técnico a Usuarios y Equipos III"><a href="'.DIR_PAGES.'stueiii.php">STUE III</a></li>
+							            <li class="dropdown" title="Soporte Técnico a Usuarios y Equipos I">
+                            <a href="#"class="dropdown-toggle" data-toggle="dropdown">STUE I<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                              <li><a href="'.DIR_PAGES.'stuei.php">Ver modulo</a></li>
+                              <li class="divider"></li>
+                              <li class="dropdown-header">Actividades</li>
+                              <li><a href="'.DIR_PAGES.'ejemplos/crear.actividad.php">Crear Actividad</a></li>
+                              <li><a href="'.DIR_PAGES.'/consultaActividadHtml.php">Consultar Actividad</a></li>
+                            </ul>
+                          </li>
+							            <li class="dropdown" title="Soporte Técnico a Usuarios y Equipos II">
+                            <a href="#"class="dropdown-toggle" data-toggle="dropdown">STUE II<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                              <li><a href="'.DIR_PAGES.'stueii.php">Ver modulo</a></li>
+                              <li class="divider"></li>
+                              <li class="dropdown-header">Actividades</li>
+                              <li><a href="'.DIR_PAGES.'ejemplos/crear.actividad.php">Crear Actividad</a></li>
+                              <li><a href="'.DIR_PAGES.'/consultaActividadHtml.php">Consultar Actividad</a></li>
+                            </ul>
+                          </li>
+							            <li class="dropdown" title="Soporte Técnico a Usuarios y Equipos III">
+                            <a href="#"class="dropdown-toggle" data-toggle="dropdown">STUE III<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                              <li><a href="'.DIR_PAGES.'stueiii.php">Ver modulo</a></li>
+                              <li class="divider"></li>
+                              <li class="dropdown-header">Actividades</li>
+                              <li><a href="'.DIR_PAGES.'ejemplos/crear.actividad.php">Crear Actividad</a></li>
+                              <li><a href="'.DIR_PAGES.'/consultaActividadHtml.php">Consultar Actividad</a></li>
+                            </ul>
+                          </li>
                           <li title="Buscar..."><a href="'.DIR_PAGES.'preg-resp.php">Preguntas frecuentes</a></li>
 							          </ul>
                         <ul class="nav navbar-nav pull-right">
                           <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b class="icon-key"></b> '.$userData[0].'<b class="caret"></b></a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">'.$userData[0].'<b class="caret"></b></a>
                             <ul class="dropdown-menu">
                               <li class="dropdown-header">'.$userData[2].'</li>
                               <li><a href="'.DIR_PAGES.'editInfoUser.php">Editar mis datos</a></li>
