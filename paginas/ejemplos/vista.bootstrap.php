@@ -6,7 +6,7 @@
  * @author Ramón Serrano
  */
 include '../../lib/config/config.php';
-print_r($t = new BootstrapSestue());
+print_r($t = Templates::getInstance($_SESSION['estilo']));
 
 $contenido = '<div class="jumbotron">
 
@@ -32,4 +32,8 @@ $contenido = '<div class="jumbotron">
 
 </div>';
 print $t->getPage('ejemplo', $contenido);
+#Para registrarse
+#print $t->getPage('ejemplo', $contenido, 'registrarse');
+#Para hacer login
+#print $t->getPage('ejemplo', $contenido, 'login');
 

@@ -83,8 +83,8 @@ class BootstrapSestue extends Templates {
 						    <!-- Bootstrap core CSS -->
 						    <link href="' . $this->dir_path . 'css/bootstrap.css" rel="stylesheet">
                                                     
-                                                    <!-- Bootswatch min css -->
-                                                    <link href="' . $this->dir_path . 'css/bootswatch.min.css" rel="stylesheet">
+                <!-- Bootswatch min css -->
+                <link href="' . $this->dir_path . 'css/bootswatch.min.css" rel="stylesheet">
 
 						    <!-- Custom styles for this template -->
 						    <link href="' . $this->dir_path . 'css/starter-template.css" rel="stylesheet">
@@ -97,6 +97,8 @@ class BootstrapSestue extends Templates {
 						      <script src="' . $this->dir_path . 'js/html5shiv.js"></script>
 						      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
 						    <![endif]-->
+                <script src="' . $this->dir_path . 'js/jquery.min.js"></script>
+                <script src="' . $this->dir_path . 'js/bootstrap.min.js"></script>
 						</head>
 						<body>
 						';
@@ -106,35 +108,10 @@ class BootstrapSestue extends Templates {
      * @param $perfilUser
      * Setear la variable menu para el html
      */
-    private function setMenuByPerfilUser($perfilUser = null) {
-        switch ($perfilUser) {
-            case 1:
-                # Login
-                $this->html .= '
-								<div class="navbar navbar-default navbar-fixed-top">
-							      	<div class="container">
-							        <div class="navbar-header">
-							          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-							            <span class="icon-bar"></span>
-							            <span class="icon-bar"></span>
-							            <span class="icon-bar"></span>
-							          </button>
-							          <a class="navbar-brand" href="#">Project name</a>
-							        </div>
-							        <div class="collapse navbar-collapse">
-							          <ul class="nav navbar-nav">
-							            <li class="active"><a href="#">Home</a></li>
-							            <li><a href="#about">About</a></li>
-							            <li><a href="#contact">Contact</a></li>
-							          </ul>
-							        </div><!--/.nav-collapse -->
-							      </div>
-							    </div>
-								';
-                break;
-            case 2:
-                # code...
-                break;
+    private function setMenu( $exception = null ) {
+      if( !empty($this->objUser) and ( $exception == null or $exception == 'inicio')){
+        $userData = $this->objUser->getUsuarioSesion();
+        switch ($userData[1]) {
             case 3:
                 # Estudiante
                 $this->html .= '
@@ -146,14 +123,27 @@ class BootstrapSestue extends Templates {
 							            <span class="icon-bar"></span>
 							            <span class="icon-bar"></span>
 							          </button>
-							          <a class="navbar-brand" href="#">Project name</a>
+							          <a class="navbar-brand" href="'.DIR_PAGES.'index.php" title="Inicio">'.APP_NAME.'</a>
 							        </div>
 							        <div class="collapse navbar-collapse">
 							          <ul class="nav navbar-nav">
-							            <li class="active"><a href="#">Home</a></li>
-							            <li><a href="#about">About</a></li>
-							            <li><a href="#contact">Contact</a></li>
+							            <li title="Soporte Técnico a Usuarios y Equipos I"><a href="'.DIR_PAGES.'stuei.php">STUE I</a></li>
+							            <li title="Soporte Técnico a Usuarios y Equipos II"><a href="'.DIR_PAGES.'stueii.php">STUE II</a></li>
+							            <li title="Soporte Técnico a Usuarios y Equipos III"><a href="'.DIR_PAGES.'stueiii.php">STUE III</a></li>
+                          <li title="Buscar..."><a href="'.DIR_PAGES.'stueiii.php">Preguntas frecuentes</a></li>
 							          </ul>
+                        <ul class="nav navbar-nav pull-right">
+                          <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b class="icon-key"></b> '.$userData[0].'<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                              <li class="dropdown-header">'.$userData[2].'</li>
+                              <li><a href="'.DIR_PAGES.'editInfoUser.php">Editar mis datos</a></li>
+                              <li><a href="'.DIR_PAGES.'config.estilo.php">Configurar tema</a></li>
+                              <li class="divider"></li>
+                              <li><a href="'.DIR_PAGES.'cerrar.sesion.php">Cerrar sesión</a></li>
+                            </ul>
+                          </li>
+                        </ul>
 							        </div><!--/.nav-collapse -->
 							      </div>
 							    </div>
@@ -169,11 +159,83 @@ class BootstrapSestue extends Templates {
                 # code...
                 break;
         }
+      }
+      elseif ($exception) {
+        if($exception == 'login'){
+          # Login
+          $this->html .= '
+                <div class="navbar navbar-default navbar-fixed-top">
+                    <div class="container">
+                      <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="'.DIR_PAGES.'index.php" title="Inicio">'.APP_NAME.'</a>
+                      </div>
+                      <div class="collapse navbar-collapse">
+                        <ul class="nav navbar-nav">
+                          <li class="active"><a href="#">Iniciar sesion</a></li>
+                          <li><a href="'.DIR_PAGES.'registrousuario.php">Registrarse</a></li>
+                        </ul>
+                      </div><!--/.nav-collapse -->
+                    </div>
+                </div>
+                ';
+        }
+        elseif ($exception == 'registrarse') {
+          # Registrar usuario
+          $this->html .= '
+                <div class="navbar navbar-default navbar-fixed-top">
+                    <div class="container">
+                      <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="'.DIR_PAGES.'index.php" title="Inicio">'.APP_NAME.'</a>
+                      </div>
+                      <div class="collapse navbar-collapse">
+                        <ul class="nav navbar-nav">
+                          <li><a href="'.DIR_PAGES.'inicio.sesion.php">Iniciar sesion</a></li>
+                          <li class="active"><a href="'.DIR_PAGES.'registrousuario.php">Registrarse</a></li>
+                        </ul>
+                      </div><!--/.nav-collapse -->
+                    </div>
+                </div>
+                ';
+        }
+        elseif ($exception == 'recordar' or $exception == 'inicio') {
+          # Recordar clave de usuario
+          $this->html .= '
+                <div class="navbar navbar-default navbar-fixed-top">
+                    <div class="container">
+                      <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="'.DIR_PAGES.'index.php" title="Inicio">'.APP_NAME.'</a>
+                      </div>
+                      <div class="collapse navbar-collapse">
+                        <ul class="nav navbar-nav">
+                          <li><a href="'.DIR_PAGES.'inicio.sesion.php">Iniciar sesion</a></li>
+                          <li><a href="#">Registrarse</a></li>
+                        </ul>
+                      </div><!--/.nav-collapse -->
+                    </div>
+                </div>
+                ';
+        }
+      }
     }
 
     private function setContentPage($contentPage) {
         $this->html .= '
-                                                    <div class="container">
+                <div class="container">
 						      <div class="starter-template">
 						        ' . $contentPage . '
 						      </div>
@@ -211,7 +273,7 @@ class BootstrapSestue extends Templates {
     }
 
     public function getPage($pageTitle = null, $contentPage = null, $exception = null) {
-        if(empty($this->objUser) or $this->objUser == NULL){
+        if((empty($this->objUser) or $this->objUser == NULL)and $exception == null){
             $this->__mainBootstrap();
             $this->setTitle($pageTitle);
             $this->setHeaders();
@@ -230,11 +292,11 @@ class BootstrapSestue extends Templates {
             $this->__endBootstrap();
             return $this->html;
         }
-        elseif (( !empty($pageTitle) and !empty($contentPage) ) or $exception == true){
+        elseif (( !empty($pageTitle) and !empty($contentPage) ) or $exception){
             $this->__mainBootstrap();
             $this->setTitle($pageTitle);
             $this->setHeaders();
-            $this->setMenuByPerfilUser($perfilUser);
+            $this->setMenu($exception);
             $this->setContentPage($contentPage);
             $this->setFooter();
             $this->__endBootstrap();

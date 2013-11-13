@@ -17,4 +17,20 @@ class Templates{
         else
             return false;
     }
+    public function getInstance( $theme = null ){
+        switch ($theme) {
+            case 'bootstrap':
+                # Instancia de BootstrapSestue
+                return new BootstrapSestue();
+                break;
+            case 'aries':
+                # Instancia de AriesSestue
+                return new AriesSestue();
+                break;
+            default:
+                # si esta vacio
+                return new BootstrapSestue();
+                break;
+        }
+    }
 }

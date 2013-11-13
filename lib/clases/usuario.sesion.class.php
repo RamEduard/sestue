@@ -35,7 +35,7 @@ class UsuarioSesion {
     }
 
     public function getUsuarioSesion() {
-        return array($this->usuario, $this->nivelUsuario, $this->nombreApellido);
+        return array($this->usuario, $this->nivelUsuario, $this->nombreApellido/*, $_COOKIE['PHPSESSID']*/);
     }
 
     public function existeUsuario() {
