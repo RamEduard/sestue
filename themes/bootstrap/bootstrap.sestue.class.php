@@ -117,7 +117,8 @@ class BootstrapSestue extends Templates {
                 # Estudiante
                 $this->html .= '
 								<div class="navbar navbar-default navbar-fixed-top">
-							      	<div class="container">
+							      	<img src="http://localhost/sestue/lib/img/gobierno2.png" width="100%" height="53"/>
+                      <div class="container">
 							        <div class="navbar-header">
 							          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
 							            <span class="icon-bar"></span>
@@ -193,6 +194,7 @@ class BootstrapSestue extends Templates {
           # Login
           $this->html .= '
                 <div class="navbar navbar-default navbar-fixed-top">
+                    <img src="http://localhost/sestue/lib/img/gobierno2.png" width="100%" height="53"/>
                     <div class="container">
                       <div class="navbar-header">
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -216,6 +218,7 @@ class BootstrapSestue extends Templates {
           # Registrar usuario
           $this->html .= '
                 <div class="navbar navbar-default navbar-fixed-top">
+                    <img src="http://localhost/sestue/lib/img/gobierno2.png" width="100%" height="53"/>
                     <div class="container">
                       <div class="navbar-header">
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -239,6 +242,7 @@ class BootstrapSestue extends Templates {
           # Recordar clave de usuario
           $this->html .= '
                 <div class="navbar navbar-default navbar-fixed-top">
+                    <img src="http://localhost/sestue/lib/img/gobierno2.png" width="100%" height="53"/>                    
                     <div class="container">
                       <div class="navbar-header">
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -251,7 +255,7 @@ class BootstrapSestue extends Templates {
                       <div class="collapse navbar-collapse">
                         <ul class="nav navbar-nav">
                           <li><a href="'.DIR_PAGES.'inicio.sesion.php">Iniciar sesion</a></li>
-                          <li><a href="#">Registrarse</a></li>
+                          <li><a href="'.DIR_PAGES.'registrousuario.php">Registrarse</a></li>
                         </ul>
                       </div><!--/.nav-collapse -->
                     </div>

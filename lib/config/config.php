@@ -3,8 +3,7 @@
 /**
  * Descripcion de config
  * Fecha de creacion 05/10/2013
- * @author Ramon Serrano
- * @email <ramon_calle-88@hotmail.com
+ * @author Ramon Serrano <ramon_calle-88@hotmail.com>
  */
 //No ver errores de PHP
 error_reporting(0);
