@@ -22,13 +22,14 @@
 	}
 	else{
 		$mensaje='
-			<form class="form-signin" action="../controllers/login.accion.php" method=post style="width:300px; margin:auto;">
-		        <h2 class="form-signin-heading">Entrar al sistema</h2>
+			<form class="form-signin" action="../controllers/login.accion.php" method=post style="width:300px; margin:auto;" autocomplete="off">
+		        <h2 class="form-signin-heading">
+		        	<span class="glyphicon glyphicon-lock btn-lg"></span>
+		        	Entrar al sistema
+		        </h2>
 		        <input name="user" type="text" class="form-control" maxlength=10 onkeypress="return permite(event, 2)" autofocus required title="Ingrese su nombre de usuario">
 		        <input name="password" type="password" class="form-control" maxlength=8 onkeypress="return permite(event, 3)" required title="Ingrese su clave">
-		        <label class="checkbox">
-		          <button type="button" onclick="location.href=\'remember.php\'">Recordar contraseña</button>
-		        </label>
+		        <label class="checkbox" onclick="location.href=\'remember.php\'" title="Haga click aqui para recordar su clave">Recordar contraseña</label>
 		        <button name="entrar" class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button>
 		    </form>
 		';

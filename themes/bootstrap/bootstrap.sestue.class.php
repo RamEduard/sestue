@@ -124,7 +124,7 @@ class BootstrapSestue extends Templates {
 							            <span class="icon-bar"></span>
 							            <span class="icon-bar"></span>
 							          </button>
-							          <a class="navbar-brand" href="'.DIR_PAGES.'index.php" title="Inicio">'.APP_NAME.'</a>
+							          <a class="navbar-brand" href="'.DIR_PAGES.'index.php" title="Inicio"><span class="glyphicon glyphicon-home"></span> '.APP_NAME.'</a>
 							        </div>
 							        <div class="collapse navbar-collapse">
 							          <ul class="nav navbar-nav">
@@ -165,10 +165,10 @@ class BootstrapSestue extends Templates {
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">'.$userData[0].'<b class="caret"></b></a>
                             <ul class="dropdown-menu">
                               <li class="dropdown-header">'.$userData[2].'</li>
-                              <li><a href="'.DIR_PAGES.'editInfoUser.php">Editar mis datos</a></li>
+                              <li><a href="'.DIR_PAGES.'editInfoUser.php">Editar mis datos <b class="glyphicon glyphicon-edit"></b></a></li>
                               <li><a href="'.DIR_PAGES.'config.estilo.php">Configurar tema</a></li>
                               <li class="divider"></li>
-                              <li><a href="'.DIR_PAGES.'cerrar.sesion.php">Cerrar sesión</a></li>
+                              <li><a href="'.DIR_PAGES.'cerrar.sesion.php">Cerrar sesión <b class="glyphicon glyphicon-log-out"></b></a></li>
                             </ul>
                           </li>
                         </ul>
@@ -200,7 +200,7 @@ class BootstrapSestue extends Templates {
                           <span class="icon-bar"></span>
                           <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="'.DIR_PAGES.'index.php" title="Inicio">'.APP_NAME.'</a>
+                        <a class="navbar-brand" href="'.DIR_PAGES.'index.php" title="Inicio"><span class="glyphicon glyphicon-home"></span> '.APP_NAME.'</a>
                       </div>
                       <div class="collapse navbar-collapse">
                         <ul class="nav navbar-nav">
@@ -223,7 +223,7 @@ class BootstrapSestue extends Templates {
                           <span class="icon-bar"></span>
                           <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="'.DIR_PAGES.'index.php" title="Inicio">'.APP_NAME.'</a>
+                        <a class="navbar-brand" href="'.DIR_PAGES.'index.php" title="Inicio"><span class="glyphicon glyphicon-home"></span> '.APP_NAME.'</a>
                       </div>
                       <div class="collapse navbar-collapse">
                         <ul class="nav navbar-nav">
@@ -246,7 +246,7 @@ class BootstrapSestue extends Templates {
                           <span class="icon-bar"></span>
                           <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="'.DIR_PAGES.'index.php" title="Inicio">'.APP_NAME.'</a>
+                        <a class="navbar-brand" href="'.DIR_PAGES.'index.php" title="Inicio"><span class="glyphicon glyphicon-home"></span> '.APP_NAME.'</a>
                       </div>
                       <div class="collapse navbar-collapse">
                         <ul class="nav navbar-nav">
@@ -306,7 +306,7 @@ class BootstrapSestue extends Templates {
             $this->setTitle($pageTitle);
             $this->setHeaders();
             $this->html .= '
-                        <div class="panel panel-warning" style="width:20%">
+                        <div class="panel panel-warning" style="width:300px;margin:auto;">
                             <div class="panel-heading">
                                 <h3 class="panel-title">No puede ver contenido de la página</h3>
                             </div>

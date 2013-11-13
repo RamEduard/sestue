@@ -8,15 +8,8 @@
 	$db = Db::getInstance();
 	#$index = Index::getInstance();
 	$template = Templates::getInstance($_SESSION['estilo']);
-	if ($_SESSION['objeto'])
-		$usuarioSesion = $_SESSION['objeto'];
 	
-	if(!$_SESSION['objeto']){
-		header("location:inicio.sesion.php");
-	}
-	else if($usuarioSesion->existeUsuario()){
 		//Obtener array con datos del usuario
-		$datosUser = $usuarioSesion->getUsuarioSesion();
 		//Armar el html
 		$mensaje = '
         <h2>Soporte técnico a usuarios y equipos II</h2>
@@ -27,11 +20,5 @@
 		//salida html
 		#$index->construirHtml("SESTUE | Soporte Técnico a Usuarios y Equipos II", $datosUser[1], $mensaje, $datosUser[2]);
 		print $template->getPage('SESTUE | Entrar', $mensaje);
-	}
-	else
-	{
-		echo "<script>
-				location.href='inicio.sesion.php';
-			 </script>";
-	}
+
 ?>

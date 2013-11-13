@@ -8,29 +8,15 @@
 	$db = Db::getInstance();
 	#$index = Index::getInstance();
 	$template = Templates::getInstance($_SESSION['estilo']);
-	if ($_SESSION['objeto'])
-		$usuarioSesion = $_SESSION['objeto'];
 	
-	if(!$_SESSION['objeto']){
-		header("location:inicio.sesion.php");
-	}
-	else if($usuarioSesion->existeUsuario()){
-		//Obtener array con datos del usuario
-		$datosUser = $usuarioSesion->getUsuarioSesion();
-		//Armar el html
-		$mensaje = '
-        <h2>Soporte técnico a usuarios y equipos I</h2>
-        <p>Hola! Bienvenidos al Software Educativo: Soporte Tecnico a Usuarios y Equipos (SESTUE).</p>
+	//Armar el html
+	$mensaje = '
+   	 	<h2>Soporte técnico a usuarios y equipos I</h2>
+	    <p>Hola! Bienvenidos al Software Educativo: Soporte Tecnico a Usuarios y Equipos (SESTUE).</p>
         <p>En esta aplicacion aprendera como realizar un trabajo de investigacion, a traves de las normas mas conocidas para trabajos de investigacion y tesis UPEL y APA, y el Manual del Colegio Universitario Francisco de Miranda.</p>
         <p>En el menu de arriba contiene de manera general lo que integra y aborda SESTUE </p>
 		';
-		//salida html
-		print $template->getPage('SESTUE | Entrar', $mensaje);
-	}
-	else
-	{
-		echo "<script>
-				location.href='inicio.sesion.php';
-			 </script>";
-	}
+	//salida html
+	print $template->getPage('SESTUE | Entrar', $mensaje);
+	
 ?>

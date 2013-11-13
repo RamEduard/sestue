@@ -5,7 +5,8 @@
     require("../lib/config/config.php");
 	//Objetos Db y Html
 	$db = Db::getInstance();
-	$index = Index::getInstance();
+	#$index = Index::getInstance();
+	$template = Templates::getInstance($_SESSION['estilo']);
 	//Consultar si existen usuarios nuevos ademas del administrador
 	$sql = "SELECT c_alias_pk FROM t_usuarios";
 	$usuarios = $db->select($sql);
@@ -13,28 +14,25 @@
 	if (!$usuarios[1]){
 		header('location:registrousuario.php');
 	}
-	else if ($_SESSION['objeto']){
-		header('location:index.php');
-	}	
 	else if($_GET["user"] && $_GET["ps"]){
 		$mensaje = '    	
 			<h2 align="center">Nueva contraseña</h2>
 			<center>
-			<form method="post" action="">
+			<form method="post" action="" autocomplete="off" class="form-signin">
 			<table border="2" rules="no">
 				<tr>
 					<td>
-						<input type="password" name="pass" onkeypress="return permite(event, 3)" placeholder="Introduce una nueva contraseña" required autofocus maxlength=8/>
+						<input class="form-control" type="password" name="pass" onkeypress="return permite(event, 3)" placeholder="Introduce una nueva contraseña" required autofocus maxlength=8/>
 					</td>
 				</tr>
 				<tr>
 					<td>
-						<input type="password" name="pass2" onkeypress="return permite(event, 3)" placeholder="Vuelve a introducir la nueva contraseña" required maxlength=8 onchange="validaPass()"/>
+						<input class="form-control" type="password" name="pass2" onkeypress="return permite(event, 3)" placeholder="Vuelve a introducir la nueva contraseña" required maxlength=8 onchange="validaPass()"/>
 					</td>
 				</tr>
 				<tr>
 					<td align="center">
-						<input type="submit" value="Guardar" name="guardar" />
+						<button type="submit" class="btn btn-primary" name="guardar">Guardar</button>
 					</td>
 				</tr>
 			</table>
@@ -46,21 +44,21 @@
 		$mensaje = '    	
 			<h2 align="center">Recordar contraseña</h2>
 			<center>
-			<form method="post" action="">
+			<form method="post" action="" autocomplete="off" class="form-signin">
 			<table border="2" rules="no">
 				<tr>
 					<td>
-						<input type="text" name="user" onkeypress="return permite(event, 2)" placeholder="Nombre/Alias de usuario" required autofocus maxlength=10/>
+						<input class="form-control" type="text" name="user" onkeypress="return permite(event, 2)" placeholder="Nombre/Alias de usuario" required autofocus maxlength=10/>
 					</td>
 				</tr>
 				<tr>
 					<td>
-						<input type="text" name="psecreta" onkeypress="return permite(event, 2)" placeholder="Palabra secreta" required maxlength=32 />
+						<input class="form-control" type="text" name="psecreta" onkeypress="return permite(event, 2)" placeholder="Palabra secreta" required maxlength=32 />
 					</td>
 				</tr>
 				<tr>
 					<td align="center">
-						<input type="submit" value="Validar" name="recordar" />
+						<button type="submit" class="btn btn-primary" name="recordar">Validar</button>
 					</td>
 				</tr>
 			</table>
@@ -68,7 +66,8 @@
 			</center>
 		';
 	}
-	$index->construirHtml("SESTUE | Recordar", 1, $mensaje, "");
+	#$index->construirHtml("SESTUE | Recordar", 1, $mensaje, "");
+	print $template->getPage("SESTUE | Recordar clave de usuario", $mensaje, 'recordar');
 	//*************************************************************
 	//print_r($usuarios);
 
