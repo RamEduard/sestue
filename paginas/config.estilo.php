@@ -6,7 +6,8 @@
 
 	//Objetos a usar en el archivo
 	$db = Db::getInstance();
-	$index = Index::getInstance();
+	#$index = Index::getInstance();
+	$template = Templates::getInstance($_SESSION['estilo']);
 	if ($_SESSION['objeto'])
 		$usuarioSesion = $_SESSION['objeto'];
 
@@ -25,11 +26,8 @@
 		<form method="post">
 			<select name="estilo">
 				<option selected value="">Seleccione</option>
-				<option value="default">Predeterminado (recomendado)</option>
-				<option value="azul">Azul (recomendado)</option>
-				<option value="azul-default">Azul ligero</option>
-				<option value="verde">Verde (no recomendado)</option>
-				<option value="gris">Gris (no recomendado)</option>
+				<option value="bootstrap">Predeterminado (recomendado)</option>
+				<option value="">Aries (Aun no configurado)</option>
 			</select>
 			<input type="submit" name="aceptar" value="Aceptar" />
 		</form>
@@ -50,5 +48,6 @@
 		}
 	}
 	//Mostrar Html
-	$index->construirHtml("SESTUE | Principal", $datosUser[1], $mensaje, $datosUser[2]);
+	#$index->construirHtml("SESTUE | Principal", $datosUser[1], $mensaje, $datosUser[2]);
+	print $template->getPage('SESTUE | Entrar', $mensaje);
 ?>

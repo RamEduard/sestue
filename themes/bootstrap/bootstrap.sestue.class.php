@@ -99,6 +99,7 @@ class BootstrapSestue extends Templates {
 						    <![endif]-->
                 <script src="' . $this->dir_path . 'js/jquery.min.js"></script>
                 <script src="' . $this->dir_path . 'js/bootstrap.min.js"></script>
+                <script type="text/javascript" src="/sestue/lib/js/restringirCaracteres.js"></script>
 						</head>
 						<body>
 						';
@@ -130,7 +131,7 @@ class BootstrapSestue extends Templates {
 							            <li title="Soporte Técnico a Usuarios y Equipos I"><a href="'.DIR_PAGES.'stuei.php">STUE I</a></li>
 							            <li title="Soporte Técnico a Usuarios y Equipos II"><a href="'.DIR_PAGES.'stueii.php">STUE II</a></li>
 							            <li title="Soporte Técnico a Usuarios y Equipos III"><a href="'.DIR_PAGES.'stueiii.php">STUE III</a></li>
-                          <li title="Buscar..."><a href="'.DIR_PAGES.'stueiii.php">Preguntas frecuentes</a></li>
+                          <li title="Buscar..."><a href="'.DIR_PAGES.'preg-resp.php">Preguntas frecuentes</a></li>
 							          </ul>
                         <ul class="nav navbar-nav pull-right">
                           <li class="dropdown">
@@ -246,7 +247,7 @@ class BootstrapSestue extends Templates {
 
     private function setFooter($contentHtml = null) {
         $this->html .= '
-                                <footer>
+                                <!--<footer>
                                     <div class="row">
                                       <div class="col-lg-12">
 
@@ -266,7 +267,7 @@ class BootstrapSestue extends Templates {
                                       </div>
                                     </div>
 
-                                  </footer>
+                                  </footer>-->
                               </div><!-- /.container -->
                         </body>
                       ';

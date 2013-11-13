@@ -6,7 +6,8 @@
 
 	//Hago instancia las clases Db y Html
 	$db = Db::getInstance();
-	$index = Index::getInstance();
+	#$index = Index::getInstance();
+	$template = Templates::getInstance($_SESSION['estilo']);
 	if ($_SESSION['objeto'])
 		$usuarioSesion = $_SESSION['objeto'];
 	
@@ -24,7 +25,7 @@
         <p>En el menu de arriba contiene de manera general lo que integra y aborda SESTUE </p>
 		';
 		//salida html
-		$index->construirHtml("SESTUE | Soporte Técnico a Usuarios y Equipos I", $datosUser[1], $mensaje, $datosUser[2]);
+		print $template->getPage('SESTUE | Entrar', $mensaje);
 	}
 	else
 	{

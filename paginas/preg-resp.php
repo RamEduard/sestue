@@ -6,7 +6,8 @@
 
 	//Hago instancia las clases Db y Html
 	$db = Db::getInstance();
-	$index = Index::getInstance();
+	#$index = Index::getInstance();
+	$template = Templates::getInstance($_SESSION['estilo']);
 	if ($_SESSION['objeto'])
 		$usuarioSesion = $_SESSION['objeto'];
 	
@@ -39,5 +40,6 @@
 	if (isset($_POST["buscar"])){
 		$formPregHtml = "Busqueda";
 	}
-	$index->construirHtml("SESTUE| Preguntas", $datosUser[1], $formPregHtml, $datosUser[2]);
+	#$index->construirHtml("SESTUE| Preguntas", $datosUser[1], $formPregHtml, $datosUser[2]);
+	print $template->getPage('SESTUE | Preguntas', $formPregHtml);
 ?>

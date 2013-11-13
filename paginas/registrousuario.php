@@ -6,7 +6,8 @@
 
 	//Objetos que seran usados en el archivo
 	$db = Db::getInstance();
-	$index = Index::getInstance();
+	#$index = Index::getInstance();
+	$template = Templates::getInstance($_SESSION['estilo']);
 	//Construccion del formulario de Registro de usuario
 	$formRegistroUser = new Formulario("registro-usuario","../controllers/registro.usuario.accion.php","post",0,"registro-usuario",0);
 	$formRegistroUser->tab(3);
@@ -77,5 +78,6 @@
 	$formRegistroUserHtml = $formRegistroUser->obtenerHtml();
 
 	//Salida del html
-	$index->construirHtml("SESTUE | Registrarse", 1, $formRegistroUserHtml, "");
+	#$index->construirHtml("SESTUE | Registrarse", 1, $formRegistroUserHtml, "");
+	print $template->getPage('SESTUE | Entrar', $formRegistroUserHtml, 'registrarse');
 ?>

@@ -7,7 +7,8 @@
     require("../lib/config/config.php");
 	//Hago instancia las clases Db y Html
 	$db = Db::getInstance();
-	$index = Index::getInstance();
+	#$index = Index::getInstance();
+	$template = Templates::getInstance($_SESSION['estilo']);
 	if ($_SESSION['objeto'])
 		$usuarioSesion = $_SESSION['objeto'];
 	
@@ -58,7 +59,8 @@
 			</table>
         </form>
 		';
-		$index->construirHtml("SESTUE| Principal", $datosUser[1], $mensaje, $datosUser[2]);
+		#$index->construirHtml("SESTUE| Principal", $datosUser[1], $mensaje, $datosUser[2]);
+		print $template->getPage('SESTUE | Entrar', $mensaje);
 	}
 	else
 	{
