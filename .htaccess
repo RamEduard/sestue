@@ -1,6 +1,4 @@
 RewriteEngine on
 Options All -Indexes
-# Make PHP code look like unknown types
-AddType application/x-httpd-php .sestue
-ErrorDocument 403 /sestue/paginas/error/403.sestue
-ErrorDocument 404 /sestue/paginas/error/404.sestue
+ErrorDocument 403 /sestue/paginas/error/403.php
+ErrorDocument 404 /sestue/paginas/error/404.php

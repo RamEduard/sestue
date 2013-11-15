@@ -27,6 +27,9 @@
 		}
 	}
 	else{
-		header("location:../paginas/ejemplos/crear.actividad.php");
+		echo "<script>
+					alert('Ningún dato fue enviado al servidor!'); 
+					location.href='../paginas/ejemplos/crear.actividad.php'
+				  </script>";
 	}
 ?>

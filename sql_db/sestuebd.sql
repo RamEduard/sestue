@@ -92,7 +92,7 @@ CREATE TABLE IF NOT EXISTS `t_usuarios` (
 
 INSERT INTO `t_usuarios` (`c_cedula_pk`, `c_carnet_pk`, `c_nombres`, `c_apellidos`, `c_alias_pk`, `c_clave`, `c_palabra_secreta`, `c_rol`, `c_estilo_css_pag`) VALUES
 (1, 1, 'Administrador', 'del Sistema', 'admin', '21232f297a57a5a743894a0e4a801fc3', 'admin', 5, ''),
-(23658013, 110300775, 'Ramon', 'Serrano', 'ramon', '266575d3c2b8a34f83817458f96152b1', 'ramon', 3, 'default');
+(23658013, 110300775, 'Ramon', 'Serrano', 'ramon', '266575d3c2b8a34f83817458f96152b1', 'ramon', 3, 'bootstrap');
 
 --
 -- Restricciones para tablas volcadas

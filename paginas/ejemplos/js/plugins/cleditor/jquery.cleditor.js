@@ -52,7 +52,7 @@
       docCSSFile:   // CSS file used to style the document contained within the editor
                     "", 
       bodyStyle:    // style to assign to document body contained within the editor
-                    "margin:10px; font:10pt Arial,Verdana; cursor:text"
+                    "margin:10px; font:10pt Arial,Verdana; cursor:text; background-color:rgba(0,0,0,.05)"
     },
 
     // Define all usable toolbar buttons - the init string property is 

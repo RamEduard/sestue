@@ -70,7 +70,7 @@ form{margin: 0px;}
     
 
     /* Body */
-    .body{position: relative; margin-left: 250px; padding: 0px 0px 0px 20px;}    
+    .body{position: relative; margin-left: 50px; margin-right: 50px; padding: 0px 0px 0px 20px;}    
         
         /* body navigation */
         .body .navigation{padding: 10px 0px 25px; float: right; margin: 0px; list-style: none; display: block; position: relative;}

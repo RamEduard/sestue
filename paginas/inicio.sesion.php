@@ -7,11 +7,6 @@
 	$db = Db::getInstance();
 	#$index = Index::getInstance();
 	$template = Templates::getInstance($_SESSION['estilo']);
-	if ($_SESSION['objeto']){
-		$usuarioSesion = $_SESSION['objeto'];
-		if($usuarioSesion->existeUsuario()) 
-			header('location:index.php');
-	}
 
 	//Consultar si existen usuarios nuevos ademas del administrador
 	$sql = "SELECT c_alias_pk FROM t_usuarios";
@@ -19,6 +14,9 @@
 	
 	if (!$usuarios[1]){
 		header('location:registrousuario.php');
+	}
+	elseif($_SESSION['objeto']){
+		header("location:index.php");
 	}
 	else{
 		$mensaje='

@@ -45,4 +45,7 @@
 				";
 		}
 	}
+	else{
+		header("location:../paginas/registrousuario.php");
+	}
 ?>

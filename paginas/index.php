@@ -9,8 +9,6 @@
 	$db = Db::getInstance();
 	#$index = Index::getInstance();
 	$template = Templates::getInstance($_SESSION['estilo']);
-	if ($_SESSION['objeto'])
-		$usuarioSesion = $_SESSION['objeto'];
 
 	//Consultar si existen usuarios nuevos ademas del administrador
 	$sql = "SELECT c_alias_pk FROM t_usuarios";

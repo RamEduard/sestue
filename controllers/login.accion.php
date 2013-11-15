@@ -35,4 +35,7 @@
 		}
 		
 	}
+	else{
+		header("location:../paginas/index.php");
+	}
 ?>

@@ -3,81 +3,78 @@
 	# Con este archivo se evita requerir las clases desde los archivos
 	# y hacer session_start()
     require("../lib/config/config.php");
+	
+	if($_SESSION['objeto']){
+		header("location:index.php");
+	}
+	else{
+		//Objetos que seran usados en el archivo
+		$db = Db::getInstance();
+		#$index = Index::getInstance();
+		$template = Templates::getInstance($_SESSION['estilo']);
+		//Construccion del formulario de Registro de usuario
+		$mensaje = '
+			<form name="registro-usuario" action="../controllers/registro.usuario.accion.php" method="post" id="registro-usuario" style="min-width:300px;max-width:500px;margin:auto">			
+				<fieldset > <legend align="center">
+				<style type="text/css">
+					.input-group-addon{
+						width:200px;
+						text-align:left;
+					}
+					input[type="text"]{
+						width:300px;
+					}
+				</style>
+				<h3>Registrar nuevo usuario</h3></legend>
+					<div class="input-group">
+					  <span class="input-group-addon">Usuario</span>
+					  <input  type="text" name="user" title="Solo letras. Ej.: UsuarioEjemplo" class="form-control" id="input-text" onkeypress="return permite(event, 2)" autofocus required />
+					</div>
+					<div class="input-group">
+					  <span class="input-group-addon">Clave</span>
+					  <input  type="password" name="password" title="Solo letras y numeros. Ej.: Usu4r1o0" class="form-control" id="p" maxlength=8  onkeypress="return permite(event, 3)" required />
+					</div>
+					<div class="input-group">
+					  <span class="input-group-addon">Confirme su clave</span>
+					  <input  type="password" name="password2" title="Introduzca su clave nuevamente" class="form-control" id="p2" maxlength=8  onkeypress="return permite(event, 3)" required />
+					</div>
+					<div class="input-group">
+					  <span class="input-group-addon">Palabra secreta</span>
+					  <input  type="text" name="psecreta" title="Palabra sin simbolos para recordar su clave" class="form-control" id="input-text" onkeypress="return permite(event, 2)" required />
+					</div>
+					<div class="input-group">
+					  <span class="input-group-addon">Nombre(s)</span>
+					  <input  type="text" name="names" title="Introduzca su(s) nombre(s)" class="form-control" id="input-text" onkeypress="return permite(event, 2)" required />
+					</div>
+					<div class="input-group">
+					  <span class="input-group-addon">Apellido(s)</span>
+					  <input  type="text" name="lastname" title="Introduzca su(s) apellido(s)" class="form-control" id="input-text" onkeypress="return permite(event, 2)" required />
+					</div>
+					<div class="input-group">
+					  <span class="input-group-addon">Cedula/Pasaporte</span>
+					  <input  type="text" name="ci" title="Introduzca su numero de cedula/pasaporte" class="form-control" id="input-text" onkeypress="return permite(event, 1)" required />
+					</div>
+					<div class="input-group">
+					  <span class="input-group-addon">Carnet</span>
+					  <input  type="text" name="carnet" title="Introduzca su numero de carnet" class="form-control" id="input-text" maxlength=9 onkeypress="return permite(event, 1)" required />
+					</div>
+					<div class="input-group">
+					  <span class="input-group-addon">Rol</span>
+					  <select  name="rol" class="form-control" required>
+						<option value="">Seleccione<br>
+						<option value="3">Estudiante<br>
+						<option value="4">Profesor<br>
+					  </select>
+					</div>
+					<br>
+					<input type="submit" name="guardar" value="Guardar" title="form-control" class="btn btn-log btn-success btn-block" id="boton"/><br>
+				</fieldset>
+					<br>
+			</form>
+		';
 
-	//Objetos que seran usados en el archivo
-	$db = Db::getInstance();
-	#$index = Index::getInstance();
-	$template = Templates::getInstance($_SESSION['estilo']);
-	//Construccion del formulario de Registro de usuario
-	$formRegistroUser = new Formulario("registro-usuario","../controllers/registro.usuario.accion.php","post",0,"registro-usuario",'style="min-width:300px;max-width:500px;margin:auto"');
-	$formRegistroUser->tab(3);
-	$formRegistroUser->agregarLeyenda("<h3>Registrar nuevo usuario</h3>",0,0,"center");
-	$formRegistroUser->tab(3);
-	$formRegistroUser->agregarEtiqueta("Usuario: ", 0, "label");
-	$atributosExtraUser = 'onkeypress="return permite(event, 2)" autofocus required';
-	$formRegistroUser->agregarInput("text", "user", "", "Solo letras. Ej.: UsuarioEjemplo", "form-control", "input-text", $atributosExtraUser);
-	$formRegistroUser->ln(1);
-	$formRegistroUser->tab(4);
-	$formRegistroUser->agregarEtiqueta("Clave: ", 0, "label");
-	$atributosExtraPass = 'maxlength=8  onkeypress="return permite(event, 3)" required';
-	$formRegistroUser->agregarInput("password", "password", "", "Solo letras y numeros. Ej.: Usu4r1o0", "form-control", "p", $atributosExtraPass);
-	$formRegistroUser->ln(1);
-	$formRegistroUser->tab(4);
-	$formRegistroUser->agregarEtiqueta("Confirme su clave: ", 0, "label");
-	$formRegistroUser->agregarInput("password", "password2", "", "Introduzca su clave nuevamente", "form-control", "p2", $atributosExtraPass);
-	$formRegistroUser->ln(1);
-	$formRegistroUser->tab(4);
-	$formRegistroUser->agregarEtiqueta("Palabra secreta: ", 0, "label");
-	$atributosExtraInputs = 'onkeypress="return permite(event, 2)" required';
-	$formRegistroUser->agregarInput("text", "psecreta", "", "Palabra sin simbolos para recordar su clave", "form-control", "input-text", $atributosExtraInputs);
-	$formRegistroUser->ln(1);
-	$formRegistroUser->tab(4);
-	$formRegistroUser->agregarEtiqueta("Nombre(s): ", 0, "label");
-	$formRegistroUser->agregarInput("text", "names", "", "Introduzca su(s) nombre(s)", "form-control", "input-text", $atributosExtraInputs);
-	$formRegistroUser->ln(1);
-	$formRegistroUser->tab(4);
-	$formRegistroUser->agregarEtiqueta("Apellido(s): ", 0, "label");
-	$formRegistroUser->agregarInput("text", "lastname", "", "Introduzca su(s) apellido(s)", "form-control", "input-text", $atributosExtraInputs);
-	$formRegistroUser->ln(1);
-	$formRegistroUser->tab(4);
-	$formRegistroUser->agregarEtiqueta("Cedula/Pasaporte: ", 0, "label");
-	$atributosExtraCiPp = 'onkeypress="return permite(event, 1)" required';
-	$formRegistroUser->agregarInput("text", "ci", "", "Introduzca su numero de cedula/pasaporte", "form-control", "input-text", $atributosExtraCiPp);
-	$formRegistroUser->ln(1);
-	$formRegistroUser->tab(4);
-	$formRegistroUser->agregarEtiqueta("Carnet: ", 0, "label");
-	$atributosExtraCarnet = 'maxlength=9 onkeypress="return permite(event, 1)" required';
-	$formRegistroUser->agregarInput("text", "carnet", "", "Introduzca su numero de carnet", "form-control", "input-text", $atributosExtraCarnet);
-	$formRegistroUser->ln(1);
-	$formRegistroUser->tab(4);
-	$formRegistroUser->agregarEtiqueta("Rol: ", 0, "label");
-	$formRegistroUser->agregarSelect("rol","","form-control",0,"required");
-	$formRegistroUser->ln(1);
-	$formRegistroUser->tab(5);
-	$formRegistroUser->agregarOpcSel("","Seleccione");
-	$formRegistroUser->ln(1);
-	$formRegistroUser->tab(5);
-	$formRegistroUser->agregarOpcSel("3","Estudiante");
-	$formRegistroUser->ln(1);
-	$formRegistroUser->tab(5);
-	$formRegistroUser->agregarOpcSel("4","Profesor");
-	$formRegistroUser->ln(1);
-	$formRegistroUser->tab(4);
-	$formRegistroUser->cerrarSelect();
-	$formRegistroUser->ln(1);
-	$formRegistroUser->tab(4);
-	$formRegistroUser->agregarInput("submit","guardar","Guardar","form-control","btn btn-log btn-success btn-block","boton",0);
-	$formRegistroUser->ln(1);
-	$formRegistroUser->tab(4);
-	$formRegistroUser->cerrarLeyenda();
-	$formRegistroUser->ln(1);
-	$formRegistroUser->tab(3);
-	$formRegistroUser->cerrarFormulario();
-
-	//Se obtiene el Html del Formulario
-	$formRegistroUserHtml = $formRegistroUser->obtenerHtml();
-
-	//Salida del html
-	#$index->construirHtml("SESTUE | Registrarse", 1, $formRegistroUserHtml, "");
-	print $template->getPage('SESTUE | Entrar', $formRegistroUserHtml, 'registrarse');
+		//Salida del html
+		#$index->construirHtml("SESTUE | Registrarse", 1, $formRegistroUserHtml, "");
+		print $template->getPage('SESTUE | Entrar', $mensaje, 'registrarse');
+	}
 ?>

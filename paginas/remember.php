@@ -14,6 +14,9 @@
 	if (!$usuarios[1]){
 		header('location:registrousuario.php');
 	}
+	elseif($_SESSION['objeto']){
+		header("location:index.php");
+	}
 	else if($_GET["user"] && $_GET["ps"]){
 		$mensaje = '    	
 			<h2 align="center">Nueva contraseña</h2>
