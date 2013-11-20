@@ -86,7 +86,7 @@ class BootstrapSbAdmin extends Templates {
                             <link href="' . $this->dir_path . 'css/sb-admin.css" rel="stylesheet">
                             <link rel="stylesheet" href="' . $this->dir_path . 'font-awesome/css/font-awesome.min.css">
                             <!-- Page Specific CSS -->
-                            <!--<link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css">
+                            <!--<link rel="stylesheet" href="' . $this->dir_path . 'css/morris-0.4.3.min.css">
                             <!-- Bootstrap core JavaScript -->
                             <script src="' . $this->dir_path . 'js/jquery.min.js"></script>
                             <script src="' . $this->dir_path . 'js/bootstrap.js"></script>
@@ -143,11 +143,11 @@ class BootstrapSbAdmin extends Templates {
 		    </h2>
                     <div class="input-group">
                         <span class="input-group-addon">Usuario</span>
-                        <input  type="text" name="user" title="Solo letras. Ej.: UsuarioEjemplo" class="form-control" id="input-text" onkeypress="return permite(event, 1)" autofocus required />
+                        <input  type="text" name="user" title="Solo letras. Ej.: UsuarioEjemplo" class="form-control" id="input-text" pattern="[a-zA-Z0-9]+" autofocus required />
                     </div>
                     <div class="input-group">
                         <span class="input-group-addon">Clave&nbsp;&nbsp;&nbsp;</span>
-                        <input name="password" type="password" class="form-control" maxlength=8 onkeypress="return permite(event, 3)" required title="Ingrese su clave" />
+                        <input name="password" type="password" class="form-control" maxlength=8 pattern="[a-zA-Z0-9]+" required title="Ingrese su clave" />
                     </div>
 		    <label class="checkbox" onclick="location.href=\'remember.php\'" title="Haga click aqui para recordar su clave">Recordar contraseña</label>
 		    <button name="entrar" class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button>
