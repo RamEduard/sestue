@@ -27,7 +27,7 @@
 		';
 		//Mostrar Html
 		#$index->construirHtml("SESTUE | Principal", 1, $mensaje, 0);
-		print $template->getPage('SESTUE | Principal', $mensaje, 'inicio');
+		print $template->getPage('SESTUE | Principal', $mensaje);
 	}
 	
 ?>

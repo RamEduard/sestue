@@ -1,8 +1,8 @@
 <?php
-
 /**
  * Description of BootstrapSestue
- * @author Ramon Serrano <ramon_calle-88@hotmail.com>
+ *
+ * @author Ramón Serrano
  */
 class BootstrapSestue extends Templates {
 
@@ -110,11 +110,8 @@ class BootstrapSestue extends Templates {
      * Setear la variable menu para el html
      */
     private function setMenu( $exception = null ) {
-      if( !empty($this->objUser) and ( $exception == null or $exception == 'inicio' or $exception == 'login' or $exception == 'registrarse')){
-        $userData = $this->objUser->getUsuarioSesion();
-        switch ($userData[1]) {
-            case 3:
-                # Estudiante
+      if( $exception == null ){
+        
                 $this->html .= '
 								<div class="navbar navbar-default navbar-fixed-top">
 							      	<img src="'.$this->dir_path.'img/gobierno2.png" width="100%" height="53"/>
@@ -161,33 +158,12 @@ class BootstrapSestue extends Templates {
                           </li>
                           <li title="Buscar..."><a href="'.DIR_PAGES.'preg-resp.php">Preguntas frecuentes</a></li>
 							          </ul>
-                        <ul class="nav navbar-nav pull-right">
-                          <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">'.$userData[0].'<b class="caret"></b></a>
-                            <ul class="dropdown-menu">
-                              <li class="dropdown-header">'.$userData[2].'</li>
-                              <li><a href="'.DIR_PAGES.'editInfoUser.php">Editar mis datos <b class="glyphicon glyphicon-edit"></b></a></li>
-                              <li><a href="'.DIR_PAGES.'config.estilo.php">Configurar tema</a></li>
-                              <li class="divider"></li>
-                              <li><a href="'.DIR_PAGES.'cerrar.sesion.php">Cerrar sesión <b class="glyphicon glyphicon-log-out"></b></a></li>
-                            </ul>
-                          </li>
-                        </ul>
+                        
 							        </div><!--/.nav-collapse -->
 							      </div>
 							    </div>
 								';
-                break;
-            case 4:
-                # code...
-                break;
-            case 5:
-                # code...
-                break;
-            default:
-                # code...
-                break;
-        }
+                
       }
       elseif ($exception) {
         if($exception == 'login'){
@@ -305,26 +281,7 @@ class BootstrapSestue extends Templates {
     }
 
     public function getPage($pageTitle = null, $contentPage = null, $exception = null) {
-        if((empty($this->objUser) or $this->objUser == NULL)and $exception == null){
-            $this->__mainBootstrap();
-            $this->setTitle($pageTitle);
-            $this->setHeaders();
-            $this->html .= '
-                        <div class="panel panel-warning" style="width:300px;margin:auto;">
-                            <div class="panel-heading">
-                                <h3 class="panel-title">No puede ver contenido de la página</h3>
-                            </div>
-                            <div class="panel-body">
-                                Debe iniciar sesión para poder ver el contenido de esta página.<br>
-                                <button class="btn btn-primary" onclick="location.href=\'/sestue/paginas/inicio.sesion.php\'" style="float:right">Iniciar sesión</button>
-                            </div>
-                            
-                        </div>
-                        ';
-            $this->__endBootstrap();
-            return $this->html;
-        }
-        elseif (( !empty($pageTitle) and !empty($contentPage) ) or $exception){
+        if (( !empty($pageTitle) and !empty($contentPage) ) or $exception){
             $this->__mainBootstrap();
             $this->setTitle($pageTitle);
             $this->setHeaders();
@@ -339,4 +296,3 @@ class BootstrapSestue extends Templates {
     }
 
 }
-

@@ -110,7 +110,7 @@ class Bootstrap extends Templates {
      * Setear la variable menu para el html
      */
     private function setMenu( $exception = null ) {
-      if( !empty($this->objUser) and ( $exception == null or $exception == 'inicio' or $exception == 'login' or $exception == 'registrarse')){
+      if( $exception == null ){
         $userData = $this->objUser->getUsuarioSesion();
         switch ($userData[1]) {
             case 3:
