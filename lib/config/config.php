@@ -29,13 +29,13 @@ defined("USUARIO_BD")             || define("USUARIO_BD", "root");
 defined("PASS_BD")                || define('PASS_BD', 'ramon');
 defined("BD")                     || define('BD', 'sestuebd');
 
-defined("CLASS_DB")               || define('CLASS_DB', DIR . '/lib/clases/db.class.php');
-defined("CLASS_UsuarioSesion")    || define('CLASS_UsuarioSesion', DIR . '/lib/clases/usuario.sesion.class.php');
-defined("CLASS_Formulario")       || define('CLASS_Formulario', DIR . '/lib/clases/formulario.class.php');
-defined("CLASS_Templates")        || define('CLASS_Templates', DIR . '/lib/clases/templates.class.php');
-defined("CLASS_BOOTSTRAP_SESTUE") || define('CLASS_BOOTSTRAP_SESTUE', DIR . '/themes/bootstrap/bootstrap.sestue.class.php');
-defined("CLASS_BOOTSTRAP_SBADMIN") || define('CLASS_BOOTSTRAP_SBADMIN', DIR . '/themes/bootstrap-sb-admin/bootstrap.sbadmin.class.php');
-defined("CLASS_MODELS")           || define("CLASS_MODELS", DIR . "/lib/clases/model/class.models.php");
+defined("CLASS_DB")               || define('CLASS_DB', DIR . 'lib/clases/db.class.php');
+defined("CLASS_UsuarioSesion")    || define('CLASS_UsuarioSesion', DIR . 'lib/clases/usuario.sesion.class.php');
+defined("CLASS_Formulario")       || define('CLASS_Formulario', DIR . 'lib/clases/formulario.class.php');
+defined("CLASS_Templates")        || define('CLASS_Templates', DIR . 'lib/clases/templates.class.php');
+defined("CLASS_BOOTSTRAP_SESTUE") || define('CLASS_BOOTSTRAP_SESTUE', DIR . 'themes/bootstrap/bootstrap.sestue.class.php');
+defined("CLASS_BOOTSTRAP_SBADMIN") || define('CLASS_BOOTSTRAP_SBADMIN', DIR . 'themes/bootstrap-sb-admin/bootstrap.sbadmin.class.php');
+defined("CLASS_MODELS")           || define("CLASS_MODELS", DIR . "lib/clases/model/class.models.php");
 
 require(CLASS_DB);
 require(CLASS_UsuarioSesion);
