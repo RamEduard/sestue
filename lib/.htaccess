@@ -1,4 +1,0 @@
-RewriteEngine on
-Options -All
-ErrorDocument 403 /sestue/paginas/error/403.php
-ErrorDocument 404 /sestue/paginas/error/404.php

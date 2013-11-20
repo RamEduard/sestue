@@ -35,4 +35,3 @@
 	#$index->construirHtml("SESTUE | Entrar", 1, $formLoginHtml, "");
 	print $template->getPage('SESTUE | Entrar', $mensaje, 'login');
 	//*************************************************************	
-?>

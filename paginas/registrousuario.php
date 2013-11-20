@@ -14,7 +14,7 @@
 		$template = Templates::getInstance($_SESSION['estilo']);
 		//Construccion del formulario de Registro de usuario
 		$mensaje = '
-			<form name="registro-usuario" action="../controllers/registro.usuario.accion.php" method="post" id="registro-usuario" style="min-width:300px;max-width:500px;margin:auto">			
+			<form name="registro-usuario" action="../controllers/registro.usuario.accion.php" method="post" id="registro-usuario" style="min-width:300px;max-width:400px;margin:auto">			
 				<fieldset > <legend align="center">
 				<style type="text/css">
 					.input-group-addon{
@@ -67,7 +67,7 @@
 					  </select>
 					</div>
 					<br>
-					<input type="submit" name="guardar" value="Guardar" title="form-control" class="btn btn-log btn-success btn-block" id="boton"/><br>
+					<input type="submit" name="guardar" value="Guardar" title="form-control" class="btn btn-log btn-success" id="boton"/><br>
 				</fieldset>
 					<br>
 			</form>
