@@ -15,9 +15,6 @@
 	if (!$usuarios[1]){
 		header('location:registrousuario.php');
 	}
-	elseif($_SESSION['objeto']){
-		header("location:index.php");
-	}
 	else{
 		$mensaje='
 			<form class="form-signin" action="../controllers/login.accion.php" method=post style="width:300px; margin:auto;" autocomplete="off">
@@ -35,3 +32,4 @@
 	#$index->construirHtml("SESTUE | Entrar", 1, $formLoginHtml, "");
 	print $template->getPage('SESTUE | Entrar', $mensaje, 'login');
 	//*************************************************************	
+?>

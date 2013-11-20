@@ -22,21 +22,11 @@ class BootstrapSestue extends Templates {
     private $html;
 
     /**
-     * @var $objUser
-     */
-    private $objUser;
-
-    /**
      * @param 
      * Crear objetos a traves de __construct
      */
     public function __construct() {
         $this->dir_path = $this->getHost() . "bootstrap/";
-        if ($this->objUser = $this->validateUser()) {
-            return true;
-        } else {
-            return false;
-        }
     }
 
     /**

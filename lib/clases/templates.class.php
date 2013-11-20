@@ -28,12 +28,11 @@ class Templates {
     }
 
     public function getInstance($theme = null) {
-        if ($theme != null) {
-            if ($theme == 'bootstrap') {
-                return new BootstrapSestue();
-            } else if ($theme == 'sb-admin') {
-                return new BootstrapSbAdmin();
-            }
+        
+        if ($theme == 'bootstrap') {
+            return new BootstrapSestue();
+        } else if ($theme == 'sb-admin') {
+            return new BootstrapSbAdmin();
         } else {
             return new BootstrapSestue();
         }

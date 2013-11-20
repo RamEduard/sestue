@@ -25,7 +25,7 @@ $contenido = '<div class="jumbotron">
     </p>
 
 </div>';
-print $t->getPage('SESTUE | Error 403', $contenido);
+print $t->getPage('SESTUE | Error 404', $contenido);
 #Para registrarse
 #print $t->getPage('ejemplo', $contenido, 'registrarse');
 #Para hacer login

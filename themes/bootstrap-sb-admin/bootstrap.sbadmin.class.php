@@ -111,7 +111,7 @@ class BootstrapSbAdmin extends Templates {
         }
     }
 
-    private function setContentPage($contentPage, $pageTitle) {
+    private function setContentPage($contentPage, $pageTitle, $exception = null) {
         if(!empty($this->objUser)){
             $this->html .= '
                     <div id="page-wrapper">
@@ -131,6 +131,9 @@ class BootstrapSbAdmin extends Templates {
                     <!-- /#page-wrapper -->
             ';
         }
+		else if($exception == "forbidden" or $exception == "not-found"){
+			$this->html .= $contentPage;
+		}
         else{
             $this->html .= '
                 <form class="form-signin" action="../controllers/login.accion.php" method=post style="width:300px; margin:auto;margin-top:100px" autocomplete="off">
@@ -140,7 +143,7 @@ class BootstrapSbAdmin extends Templates {
 		    </h2>
                     <div class="input-group">
                         <span class="input-group-addon">Usuario</span>
-                        <input  type="text" name="user" title="Solo letras. Ej.: UsuarioEjemplo" class="form-control" id="input-text" pattern="^[a-zA-Z0-9ñÑ]$" autofocus required />
+                        <input  type="text" name="user" title="Solo letras. Ej.: UsuarioEjemplo" class="form-control" id="input-text" onkeypress="return permite(event, 1)" autofocus required />
                     </div>
                     <div class="input-group">
                         <span class="input-group-addon">Clave&nbsp;&nbsp;&nbsp;</span>
@@ -165,7 +168,7 @@ class BootstrapSbAdmin extends Templates {
             $this->setTitle($pageTitle);
             $this->setHeaders();
             $this->setMenu($exception);
-            $this->setContentPage($contentPage, $pageTitle);
+            $this->setContentPage($contentPage, $pageTitle, $exception);
             $this->setFooter();
             $this->__endBootstrap();
             return $this->html;

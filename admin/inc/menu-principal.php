@@ -1,5 +1,6 @@
 <?php
-$usuarioSesion = UsuarioSesion::getInstance();
+$usuarioSesion = $_SESSION['objeto'];
+$usuario = $usuarioSesion->getUsuarioSesion();
 $menu = '
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -84,13 +85,13 @@ $menu = '
               </ul>
             </li>
             <li class="dropdown user-dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> '..' <b class="caret"></b></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> '.$usuario[2].' <b class="caret"></b></a>
               <ul class="dropdown-menu">
                 <li><a href="#"><i class="fa fa-user"></i> Profile</a></li>
                 <li><a href="#"><i class="fa fa-envelope"></i> Inbox <span class="badge">7</span></a></li>
                 <li><a href="#"><i class="fa fa-gear"></i> Settings</a></li>
                 <li class="divider"></li>
-                <li><a href="#"><i class="fa fa-power-off"></i> Log Out</a></li>
+                <li><a href="#" onclick="window.location = \''.DIR_ADMIN.'cerrar.sesion.sestue\'"><i class="fa fa-power-off"></i> Log Out</a></li>
               </ul>
             </li>
           </ul>

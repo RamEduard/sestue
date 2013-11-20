@@ -20,7 +20,7 @@
 		if (!$result_session){
 			echo "<script>
 					alert('Usuario no encontrado o no coincide con la clave');
-					location.href='../paginas/inicio.sesion.php';
+					location.href='../admin/index.sestue';
 			</script>";
 		}
 		else
@@ -31,11 +31,11 @@
 				$_SESSION['estilo'] = $result_session[0][5];
 			else
 				$_SESSION['estilo'] = 'default';
-			header("location:../paginas/index.php");
+			header("location:../admin/index.sestue");
 		}
 		
 	}
 	else{
-		header("location:../paginas/index.php");
+		header("location:../admin/index.sestue");
 	}
 ?>
