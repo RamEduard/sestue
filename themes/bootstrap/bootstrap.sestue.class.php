@@ -117,7 +117,7 @@ class BootstrapSestue extends Templates {
                 # Estudiante
                 $this->html .= '
 								<div class="navbar navbar-default navbar-fixed-top">
-							      	<img src="http://localhost/sestue/lib/img/gobierno2.png" width="100%" height="53"/>
+							      	<img src="'.$this->dir_path.'img/gobierno2.png" width="100%" height="53"/>
                       <div class="container">
 							        <div class="navbar-header">
 							          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -194,7 +194,7 @@ class BootstrapSestue extends Templates {
           # Login
           $this->html .= '
                 <div class="navbar navbar-default navbar-fixed-top">
-                    <img src="http://localhost/sestue/lib/img/gobierno2.png" width="100%" height="53"/>
+                    <img src="'.$this->dir_path.'img/gobierno2.png" width="100%" height="53"/>
                     <div class="container">
                       <div class="navbar-header">
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -218,7 +218,7 @@ class BootstrapSestue extends Templates {
           # Registrar usuario
           $this->html .= '
                 <div class="navbar navbar-default navbar-fixed-top">
-                    <img src="http://localhost/sestue/lib/img/gobierno2.png" width="100%" height="53"/>
+                    <img src="'.$this->dir_path.'img/gobierno2.png" width="100%" height="53"/>
                     <div class="container">
                       <div class="navbar-header">
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -242,7 +242,7 @@ class BootstrapSestue extends Templates {
           # Recordar clave de usuario
           $this->html .= '
                 <div class="navbar navbar-default navbar-fixed-top">
-                    <img src="http://localhost/sestue/lib/img/gobierno2.png" width="100%" height="53"/>                    
+                    <img src="'.$this->dir_path.'img/gobierno2.png" width="100%" height="53"/>                    
                     <div class="container">
                       <div class="navbar-header">
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
