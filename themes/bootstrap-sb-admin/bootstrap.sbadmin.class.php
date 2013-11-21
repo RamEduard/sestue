@@ -126,7 +126,9 @@ class BootstrapSbAdmin extends Templates {
                         </div>
                         </div>
                         <!-- /.row -->
-
+                        <div class="row">
+                            ' . $contentPage . '
+                        </div>
                     </div>
                     <!-- /#page-wrapper -->
             ';
