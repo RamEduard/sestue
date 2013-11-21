@@ -16,6 +16,6 @@
         <p>En el menu de arriba contiene de manera general lo que integra y aborda SESTUE </p>
 		';
 		//salida html
-		print $template->getPage('SESTUE | Entrar', $mensaje);
+		print $template->getPage('SESTUE | Soporte Técnico a Usuarios y Equipos III', $mensaje);
 
 ?>

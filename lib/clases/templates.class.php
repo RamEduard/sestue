@@ -1,36 +1,42 @@
 <?php
+
 /**
  * Description of BootstrapSestue
  * @author Ramon Serrano <ramon_calle-88@gmail.com
  */
-class Templates{
-    private function __clone() { }
-    public function __construct() { }
-    protected function getHost() {
-        return "http://".$_SERVER["HTTP_HOST"]."/sestue/themes/";
+class Templates {
+
+    private function __clone() {
+        
     }
-    protected function validateUser(){
+
+    public function __construct() {
+        
+    }
+
+    protected function getHost() {
+        return "http://" . $_SERVER["HTTP_HOST"] . "/sestue/themes/";
+    }
+
+    protected function validateUser() {
         $user = $_SESSION['objeto'];
-        if(!empty($user) or $user != NULL){
+        if (!empty($user) or $user != NULL) {
             return $user;
         }
         else
             return false;
     }
-    public function getInstance( $theme = null ){
-        switch ($theme) {
-            case 'bootstrap':
-                # Instancia de BootstrapSestue
+
+    public function getInstance($theme = null) {
+        if ($theme != null) {
+            if ($theme == 'bootstrap') {
                 return new BootstrapSestue();
-                break;
-            case 'aries':
-                # Instancia de AriesSestue
-                return new AriesSestue();
-                break;
-            default:
-                # si esta vacio
-                return new BootstrapSestue();
-                break;
+            } else if ($theme == 'sb-admin') {
+                return new BootstrapSbAdmin();
+            }
+        } else {
+            return new BootstrapSestue();
         }
     }
+
 }

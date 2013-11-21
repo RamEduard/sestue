@@ -1,19 +1,19 @@
 <?php
-	//Requerimiento de archivos de consulta y html
-	# Con este archivo se evita requerir las clases desde los archivos
-	# y hacer session_start()
-    require("../lib/config/config.php");
-	
-	if($_SESSION['objeto']){
-		header("location:index.php");
-	}
-	else{
-		//Objetos que seran usados en el archivo
-		$db = Db::getInstance();
-		#$index = Index::getInstance();
-		$template = Templates::getInstance($_SESSION['estilo']);
-		//Construccion del formulario de Registro de usuario
-		$mensaje = '
+
+//Requerimiento de archivos de consulta y html
+# Con este archivo se evita requerir las clases desde los archivos
+# y hacer session_start()
+require("../lib/config/config.php");
+
+if ($_SESSION['objeto']) {
+    header("location:index.php");
+} else {
+    //Objetos que seran usados en el archivo
+    $db = Db::getInstance();
+    #$index = Index::getInstance();
+    $template = Templates::getInstance($_SESSION['estilo']);
+    //Construccion del formulario de Registro de usuario
+    $mensaje = '
 			<form name="registro-usuario" action="../controllers/registro.usuario.accion.php" method="post" id="registro-usuario" style="min-width:300px;max-width:400px;margin:auto">			
 				<fieldset > <legend align="center">
 				<style type="text/css">
@@ -73,8 +73,8 @@
 			</form>
 		';
 
-		//Salida del html
-		#$index->construirHtml("SESTUE | Registrarse", 1, $formRegistroUserHtml, "");
-		print $template->getPage('SESTUE | Entrar', $mensaje, 'registrarse');
-	}
+    //Salida del html
+    #$index->construirHtml("SESTUE | Registrarse", 1, $formRegistroUserHtml, "");
+    print $template->getPage('SESTUE | Entrar', $mensaje, 'registrarse');
+}
 ?>

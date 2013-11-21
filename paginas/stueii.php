@@ -19,6 +19,6 @@
 		';
 		//salida html
 		#$index->construirHtml("SESTUE | Soporte Técnico a Usuarios y Equipos II", $datosUser[1], $mensaje, $datosUser[2]);
-		print $template->getPage('SESTUE | Entrar', $mensaje);
+		print $template->getPage('SESTUE | Soporte Técnico a Usuarios y Equipos II', $mensaje);
 
 ?>
