@@ -11,11 +11,18 @@ $menu = '
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.html">SB Admin</a>
+          <a class="navbar-brand" href="'.DIR_ADMIN.'index.sestue">Admin</a>
         </div>
-
+        
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-ex1-collapse">
+          <ul class="nav navbar-nav navbar-left navbar-user">
+            <li>
+              <a href="'.DIR_PAGES.'index.php" ><i class="fa fa-angle-left"></i> Ir a SESTUE</a>
+              
+            </li>
+            
+          </ul>
           <ul class="nav navbar-nav side-nav">
             <li><a href="index.html"><i class="fa fa-dashboard"></i> Dashboard</a></li>
             <li><a href="charts.html"><i class="fa fa-bar-chart-o"></i> Charts</a></li>
