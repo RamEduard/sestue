@@ -17,14 +17,14 @@ $menu = '
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-ex1-collapse">
           <ul class="nav navbar-nav side-nav">
-            <li><a href="index.html"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-            <li><a href="charts.html"><i class="fa fa-bar-chart-o"></i> Charts</a></li>
-            <li><a href="tables.html"><i class="fa fa-table"></i> Tables</a></li>
-            <li><a href="forms.html"><i class="fa fa-edit"></i> Forms</a></li>
-            <li><a href="typography.html"><i class="fa fa-font"></i> Typography</a></li>
-            <li><a href="bootstrap-elements.html"><i class="fa fa-desktop"></i> Bootstrap Elements</a></li>
-            <li><a href="bootstrap-grid.html"><i class="fa fa-wrench"></i> Bootstrap Grid</a></li>
-            <li class="active"><a href="blank-page.html"><i class="fa fa-file"></i> Blank Page</a></li>
+            <li><a href="'.$this->dir_path.'index.html"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+            <li><a href="'.$this->dir_path.'charts.html"><i class="fa fa-bar-chart-o"></i> Charts</a></li>
+            <li><a href="'.$this->dir_path.'tables.html"><i class="fa fa-table"></i> Tables</a></li>
+            <li><a href="'.$this->dir_path.'forms.html"><i class="fa fa-edit"></i> Forms</a></li>
+            <li><a href="'.$this->dir_path.'typography.html"><i class="fa fa-font"></i> Typography</a></li>
+            <li><a href="'.$this->dir_path.'bootstrap-elements.html"><i class="fa fa-desktop"></i> Bootstrap Elements</a></li>
+            <li><a href="'.$this->dir_path.'bootstrap-grid.html"><i class="fa fa-wrench"></i> Bootstrap Grid</a></li>
+            <li class="active"><a href="'.$this->dir_path.'blank-page.html"><i class="fa fa-file"></i> Blank Page</a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-caret-square-o-down"></i> Dropdown <b class="caret"></b></a>
               <ul class="dropdown-menu">

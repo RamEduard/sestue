@@ -26,7 +26,7 @@ $contenido = '<div class="jumbotron">
     </p>
 
 </div>';
-print $t->getPage('Error 403', $contenido, "forbidden");
+print $t->getPage('Error 403', $contenido);
 #Para registrarse
 #print $t->getPage('ejemplo', $contenido, 'registrarse');
 #Para hacer login

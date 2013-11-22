@@ -25,7 +25,7 @@ $contenido = '<div class="jumbotron">
     </p>
 
 </div>';
-print $t->getPage('Error 404', $contenido, "not-found");
+print $t->getPage('Error 404', $contenido);
 #Para registrarse
 #print $t->getPage('ejemplo', $contenido, 'registrarse');
 #Para hacer login
