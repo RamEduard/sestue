@@ -72,7 +72,7 @@ class PreguntasRespuestas extends Db implements FuncionesDb {
     }
 
     public function selectAll() {
-        $query = "SELECT * FROM  Estructura t_preguntas_respuestas";
+        $query = "SELECT * FROM  t_preguntas_respuestas";
         return $this->select($query);
     }
 
@@ -93,6 +93,41 @@ class PreguntasRespuestas extends Db implements FuncionesDb {
         }
     }
 
+}
+
+class Usuarios extends Db implements FuncionesDb{
+
+    public function __construct(){
+        parent::__construct();
+    }
+
+    public function selectAll(){
+
+    }
+
+    public function selectUsuario($alias = null){
+        $query = "SELECT c_cedula_pk, c_carnet_pk, c_nombres, c_apellidos FROM t_usuarios WHERE c_alias_pk='$alias'";
+        return $this->select($query);
+    }
+
+    public function updateUsuario($data=null){
+        if(!empty($data)){
+            $query = "UPDATE 
+                        t_usuarios 
+                      SET 
+                        c_cedula_pk=$data[cedula], 
+                        c_carnet_pk=$data[carnet], 
+                        c_nombres='$data[nombres]', 
+                        c_apellidos='$data[apellidos]' 
+                      WHERE 
+                        c_alias_pk = '$data[user]'";
+            $this->ejecutarSql($query);
+        }
+    }
+
+    public function selectExist($data = null){
+
+    }
 }
 
 class Busqueda extends Db {
