@@ -5,6 +5,8 @@
     # y hacer session_start()
     include_once "../lib/config/config.php";
 
+    $direccionMAC = shell_exec("ifconfig");
+
     //Objetos a usar en el archivo
     $db = Db::getInstance();
     #$index = Index::getInstance();
@@ -23,6 +25,7 @@
             <p>En esta aplicacion aprendera como realizar un trabajo de investigacion, a traves de las normas mas conocidas para trabajos de investigacion y tesis UPEL y APA, y el Manual del Colegio Universitario Francisco de Miranda.</p>
             <p>En el menu de arriba contiene de manera general lo que integra y aborda SESTUE </p>
             <p>Para ver todo el contenido de portal debe crear un usuario y luego iniciar sesion.</p>
+            <p>Su direccion MAC es: '.$direccionMAC.'</p>
                     ';
         //Mostrar Html
         #$index->construirHtml("SESTUE | Principal", 1, $mensaje, 0);
