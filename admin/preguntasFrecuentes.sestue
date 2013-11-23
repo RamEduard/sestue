@@ -1,5 +1,58 @@
 <?php
-    include "../lib/config/config.php";
+	
+	include "../lib/config/config.php";
     $template = Templates::getInstance("sb-admin");
-    print $template->getPage( "Preguntas Frecuentes", "Contenido" );
+	
+	$file = fopen(DIR_PAGES."preguntasRespuestasInc.html", 'r');
+	$contenido = fread($file, 8192);
+	fclose($file);
+
+	if (isset($_POST['editor'])) {
+		print_r($_POST['editor']);
+		$fileW = fopen(DIR."paginas/preguntasRespuestasInc.html", "w");
+		fwrite($fileW, $_POST['editor']);
+		fclose($fileW);
+		header("location:preguntasFrecuentes.sestue");
+	} else {
+		//echo stripslashes($_POST['editor']) ;
+	} 
+
+	#Archivos extras
+	$extras = '
+	<!-- jQuery and jQuery UI -->
+	<script src="http://'.$_SERVER["HTTP_HOST"].'/sestue/themes/bootstrap-sb-admin/js/elrte/jquery-1.6.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="http://'.$_SERVER["HTTP_HOST"].'/sestue/themes/bootstrap-sb-admin/js/elrte/jquery-ui-1.8.13.custom.min.js" type="text/javascript" charset="utf-8"></script>
+	<link rel="stylesheet" href="http://'.$_SERVER["HTTP_HOST"].'/sestue/themes/bootstrap-sb-admin/css/elrte/jquery-ui-1.8.13.custom.css" type="text/css" media="screen" charset="utf-8">
+
+	<!-- elRTE -->
+	<script src="http://'.$_SERVER["HTTP_HOST"].'/sestue/themes/bootstrap-sb-admin/js/elrte/elrte.min.js" type="text/javascript" charset="utf-8"></script>
+	<link rel="stylesheet" href="http://'.$_SERVER["HTTP_HOST"].'/sestue/themes/bootstrap-sb-admin/css/elrte/elrte.min.css" type="text/css" media="screen" charset="utf-8">
+
+	<!-- elRTE translation messages -->
+	<script src="http://'.$_SERVER["HTTP_HOST"].'/sestue/themes/bootstrap-sb-admin/js/elrte/elrte.es.js" type="text/javascript" charset="utf-8"></script>
+
+	<script type="text/javascript" charset="utf-8">
+		$().ready(function() {
+			var opts = {
+				cssClass : "el-rte",
+				lang     : "es",
+				height   : 450,
+				toolbar : "complete",
+				//toolbar  : "maxi",
+				cssfiles : ["http://'.$_SERVER["HTTP_HOST"].'/sestue/themes/bootstrap-sb-admin/css/elrte/elrte-inner.css"]
+			}
+			$("#editor").elrte(opts);
+		})
+	</script>
+	';
+	
+	$htmlPage = '
+	<form method="post" action="'.DIR_ADMIN.'preguntasFrecuentes.sestue">
+		<div id="editor">
+			'.$contenido.'
+		</div>
+	</form>
+	';
+
+	print $template->getPage( "Preguntas Frecuentes", $htmlPage.$extras );
 ?>
