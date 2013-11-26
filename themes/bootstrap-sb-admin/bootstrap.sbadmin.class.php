@@ -79,6 +79,8 @@ class BootstrapSbAdmin extends Templates {
                             <meta name="viewport" content="width=device-width, initial-scale=1.0">
                             <meta name="description" content="Softawre Educativo para Soporte Técnico a Usuarios y Equipos del Colegio Universitario Francisco de Miranda">
                             <meta name="author" content="Ramón Serrano">
+                            <!-- Icon -->
+                            <link href="' . $this->dir_path .'img/ico.png" rel="shortcut icon" type="image/png"/>
                             <!-- Bootstrap core CSS -->
                             <link href="' . $this->dir_path . 'css/bootstrap.css" rel="stylesheet">
 

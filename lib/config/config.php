@@ -6,7 +6,7 @@
  * @author Ramon Serrano <ramon_calle-88@hotmail.com>
  */
 //No ver errores de PHP
-error_reporting(E_ALL);
+error_reporting(0);
 //Variables de Base de Datos
 defined("DIR")                    || define('DIR', $_SERVER['DOCUMENT_ROOT'] . "/sestue/");
 defined("DIR_PAGES")              || define('DIR_PAGES', "http://".$_SERVER['HTTP_HOST']."/sestue/paginas/");

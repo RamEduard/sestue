@@ -68,7 +68,8 @@ class BootstrapSestue extends Templates {
 						    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 						    <meta name="description" content="Softawre Educativo para Soporte Técnico a Usuarios y Equipos del Colegio Universitario Francisco de Miranda">
 						    <meta name="author" content="Ramón Serrano">
-						    <link rel="shortcut icon" href="ico/favicon.png">
+						    <!-- Icon -->
+                <link href="' . $this->dir_path .'img/ico.png" rel="shortcut icon" type="image/png"/>
 
 						    <!-- Bootstrap core CSS -->
 						    <link href="' . $this->dir_path . 'css/bootstrap.css" rel="stylesheet">
@@ -85,7 +86,7 @@ class BootstrapSestue extends Templates {
 						    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 						    <!--[if lt IE 9]>
 						      <script src="' . $this->dir_path . 'js/html5shiv.js"></script>
-						      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+						      <script src="' . $this->dir_path . 'js/respond.min.js"></script>
 						    <![endif]-->
                 <script src="' . $this->dir_path . 'js/jquery.min.js"></script>
                 <script src="' . $this->dir_path . 'js/bootstrap.min.js"></script>
