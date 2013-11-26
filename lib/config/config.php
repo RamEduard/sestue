@@ -12,7 +12,7 @@ defined("DIR")                    || define('DIR', $_SERVER['DOCUMENT_ROOT'] . "
 defined("DIR_PAGES")              || define('DIR_PAGES', "http://".$_SERVER['HTTP_HOST']."/sestue/paginas/");
 defined("DIR_ADMIN")              || define('DIR_ADMIN', "http://".$_SERVER['HTTP_HOST']."/sestue/admin/");
 defined("APP_NAME")               || define("APP_NAME", "SESTUE");
-defined("APP_VERSION")		  || define("APP_VERSION", "1.0");
+defined("APP_VERSION")		  	  || define("APP_VERSION", "1.0");
 
 /*define("SERVIDOR_BD", "sql102.eshost.es");
 define("USUARIO_BD", "eshos_13988615");
