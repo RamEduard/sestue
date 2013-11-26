@@ -119,7 +119,7 @@ class BootstrapSestue extends Templates {
                           <li class="dropdown" title="Soporte Técnico a Usuarios y Equipos I">
                             <a href="#"class="dropdown-toggle" data-toggle="dropdown">STUE I<b class="caret"></b></a>
                             <ul class="dropdown-menu">
-                              <li><a href="' . DIR_PAGES . 'stuei.php">Ver modulo</a></li>
+                              <li><a href="' . DIR_PAGES . 'stuei.php">Ver Módulo</a></li>
                               <li class="divider"></li>
                               <li class="dropdown-header">Actividades</li>
                               <li><a href="#" onclick="document.getElementById(\'starter-template\').innerHTML = \'<iframe src=' . DIR_PAGES . 'ejemplos/crear.actividad.php width=100% height=600> \';">Crear Actividad</a></li>
@@ -129,7 +129,7 @@ class BootstrapSestue extends Templates {
 							            <li class="dropdown" title="Soporte Técnico a Usuarios y Equipos II">
                             <a href="#"class="dropdown-toggle" data-toggle="dropdown">STUE II<b class="caret"></b></a>
                             <ul class="dropdown-menu">
-                              <li><a href="' . DIR_PAGES . 'stueii.php">Ver modulo</a></li>
+                              <li><a href="' . DIR_PAGES . 'stueii.php">Ver Módulo</a></li>
                               <li class="divider"></li>
                               <li class="dropdown-header">Actividades</li>
                               <li><a href="#" onclick="document.getElementById(\'starter-template\').innerHTML = \'<iframe src=' . DIR_PAGES . 'ejemplos/crear.actividad.php width=100% height=600> \';">Crear Actividad</a></li>
@@ -139,7 +139,7 @@ class BootstrapSestue extends Templates {
 							            <li class="dropdown" title="Soporte Técnico a Usuarios y Equipos III">
                             <a href="#"class="dropdown-toggle" data-toggle="dropdown">STUE III<b class="caret"></b></a>
                             <ul class="dropdown-menu">
-                              <li><a href="' . DIR_PAGES . 'stueiii.php">Ver modulo</a></li>
+                              <li><a href="' . DIR_PAGES . 'stueiii.php">Ver Módulo</a></li>
                               <li class="divider"></li>
                               <li class="dropdown-header">Actividades</li>
                               <li><a href="#" onclick="document.getElementById(\'starter-template\').innerHTML = \'<iframe src=' . DIR_PAGES . 'ejemplos/crear.actividad.php width=100% height=600> \';">Crear Actividad</a></li>
@@ -280,7 +280,7 @@ class BootstrapSestue extends Templates {
             $this->__endBootstrap();
             return $this->html;
         } else {
-            throw new Exception("No se puede crear pagina sin el titulo o el contenido", 1);
+            throw new Exception("No se puede crear pagina sin el título o el contenido", 1);
         }
     }
 

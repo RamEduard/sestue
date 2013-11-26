@@ -26,7 +26,7 @@ defined("BD")                     || define('BD', 'n260m_13975387_sestuebd');*/
 
 defined("SERVIDOR_BD")            || define("SERVIDOR_BD", $_SERVER['HTTP_HOST']);
 defined("USUARIO_BD")             || define("USUARIO_BD", "root");
-defined("PASS_BD")                || define('PASS_BD', 'ramon');
+defined("PASS_BD")                || define('PASS_BD', '');
 defined("BD")                     || define('BD', 'sestuebd');
 
 defined("CLASS_DB")               || define('CLASS_DB', DIR . 'lib/clases/db.class.php');
