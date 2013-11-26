@@ -55,8 +55,8 @@ class BootstrapSbAdmin extends Templates {
     private function __mainBootstrap() {
         $this->html = '
                         <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-			<html lang="es">
-	';
+            <html lang="es">
+    ';
     }
 
     /**
@@ -68,7 +68,7 @@ class BootstrapSbAdmin extends Templates {
     }
 
     private function setTitle($pageTitle) {
-        $this->html .= "<title>" . APP_NAME . " | $pageTitle</title>";
+        $this->html .= "<title>Administración | $pageTitle</title>";
     }
 
     private function setHeaders($headerExtras = null) {
@@ -90,9 +90,22 @@ class BootstrapSbAdmin extends Templates {
                             <!-- Bootstrap core JavaScript -->
                             <script src="' . $this->dir_path . 'js/jquery.min.js"></script>
                             <script src="' . $this->dir_path . 'js/bootstrap.js"></script>
-			</head>
-			<body>
-	';
+                            <script type="text/javascript">
+                                $(document).ready( function(){
+                                    var url = document.URL;
+                                    var etiq = document.getElementsByTagName("li");
+                                    for (var i = 0; i < etiq.length; i++){
+                                        if(etiq[i].getElementsByTagName("a")[0].href == url){
+                                            var lista = document.getElementsByTagName("li")[i];
+                                            lista.className = "active";
+                                            break;
+                                        }
+                                    }
+                                });
+                            </script>
+            </head>
+            <body>
+    ';
     }
 
     /**
@@ -107,6 +120,11 @@ class BootstrapSbAdmin extends Templates {
         }
         else{
             include DIR."admin/inc/menu-login.php";
+            $this->html .= $menu;
+        }
+        if($exception == "ejemplo"){
+            $this->html .= '<div id="wrapper">';
+            include DIR."admin/inc/menu-ejemplo.php";
             $this->html .= $menu;
         }
     }
@@ -133,16 +151,16 @@ class BootstrapSbAdmin extends Templates {
                     <!-- /#page-wrapper -->
             ';
         }
-		else if($exception == "forbidden" or $exception == "not-found"){
-			$this->html .= $contentPage;
-		}
+        else if($exception == "forbidden" or $exception == "not-found"){
+            $this->html .= $contentPage;
+        }
         else{
             $this->html .= '
                 <form class="form-signin" action="../controllers/login.accion.php" method=post style="width:300px; margin:auto;margin-top:100px" autocomplete="off">
                     <h2 class="form-signin-heading">
-		      	<span class="glyphicon glyphicon-lock btn-lg"></span>
-		       	Entrar al sistema
-		    </h2>
+                <span class="glyphicon glyphicon-lock btn-lg"></span>
+                Entrar al sistema
+            </h2>
                     <div class="input-group">
                         <span class="input-group-addon">Usuario</span>
                         <input  type="text" name="user" title="Solo letras. Ej.: UsuarioEjemplo" class="form-control" id="input-text" pattern="[a-zA-Z0-9]+" autofocus required />
@@ -151,9 +169,9 @@ class BootstrapSbAdmin extends Templates {
                         <span class="input-group-addon">Clave&nbsp;&nbsp;&nbsp;</span>
                         <input name="password" type="password" class="form-control" maxlength=8 pattern="[a-zA-Z0-9]+" required title="Ingrese su clave" />
                     </div>
-		    <label class="checkbox" onclick="location.href=\'remember.php\'" title="Haga click aqui para recordar su clave">Recordar contraseña</label>
-		    <button name="entrar" class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button>
-		</form>
+            <label class="checkbox" onclick="location.href=\'remember.php\'" title="Haga click aqui para recordar su clave">Recordar contraseña</label>
+            <button name="entrar" class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button>
+        </form>
                 ';
         }
     }
