@@ -68,7 +68,7 @@ class BootstrapSbAdmin extends Templates {
     }
 
     private function setTitle($pageTitle) {
-        $this->html .= "<title>Administración | $pageTitle</title>";
+        $this->html .= "<title>" . APP_NAME . " | $pageTitle</title>";
     }
 
     private function setHeaders($headerExtras = null) {
@@ -90,19 +90,6 @@ class BootstrapSbAdmin extends Templates {
                             <!-- Bootstrap core JavaScript -->
                             <script src="' . $this->dir_path . 'js/jquery.min.js"></script>
                             <script src="' . $this->dir_path . 'js/bootstrap.js"></script>
-                            <script type="text/javascript">
-                                $(document).ready( function(){
-                                    var url = document.URL;
-                                    var etiq = document.getElementsByTagName("li");
-                                    for (var i = 0; i < etiq.length; i++){
-                                        if(etiq[i].getElementsByTagName("a")[0].href == url){
-                                            var lista = document.getElementsByTagName("li")[i];
-                                            lista.className = "active";
-                                            break;
-                                        }
-                                    }
-                                });
-                            </script>
 			</head>
 			<body>
 	';
@@ -120,11 +107,6 @@ class BootstrapSbAdmin extends Templates {
         }
         else{
             include DIR."admin/inc/menu-login.php";
-            $this->html .= $menu;
-        }
-        if($exception == "ejemplo"){
-            $this->html .= '<div id="wrapper">';
-            include DIR."admin/inc/menu-ejemplo.php";
             $this->html .= $menu;
         }
     }
