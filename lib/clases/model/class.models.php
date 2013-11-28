@@ -105,41 +105,30 @@ class Usuarios extends Db implements FuncionesDb{
 
     }
 
-    public function selectUsuario($alias = null){
-        $query = "SELECT c_cedula_pk, c_carnet_pk, c_nombres, c_apellidos FROM t_usuarios WHERE c_alias_pk='$alias'";
+    public function selectUsuario($alias = null, $password = null){
+        $query = "SELECT c_alias_pk, c_nombres, c_apellidos, c_rol FROM t_usuarios WHERE c_alias_pk='$alias'";
+        if($password != NULL)
+            $query .= "AND c_clave = '$password'";
         return $this->select($query);
     }
 
-    public function updateUsuario($data=null){
-        if(!empty($data)){
+    public function updateUsuario($alias = null, $name = null , $lastname = null){
+        if(!empty($alias)){
             $query = "UPDATE 
                         t_usuarios 
                       SET 
-                        c_cedula_pk=$data[cedula], 
-                        c_carnet_pk=$data[carnet], 
-                        c_nombres='$data[nombres]', 
-                        c_apellidos='$data[apellidos]' 
+                        c_nombres='$name', 
+                        c_apellidos='$lastname' 
                       WHERE 
-                        c_alias_pk = '$data[user]'";
-            $this->ejecutarSql($query);
+                        c_alias_pk = '$alias'";
+            if($this->ejecutarSql($query))
+                return true;
+            else
+                return false;
         }
     }
 
     public function selectExist($data = null){
 
     }
-}
-
-class Busqueda extends Db {
-
-    public function __contruct() {
-        parent::__construct();
-    }
-
-    public function selectBusqueda($palabras = null) {
-        if ($palabras != null) {
-            return $this->select(null);
-        }
-    }
-
 }

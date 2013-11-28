@@ -11,8 +11,7 @@ class Db {
     private $user = USUARIO_BD;
     private $password = PASS_BD;
     private $dataBase = BD;
-    private $link;
-    static $_instance;
+    private $handle;
 
     /* La función construct es privada para evitar que el objeto pueda ser creado mediante new */
 
@@ -29,24 +28,21 @@ class Db {
     //funcion encargada de crear, si es necesario, el objeto. Esta es la funcion que debemos
     //llamar desde fuera de la clase para instanciarla
     public static function getInstance() {
-        if (!(self::$_instance instanceof self)) {
-            self::$_instance = new self();
-        }
-        return self::$_instance;
+        return new self();
     }
 
     //funcion que realiza la conexion a la base de datos
     private function __connect() {
-        $this->link = mysql_connect($this->server, $this->user, $this->password) 
+        $this->handle = mysql_connect($this->server, $this->user, $this->password) 
             or die('<pre style="margin:auto;background:rgba(0,0,0,.1)">'.mysql_error().'</pre>');
-        mysql_select_db($this->dataBase, $this->link) 
+        mysql_select_db($this->dataBase, $this->handle) 
             or die('<pre style="margin:auto;background:rgba(0,0,0,.1)">'.mysql_error().'</pre>');
         @mysql_query("SET NAMES 'utf8'");
     }
 
     //funcion que realiza una consulta a la base de datos y devuelve el id
     public function ejecutarSql($sql) {
-        $query = mysql_query($sql, $this->link);
+        $query = mysql_query($sql, $this->handle);
         return $query;
     }
 

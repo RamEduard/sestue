@@ -9,7 +9,7 @@
     $contenido = fread($file, 8192);
     fclose($file);
 
-    $template = Templates::getInstance($_SESSION['estilo']);
+    $template = Templates::getInstance('bootstrap');
 
     //Armar el formulario
     

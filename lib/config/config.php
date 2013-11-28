@@ -6,7 +6,7 @@
  * @author Ramon Serrano <ramon_calle-88@hotmail.com>
  */
 //No ver errores de PHP
-error_reporting(0);
+error_reporting(E_ALL);
 //Variables de Base de Datos
 defined("DIR")                    || define('DIR', $_SERVER['DOCUMENT_ROOT'] . "/sestue/");
 defined("DIR_PAGES")              || define('DIR_PAGES', "http://".$_SERVER['HTTP_HOST']."/sestue/paginas/");
@@ -29,29 +29,16 @@ defined("USUARIO_BD")             || define("USUARIO_BD", "root");
 defined("PASS_BD")                || define('PASS_BD', 'ramon');
 defined("BD")                     || define('BD', 'sestuebd');
 
-defined("CLASS_DB")               || define('CLASS_DB', DIR . 'lib/clases/db.class.php');
-defined("CLASS_UsuarioSesion")    || define('CLASS_UsuarioSesion', DIR . 'lib/clases/usuario.sesion.class.php');
-defined("CLASS_Formulario")       || define('CLASS_Formulario', DIR . 'lib/clases/formulario.class.php');
-defined("CLASS_Templates")        || define('CLASS_Templates', DIR . 'lib/clases/templates.class.php');
-defined("CLASS_BOOTSTRAP_SESTUE") || define('CLASS_BOOTSTRAP_SESTUE', DIR . 'themes/bootstrap/bootstrap.sestue.class.php');
-defined("CLASS_BOOTSTRAP_SBADMIN") || define('CLASS_BOOTSTRAP_SBADMIN', DIR . 'themes/bootstrap-sb-admin/bootstrap.sbadmin.class.php');
-defined("CLASS_MODELS")           || define("CLASS_MODELS", DIR . "lib/clases/model/class.models.php");
-
-require(CLASS_DB);
-require(CLASS_UsuarioSesion);
-require(CLASS_Formulario);
-require(CLASS_Templates);
-require(CLASS_BOOTSTRAP_SESTUE);
-require(CLASS_BOOTSTRAP_SBADMIN);
-require(CLASS_MODELS);
+require_once DIR . 'lib/clases/db.class.php';
+require_once DIR . 'lib/clases/model/class.models.php';
+require_once DIR . 'lib/clases/usuario.sesion.class.php';
+require_once DIR . 'lib/clases/formulario.class.php';
+require_once DIR . 'lib/clases/templates.class.php';
+require_once DIR . 'themes/bootstrap/bootstrap.sestue.class.php';
+require_once DIR . 'themes/bootstrap-sb-admin/bootstrap.sbadmin.class.php';
+require_once DIR . "lib/clases/model/class.models.php";
 
 //Iniciar variables de sesion
 # Siempre se debera hacer despues de requerir los archivos
 session_start();
-//Configuracion de CSS
-if (!$_SESSION['estilo']) {
-    define('ESTILO_CSS', 'default');
-} else {
-    define('ESTILO_CSS', $_SESSION['estilo']);
-}
 ?>

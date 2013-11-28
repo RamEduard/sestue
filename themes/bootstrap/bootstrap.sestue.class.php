@@ -7,21 +7,6 @@
 class BootstrapSestue extends Templates {
 
     /**
-     * @var $instance
-     */
-    private static $instance;
-
-    /**
-     * @var $dir_path
-     */
-    private $dir_path;
-
-    /**
-     * @var $html
-     */
-    private $html;
-
-    /**
      * @param 
      * Crear objetos a traves de __construct
      */
@@ -97,7 +82,7 @@ class BootstrapSestue extends Templates {
     }
 
     /**
-     * @param $perfilUser
+     * @param $exception
      * Setear la variable menu para el html
      */
     private function setMenu( $exception = null ) {
@@ -270,10 +255,10 @@ class BootstrapSestue extends Templates {
                       ';
     }
 
-    public function getPage($pageTitle = null, $contentPage = null, $exception = null) {
-        if (( !empty($pageTitle) and !empty($contentPage) ) or $exception){
+    public function getPage($titlePage = null, $contentPage = null, $exception = null) {
+        if (( !empty($titlePage) and !empty($contentPage) ) or $exception){
             $this->__mainBootstrap();
-            $this->setTitle($pageTitle);
+            $this->setTitle($titlePage);
             $this->setHeaders();
             $this->setMenu($exception);
             $this->setContentPage($contentPage);

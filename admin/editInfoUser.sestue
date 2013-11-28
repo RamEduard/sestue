@@ -5,90 +5,60 @@
 	# Con este archivo se evita requerir las clases desde los archivos
 	# y hacer session_start()
     require("../lib/config/config.php");
-	//Hago instancia las clases Db y Html
-	$db = Db::getInstance();
-	#$index = Index::getInstance();
+	//Hago instancia de la clases que se usaran
+	#Clase usuarios de la bd
+	$objUser = new Usuarios();
+	#Clase template
 	$template = Templates::getInstance('sb-admin');
+
 	if ($_SESSION['objeto'])
 		$usuarioSesion = $_SESSION['objeto'];
 	
-	if(!$_SESSION['objeto']){
-		header("location:inicio.sesion.php");
-	}
-	else if($usuarioSesion->existeUsuario()){
-		//Obtener array con datos del usuario
-		$datosUser = $usuarioSesion->getUsuarioSesion();
-		//Hacer consulta a base de datos Sobre el Usuario
-		$usuario = $db->select("SELECT  c_cedula_pk, c_carnet_pk, c_nombres, c_apellidos FROM t_usuarios WHERE c_alias_pk='".$datosUser[0]."'");
-		$mensaje = '
-		<h2>Editar datos de usuario</h2>
-        <form method="post">
-			<table align="center">
-				<tr>
-					<td>Nombres: </td>
-					<td>
-						<input type="text" name="nombres" value="'.$usuario[0][2].'" />
-					</td>
-				</tr>
-				<tr>
-					<td>Apellidos: </td>
-					<td>
-						<input type="text" name="apellidos" value="'.$usuario[0][3].'" />
-					</td>
-				</tr>
-				<tr>
-					<td>Cedula: </td>
-					<td>
-						<input type="text" name="cedula" value="'.$usuario[0][0].'" />
-					</td>
-				</tr>
-				<tr>
-					<td>Carnet: </td>
-					<td>
-						<input type="text" name="carnet" value="'.$usuario[0][1].'" />
-					</td>
-				</tr>
-				<tr>
-					<td>&nbsp;</td>
-				</tr>
-				<tr>
-					<td colspan="2" align="center">
-						<input type="submit" name="guardar" value="Guardar" />
-					</td>
-				</tr>
-			</table>
-        </form>
-		';
-		#$index->construirHtml("SESTUE| Principal", $datosUser[1], $mensaje, $datosUser[2]);
-		print $template->getPage('SESTUE | Entrar', $mensaje);
-	}
-	else
-	{
-		echo "<script>
-				location.href='inicio.sesion.php';
-			 </script>";
-	}
+	//Obtener array con datos del usuario
+	$datosUser = $usuarioSesion->getUsuarioSesion();
+	//Hacer consulta a base de datos Sobre el Usuario
+	$usuario = $objUser->selectUsuario($datosUser[0]);
 	
+	$mensaje = '
+    <form action="../controllers/editInfoUser.accion.php" method="post" autocomplete="off" style="width:400px">
+    	<input type="hidden" name="user[alias]" value="'.$usuario[0][0].'"/>
+    	<input type="hidden" name="user[level]" value="'.$usuario[0][3].'"/>
+    	<div class="input-group">
+            <span class="input-group-addon">Nombres:</span>
+            <input  type="text" name="user[name]" value="'.$usuario[0][1].'" title="Ingrese el(los) nombre(s)" class="form-control" id="input-text" pattern="[a-zA-ZáéíóúÁÉÍÓÚÑñ ]+" autofocus required />
+        </div>
+        <div class="input-group">
+            <span class="input-group-addon">Apellidos:</span>
+            <input  type="text" name="user[lastname]" value="'.$usuario[0][2].'" title="Ingrese el(los) apellido(s)" class="form-control" id="input-text" pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚÑñ ]+" required />
+        </div>
+        <br>
+		<button name="entrar" class="btn btn-primary" type="submit" style="margin:auto">Guardar</button>
+    </form>
+	';
+
+	print $template->getPage('Editar datos de usuario', $mensaje);
+		
 	if(isset($_POST['guardar'])){
+		print_r($_POST);
 		if ($usuario[0][0] != $_POST['cedula'] or $usuario[0][1] != $_POST['carnet'] or $usuario[0][2] != $_POST['nombres'] or $usuario[0][3] != $_POST['apellidos']){
 			$sql = "UPDATE t_usuarios SET c_cedula_pk=".$_POST['cedula'].", c_carnet_pk=".$_POST['carnet'].", c_nombres='".$_POST['nombres']."', c_apellidos='".$_POST['apellidos']."' WHERE c_alias_pk = '".$_SESSION['user']."'";
 			if($db->ejecutarSql($sql)){
 				$_SESSION['NA'] = $_POST['nombres']." ".$_POST['apellidos'];
 				echo "<script>
 					alert('Actualizacion exitosa!');
-					location.href='editInfoUser.php';
+					location.href='editInfoUser.sestue';
 					</script>";
 			}
 			else{
 				echo "<script>
 					alert('Error en la actualizacion.');
-					location.href='editInfoUser.php';
+					location.href='editInfoUser.sestue';
 					</script>";
 			}
 		}
 		else{
 			echo "<script>
-					location.href='editInfoUser.php';
+					location.href='editInfoUser.sestue';
 					</script>";
 		}
 	}

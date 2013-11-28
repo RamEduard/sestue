@@ -8,21 +8,6 @@
 class BootstrapSbAdmin extends Templates {
 
     /**
-     * @var $instance
-     */
-    private static $instance;
-
-    /**
-     * @var $dir_path
-     */
-    private $dir_path;
-
-    /**
-     * @var $html
-     */
-    private $html;
-
-    /**
      * @var $objUser
      */
     private $objUser;
@@ -64,7 +49,9 @@ class BootstrapSbAdmin extends Templates {
      * Terminar las etiquetas html del documento
      */
     private function __endBootstrap() {
-        $this->html .= '</html>';
+        $this->html .= '
+                    </body>
+                    </html>';
     }
 
     private function setTitle($pageTitle) {
@@ -138,9 +125,9 @@ class BootstrapSbAdmin extends Templates {
 
                         <div class="row">
                         <div class="col-lg-12">
-                            <h1>' . APP_NAME . ' ' . $pageTitle . '<small></small></h1>
+                            <h1>' . $pageTitle . '<small></small></h1>
                             <ol class="breadcrumb">
-                            <li><a href="'.DIR_ADMIN.'index.sestue"><i class="icon-dashboard"></i>' . APP_NAME . '</a></li>
+                            <li><a href="'.DIR_ADMIN.'index.sestue"><i class="icon-dashboard"></i>Inicio</a></li>
                             <li class="active"><i class="icon-file-alt"></i> ' . $pageTitle . '</li>
                             </ol>
                         </div>
@@ -149,6 +136,7 @@ class BootstrapSbAdmin extends Templates {
                         <div class="row">
                             ' . $contentPage . '
                         </div>
+                        
                     </div>
                     <!-- /#page-wrapper -->
             ';
@@ -157,12 +145,13 @@ class BootstrapSbAdmin extends Templates {
             $this->html .= $contentPage;
         }
         else{
+            
             $this->html .= '
                 <form class="form-signin" action="../controllers/login.accion.php" method=post style="width:300px; margin:auto;margin-top:100px" autocomplete="off">
                     <h2 class="form-signin-heading">
-                <span class="glyphicon glyphicon-lock btn-lg"></span>
-                Entrar al sistema
-            </h2>
+                        <span class="glyphicon glyphicon-lock btn-lg"></span>
+                        Entrar al sistema
+                    </h2>
                     <div class="input-group">
                         <span class="input-group-addon">Usuario</span>
                         <input  type="text" name="user" title="Solo letras. Ej.: UsuarioEjemplo" class="form-control" id="input-text" pattern="[a-zA-Z0-9]+" autofocus required />

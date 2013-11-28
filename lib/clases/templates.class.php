@@ -6,6 +6,16 @@
  */
 class Templates {
 
+    /**
+     * @var $dir_path
+     */
+    protected $dir_path;
+
+    /**
+     * @var $html
+     */
+    protected $html;
+
     private function __clone() {
         
     }
@@ -19,8 +29,8 @@ class Templates {
     }
 
     protected function validateUser() {
-        $user = $_SESSION['objeto'];
-        if (!empty($user) or $user != NULL) {
+        if(!empty($_SESSION['objeto'])){
+            $user = $_SESSION['objeto'];
             return $user;
         }
         else

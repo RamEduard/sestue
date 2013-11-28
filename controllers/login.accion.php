@@ -5,19 +5,20 @@
     require("../lib/config/config.php");
 	
 
-	//Objetos que seran usados en el archivo
-	$db = Db::getInstance();
+	#Objetos que seran usados en el archivo
+	#Objeto de los usuarios en bd
+	$userObj = new Usuarios();
+	#Objeto para crear la sesion del usuario
 	$usuarioSesion = UsuarioSesion::getInstance();
-
+	
 	if (isset($_POST["entrar"])){
 
 		$user = $_POST["user"];
-		$pass = $_POST["password"];
+		$pass = md5($_POST["password"]);
 
-		$session = "SELECT c_alias_pk, c_clave, c_nombres, c_apellidos, c_rol, c_estilo_css_pag FROM t_usuarios WHERE c_alias_pk='".$user."' AND c_clave=MD5('".$pass."')";
-		$result_session = $db->select($session);
-
-		if (!$result_session){
+		$result_session = $userObj->selectUsuario($user,$pass);
+		
+		if (empty($result_session)){
 			echo "<script>
 					alert('Usuario no encontrado o no coincide con la clave');
 					location.href='../admin/index.sestue';
@@ -25,12 +26,9 @@
 		}
 		else
 		{
-			$usuarioSesion->setUsuarioSesion($result_session[0][0], $result_session[0][4], $result_session[0][2]." ".$result_session[0][3]);
+			$usuarioSesion->setUsuarioSesion($result_session[0][0], $result_session[0][3], $result_session[0][1]." ".$result_session[0][2]);
 			$_SESSION['objeto'] = $usuarioSesion;
-			if($result_session[0][5])
-				$_SESSION['estilo'] = $result_session[0][5];
-			else
-				$_SESSION['estilo'] = 'default';
+			$_SESSION['date_time'] = date("Y-n-j H:i:s");
 			header("location:../admin/index.sestue");
 		}
 		

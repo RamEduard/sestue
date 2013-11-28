@@ -1,7 +1,6 @@
 <?php
-$usuarioSesion = $_SESSION['objeto'];
-$usuario = $usuarioSesion->getUsuarioSesion();
-$menu = '
+    $usuario = $_SESSION['objeto']->getUsuarioSesion();
+    $menu = '
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -23,9 +22,14 @@ $menu = '
           </ul>
           <ul class="nav navbar-nav side-nav">
             <li><a href="'.DIR_ADMIN.'index.sestue"><i class="fa fa-table"></i> Inicio</a></li>
-            <li><a href="#"><i class="fa fa-table"></i> Base de datos</a></li>
-            <li><a href="'.DIR_ADMIN.'preguntasFrecuentes.sestue"><i class="fa fa-desktop"></i> Preguntas Frecuentes</a></li>
-            <li><a href="blank-page.html"><i class="fa fa-file"></i> Blank Page</a></li>
+            ';
+    if($usuario[1] == "admin"){
+      $menu .= '
+              <li><a href="#"><i class="fa fa-table"></i> Base de datos</a></li>
+              <li><a href="'.DIR_ADMIN.'preguntasFrecuentes.sestue"><i class="fa fa-desktop"></i> Preguntas Frecuentes</a></li>
+      ';
+    }
+    $menu .='        
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-edit"></i> Software Educatico <b class="caret"></b></a>
               <ul class="dropdown-menu">
@@ -72,19 +76,6 @@ $menu = '
                 <li><a href="#">View Inbox <span class="badge">7</span></a></li>
               </ul>
             </li>
-            <li class="dropdown alerts-dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell"></i> Alerts <span class="badge">3</span> <b class="caret"></b></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Default <span class="label label-default">Default</span></a></li>
-                <li><a href="#">Primary <span class="label label-primary">Primary</span></a></li>
-                <li><a href="#">Success <span class="label label-success">Success</span></a></li>
-                <li><a href="#">Info <span class="label label-info">Info</span></a></li>
-                <li><a href="#">Warning <span class="label label-warning">Warning</span></a></li>
-                <li><a href="#">Danger <span class="label label-danger">Danger</span></a></li>
-                <li class="divider"></li>
-                <li><a href="#">View All</a></li>
-              </ul>
-            </li>
             <li class="dropdown user-dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> '.$usuario[2].' <b class="caret"></b></a>
               <ul class="dropdown-menu">
@@ -99,3 +90,4 @@ $menu = '
         </div><!-- /.navbar-collapse -->
       </nav>
     ';
+  

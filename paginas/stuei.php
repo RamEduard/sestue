@@ -7,7 +7,7 @@
 	//Hago instancia las clases Db y Html
 	$db = Db::getInstance();
 	#$index = Index::getInstance();
-	$template = Templates::getInstance($_SESSION['estilo']);
+	$template = Templates::getInstance('bootstrap');
 	
 	//Armar el html
 	$mensaje = '

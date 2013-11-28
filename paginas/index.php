@@ -8,7 +8,7 @@
     //Objetos a usar en el archivo
     $db = Db::getInstance();
     #$index = Index::getInstance();
-    $template = Templates::getInstance($_SESSION['estilo']);
+    $template = Templates::getInstance('bootstrap');
 
     //Consultar si existen usuarios nuevos ademas del administrador
     $sql = "SELECT c_alias_pk FROM t_usuarios";
