@@ -7,17 +7,17 @@
  */
 class Db {
 
-    private $servidor = SERVIDOR_BD;
-    private $usuario = USUARIO_BD;
+    private $server = SERVIDOR_BD;
+    private $user = USUARIO_BD;
     private $password = PASS_BD;
-    private $base_datos = BD;
-    private $link, $query, $arreglo, $registros, $columnas, $filas;
+    private $dataBase = BD;
+    private $link;
     static $_instance;
 
     /* La función construct es privada para evitar que el objeto pueda ser creado mediante new */
 
     protected function __construct() {
-        $this->conectar();
+        $this->__connect();
     }
 
     /* Evitamos el clonaje del objeto. Patrón Singleton */
@@ -36,18 +36,18 @@ class Db {
     }
 
     //funcion que realiza la conexion a la base de datos
-    private function conectar() {
-        $this->link = mysql_connect($this->servidor, $this->usuario, $this->password) 
+    private function __connect() {
+        $this->link = mysql_connect($this->server, $this->user, $this->password) 
             or die('<pre style="margin:auto;background:rgba(0,0,0,.1)">'.mysql_error().'</pre>');
-        mysql_select_db($this->base_datos, $this->link) 
+        mysql_select_db($this->dataBase, $this->link) 
             or die('<pre style="margin:auto;background:rgba(0,0,0,.1)">'.mysql_error().'</pre>');
         @mysql_query("SET NAMES 'utf8'");
     }
 
     //funcion que realiza una consulta a la base de datos y devuelve el id
     public function ejecutarSql($sql) {
-        $this->query = mysql_query($sql, $this->link);
-        return $this->query;
+        $query = mysql_query($sql, $this->link);
+        return $query;
     }
 
     //funcion que realiza la consulta select
@@ -56,16 +56,15 @@ class Db {
         if (!mysql_num_rows($query))
             return false;
         else {
-            $this->filas = mysql_num_rows($query);
-            $this->columnas = mysql_num_fields($query);
-            for ($f_actual = 0; $f_actual < $this->filas; $f_actual++) {
-                $this->arreglo = mysql_fetch_array($query);
-                for ($c_actual = 0; $c_actual < $this->columnas; $c_actual++)
-                    $this->registros[$f_actual][$c_actual] = $this->arreglo[$c_actual];
+            $rows = mysql_num_rows($query);
+            $colums = mysql_num_fields($query);
+            for ($f_actual = 0; $f_actual < $rows; $f_actual++) {
+                $array = mysql_fetch_array($query);
+                for ($c_actual = 0; $c_actual < $colums; $c_actual++)
+                    $data[$f_actual][$c_actual] = $array[$c_actual];
             }
-            return $this->registros;
+            return $data;
         }
     }
 
 }
-
