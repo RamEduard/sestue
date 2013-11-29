@@ -35,7 +35,7 @@ class UsuarioSesion {
         $time_passed = (strtotime($now)-strtotime($_SESSION['date_time']));
         if($time_passed >= 600){
             session_destroy();
-            header("location:index.sestue");
+            header("location:index.sestue?time=off");
         }
         else{
             $_SESSION['date_time'] = $now;

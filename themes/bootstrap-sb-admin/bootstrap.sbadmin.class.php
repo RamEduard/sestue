@@ -152,6 +152,18 @@ class BootstrapSbAdmin extends Templates {
                         <span class="glyphicon glyphicon-lock btn-lg"></span>
                         Entrar al sistema
                     </h2>
+            ';
+            if(!empty($_GET['time']) and $_GET['time']=="off"){
+                $this->html .= '
+                <div class="row">
+                    <div class="alert alert-danger alert-dismissable">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                        <strong>Cerró su sesión!</strong> Por inactividad durante 10 min
+                    </div>
+                </div>
+                ';
+            }
+            $this->html .='
                     <div class="input-group">
                         <span class="input-group-addon">Usuario</span>
                         <input  type="text" name="user" title="Solo letras. Ej.: UsuarioEjemplo" class="form-control" id="input-text" pattern="[a-zA-Z0-9]+" autofocus required />
@@ -160,9 +172,9 @@ class BootstrapSbAdmin extends Templates {
                         <span class="input-group-addon">Clave&nbsp;&nbsp;&nbsp;</span>
                         <input name="password" type="password" class="form-control" maxlength=8 pattern="[a-zA-Z0-9]+" required title="Ingrese su clave" />
                     </div>
-            <label class="checkbox" onclick="location.href=\'remember.php\'" title="Haga click aqui para recordar su clave">Recordar contraseña</label>
-            <button name="entrar" class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button>
-        </form>
+                    <label class="checkbox" onclick="location.href=\'remember.php\'" title="Haga click aqui para recordar su clave">Recordar contraseña</label>
+                    <button name="entrar" class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button>
+                </form>
                 ';
         }
     }
