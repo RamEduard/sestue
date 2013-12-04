@@ -24,7 +24,7 @@ defined("USUARIO_BD")             || define("USUARIO_BD", "n260m_13975387");
 defined("PASS_BD")                || define('PASS_BD', 'ramoncit');
 defined("BD")                     || define('BD', 'n260m_13975387_sestuebd');*/
 
-defined("SERVIDOR_BD")            || define("SERVIDOR_BD", $_SERVER['HTTP_HOST']);
+defined("SERVIDOR_BD")            || define("SERVIDOR_BD", "localhost");
 defined("USUARIO_BD")             || define("USUARIO_BD", "root");
 defined("PASS_BD")                || define('PASS_BD', 'ramon');
 defined("BD")                     || define('BD', 'sestuebd');

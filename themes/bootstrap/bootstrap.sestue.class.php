@@ -101,9 +101,9 @@ class BootstrapSestue extends Templates {
                         <a class="navbar-brand" href="' . DIR_PAGES . 'index.php" title="Inicio"><span class="glyphicon glyphicon-home"></span> ' . APP_NAME . '</a>
                     </div>
                     <div class="collapse navbar-collapse">
-			<ul class="nav navbar-nav">
+			       <ul class="nav navbar-nav">
                           <li class="dropdown" title="Soporte Técnico a Usuarios y Equipos I">
-                            <a href="#"class="dropdown-toggle" data-toggle="dropdown">STUE I<b class="caret"></b></a>
+                            <a href="#"class="dropdown-toggle" data-toggle="dropdown">Trimestre I<b class="caret"></b></a>
                             <ul class="dropdown-menu">
                               <li><a href="' . DIR_PAGES . 'stuei.php">Ver Módulo</a></li>
                               <li class="divider"></li>
@@ -113,17 +113,16 @@ class BootstrapSestue extends Templates {
                             </ul>
                           </li>
 							            <li class="dropdown" title="Soporte Técnico a Usuarios y Equipos II">
-                            <a href="#"class="dropdown-toggle" data-toggle="dropdown">STUE II<b class="caret"></b></a>
+                            <a href="#"class="dropdown-toggle" data-toggle="dropdown">Trimestre II<b class="caret"></b></a>
                             <ul class="dropdown-menu">
                               <li><a href="' . DIR_PAGES . 'stueii.php">Ver Módulo</a></li>
                               <li class="divider"></li>
                               <li class="dropdown-header">Actividades</li>
-                              <li><a href="#" onclick="document.getElementById(\'starter-template\').innerHTML = \'<iframe src=' . DIR_PAGES . 'ejemplos/crear.actividad.php width=100% height=600> \';">Crear Actividad</a></li>
-                              <li><a href="' . DIR_PAGES . '/consultaActividadHtml.php">Consultar Actividad</a></li>
+                              
                             </ul>
                           </li>
 							            <li class="dropdown" title="Soporte Técnico a Usuarios y Equipos III">
-                            <a href="#"class="dropdown-toggle" data-toggle="dropdown">STUE III<b class="caret"></b></a>
+                            <a href="#"class="dropdown-toggle" data-toggle="dropdown">Trimestre III<b class="caret"></b></a>
                             <ul class="dropdown-menu">
                               <li><a href="' . DIR_PAGES . 'stueiii.php">Ver Módulo</a></li>
                               <li class="divider"></li>
@@ -135,93 +134,20 @@ class BootstrapSestue extends Templates {
                           <li title="Buscar..."><a href="' . DIR_PAGES . 'preg-resp.php">Preguntas frecuentes</a></li>
                         </ul>
                      </div><!--/.nav-collapse -->
-		</div>
+		          </div>
             </div>
             ';
                 
       }
       elseif ($exception) {
-        if($exception == 'login'){
-          # Login
-          $this->html .= '
-                <div class="navbar navbar-default navbar-fixed-top">
-                    <img src="'.$this->dir_path.'img/gobierno2.png" width="100%" height="53"/>
-                    <div class="container">
-                      <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                          <span class="icon-bar"></span>
-                          <span class="icon-bar"></span>
-                          <span class="icon-bar"></span>
-                        </button>
-                        <a class="navbar-brand" href="'.DIR_PAGES.'index.php" title="Inicio"><span class="glyphicon glyphicon-home"></span> '.APP_NAME.'</a>
-                      </div>
-                      <div class="collapse navbar-collapse">
-                        <ul class="nav navbar-nav">
-                          <li class="active"><a href="#">Iniciar sesion</a></li>
-                          <li><a href="'.DIR_PAGES.'registrousuario.php">Registrarse</a></li>
-                        </ul>
-                      </div><!--/.nav-collapse -->
-                    </div>
-                </div>
-                ';
-        }
-        elseif ($exception == 'registrarse') {
-          # Registrar usuario
-          $this->html .= '
-                <div class="navbar navbar-default navbar-fixed-top">
-                    <img src="'.$this->dir_path.'img/gobierno2.png" width="100%" height="53"/>
-                    <div class="container">
-                      <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                          <span class="icon-bar"></span>
-                          <span class="icon-bar"></span>
-                          <span class="icon-bar"></span>
-                        </button>
-                        <a class="navbar-brand" href="'.DIR_PAGES.'index.php" title="Inicio"><span class="glyphicon glyphicon-home"></span> '.APP_NAME.'</a>
-                      </div>
-                      <div class="collapse navbar-collapse">
-                        <ul class="nav navbar-nav">
-                          <li><a href="'.DIR_PAGES.'inicio.sesion.php">Iniciar sesion</a></li>
-                          <li class="active"><a href="'.DIR_PAGES.'registrousuario.php">Registrarse</a></li>
-                        </ul>
-                      </div><!--/.nav-collapse -->
-                    </div>
-                </div>
-                ';
-        }
-        elseif ($exception == 'recordar' or $exception == 'inicio') {
-          # Recordar clave de usuario
-          $this->html .= '
-                <div class="navbar navbar-default navbar-fixed-top">
-                    <img src="'.$this->dir_path.'img/gobierno2.png" width="100%" height="53"/>                    
-                    <div class="container">
-                      <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                          <span class="icon-bar"></span>
-                          <span class="icon-bar"></span>
-                          <span class="icon-bar"></span>
-                        </button>
-                        <a class="navbar-brand" href="'.DIR_PAGES.'index.php" title="Inicio"><span class="glyphicon glyphicon-home"></span> '.APP_NAME.'</a>
-                      </div>
-                      <div class="collapse navbar-collapse">
-                        <ul class="nav navbar-nav">
-                          <li><a href="'.DIR_PAGES.'inicio.sesion.php">Iniciar sesion</a></li>
-                          <li><a href="'.DIR_PAGES.'registrousuario.php">Registrarse</a></li>
-                        </ul>
-                      </div><!--/.nav-collapse -->
-                    </div>
-                </div>
-                ';
-        }
+        
       }
     }
 
     private function setContentPage($contentPage) {
         $this->html .= '
-                <div class="container">
-						      <div class="starter-template" id="starter-template">
-						        ' . $contentPage . '
-						      </div>
+                <div class="container" style="margin-top:80px;">
+						      ' . $contentPage . '
 						    
 						
 						';

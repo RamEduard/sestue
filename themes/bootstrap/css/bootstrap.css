@@ -6184,7 +6184,7 @@ a.list-group-item.active:focus .list-group-item-text {
 
 .panel-success > .panel-heading {
   color: #468847;
-  background-color: #73a839;
+  background-color:rgb(223, 240, 216);
   border-color: #dddddd;
 }
 
@@ -6206,7 +6206,7 @@ a.list-group-item.active:focus .list-group-item-text {
 
 .panel-warning > .panel-heading {
   color: #c09853;
-  background-color: #dd5600;
+  background-color: rgb(252, 248, 227);
   border-color: #dddddd;
 }
 
@@ -6228,7 +6228,7 @@ a.list-group-item.active:focus .list-group-item-text {
 
 .panel-danger > .panel-heading {
   color: #b94a48;
-  background-color: #c71c22;
+  background-color: rgb(242, 222, 222);
   border-color: #dddddd;
 }
 
@@ -6245,13 +6245,13 @@ a.list-group-item.active:focus .list-group-item-text {
 }
 
 .panel-info {
-  border-color: #dddddd;
+  border-color: rgb(188, 232, 241);
 }
 
 .panel-info > .panel-heading {
   color: #3a87ad;
-  background-color: #033c73;
-  border-color: #dddddd;
+  background-color: #d9edf7;
+  border-color: rgb(188, 232, 241);
 }
 
 .panel-info > .panel-heading + .panel-collapse .panel-body {
@@ -7620,7 +7620,7 @@ td.visible-print {
 .panel-warning .panel-title,
 .panel-danger .panel-title,
 .panel-info .panel-title {
-  color: #fff;
+  
 }
 
 .clearfix:before,
