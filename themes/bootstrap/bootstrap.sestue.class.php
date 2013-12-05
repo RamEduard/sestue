@@ -90,7 +90,7 @@ class BootstrapSestue extends Templates {
         
                 $this->html .= '
 		<div class="navbar navbar-default navbar-fixed-top">
-                 <img src="' . $this->dir_path . 'img/gobierno2.png" width="100%" height="53"/>
+                 <img id="gobierno-menu" src="' . $this->dir_path . 'img/gobierno2.png" width="100%" height="53"/>
                  <div class="container">
 		    <div class="navbar-header">
 		        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -107,9 +107,7 @@ class BootstrapSestue extends Templates {
                             <ul class="dropdown-menu">
                               <li><a href="' . DIR_PAGES . 'stuei.php">Ver Módulo</a></li>
                               <li class="divider"></li>
-                              <li class="dropdown-header">Actividades</li>
-                              <li><a href="#" onclick="document.getElementById(\'starter-template\').innerHTML = \'<iframe src=' . DIR_PAGES . 'ejemplos/crear.actividad.php width=100% height=600> \';">Crear Actividad</a></li>
-                              <li><a href="' . DIR_PAGES . '/consultaActividadHtml.php">Consultar Actividad</a></li>
+                              <li><a href="' . DIR_PAGES . '">Hacer Actividades</a></li>
                             </ul>
                           </li>
 							            <li class="dropdown" title="Soporte Técnico a Usuarios y Equipos II">
@@ -117,8 +115,7 @@ class BootstrapSestue extends Templates {
                             <ul class="dropdown-menu">
                               <li><a href="' . DIR_PAGES . 'stueii.php">Ver Módulo</a></li>
                               <li class="divider"></li>
-                              <li class="dropdown-header">Actividades</li>
-                              
+                              <li><a href="' . DIR_PAGES . '">Hacer Actividades</a></li>
                             </ul>
                           </li>
 							            <li class="dropdown" title="Soporte Técnico a Usuarios y Equipos III">
@@ -126,9 +123,7 @@ class BootstrapSestue extends Templates {
                             <ul class="dropdown-menu">
                               <li><a href="' . DIR_PAGES . 'stueiii.php">Ver Módulo</a></li>
                               <li class="divider"></li>
-                              <li class="dropdown-header">Actividades</li>
-                              <li><a href="#" onclick="document.getElementById(\'starter-template\').innerHTML = \'<iframe src=' . DIR_PAGES . 'ejemplos/crear.actividad.php width=100% height=600> \';">Crear Actividad</a></li>
-                              <li><a href="' . DIR_PAGES . '/consultaActividadHtml.php">Consultar Actividad</a></li>
+                              <li><a href="' . DIR_PAGES . '">Hacer Actividades</a></li>
                             </ul>
                           </li>
                           <li title="Buscar..."><a href="' . DIR_PAGES . 'preg-resp.php">Preguntas frecuentes</a></li>
