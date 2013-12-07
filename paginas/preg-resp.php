@@ -5,6 +5,12 @@
     # y hacer session_start()
     require("../lib/config/config.php");
 
+    $html = '
+        <div class="page-header">
+            <h2 class="text-warning">Preguntas Frecuentes</h2>
+        </div>
+    ';
+
     $file = fopen(DIR_PAGES."preguntasRespuestasInc.html", 'r');
     $contenido = fread($file, 8192);
     fclose($file);
@@ -13,5 +19,5 @@
 
     //Armar el formulario
     
-    print $template->getPage('SESTUE | Preguntas', $contenido);
+    print $template->getPage('SESTUE | Preguntas', $html.'<br>'.$contenido);
 ?>

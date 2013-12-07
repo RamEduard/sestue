@@ -64,7 +64,7 @@ class PreguntasRespuestas extends Db implements FuncionesDb {
 
     public function selectExist($dataPregResp = null) {
         if ($dataPregResp != null) {
-            $query = "SELECT c_id_pk FROM t_proy_activ WHERE c_cap_perteneciente = '$dataPregResp[capitulo]' AND c_actividad = '$dataPregResp[titulo]' AND c_contenido = '$dataPregResp[contenido]' ";
+            $query = "SELECT c_id_pk FROM t_preguntas_respuestas WHERE c_mod_perteneciente = '$dataPregResp[modulo]' AND c_pregunta = '$dataPregResp[pregunta]' AND c_respuestas = '" . serialize($dataPregResp["respuestas"]) . "' ";
             return $this->select($query);
         } else {
             return false;
@@ -81,7 +81,7 @@ class PreguntasRespuestas extends Db implements FuncionesDb {
             if ($this->selectExist($dataPregResp)) {
                 return "existe";
             } else {
-                $sql = "INSERT INTO t_proy_activ VALUES ( null, '$dataPregResp[capitulo]', '$dataPregResp[titulo]', '$dataPregResp[contenido]' , NOW(), NOW())";
+                $sql = "INSERT INTO t_preguntas_respuestas VALUES ( null, '$dataPregResp[pregunta]', '" . serialize($dataPregResp["respuestas"]) . "', '$dataPregResp[modulo]' , NOW() )";
                 if ($this->ejecutarSql($sql)) {
                     return true;
                 } else {

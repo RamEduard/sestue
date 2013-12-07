@@ -27,6 +27,7 @@
       $menu .= '
               <li><a href="#"><i class="fa fa-table"></i> Base de datos</a></li>
               <li><a href="'.DIR_ADMIN.'preguntasFrecuentes.sestue"><i class="fa fa-desktop"></i> Preguntas Frecuentes</a></li>
+              <li><a href="'.DIR_ADMIN.'preg_tests.sestue"><i class="fa fa-pencil"></i> Preguntas de Examen</a></li>
       ';
     }
     $menu .='        

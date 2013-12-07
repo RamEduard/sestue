@@ -1,0 +1,51 @@
+<?php
+	include "../lib/config/config.php";
+    $template = Templates::getInstance("sb-admin");
+
+    $html = '
+    	<style type="text/css">
+			.input-group-addon{
+				width:200px;
+				text-align:left;
+			}
+			input[type="text"]{
+				width:300px;
+			}
+		</style>
+    	<form action="../controllers/preg_tests.accion.php" method="post">
+    		<div class="input-group">
+				<span class="input-group-addon">Trimestre:</span>
+				<select name="preg[modulo]" class="form-control" autofocus required>
+					<option value="">Seleccione
+					<option value="1">I
+					<option value="2">II
+					<option value="3">III
+				</select>
+			</div>
+    		<div class="input-group">
+				<span class="input-group-addon">Pregunta:</span>
+				<input type="text" name="preg[pregunta]" title="Solo letras. Ej.: UsuarioEjemplo" class="form-control" id="input-text"  autofocus required />
+			</div>
+			<div class="input-group">
+				<span class="input-group-addon">Respuesta Correcta:</span>
+				<input type="text" name="preg[respuesta]" title="Solo letras. Ej.: UsuarioEjemplo" class="form-control" id="input-text" autofocus required />
+			</div>
+			<div class="input-group">
+				<span class="input-group-addon">Opción:</span>
+				<input type="text" name="preg[opcion1]" title="Solo letras. Ej.: UsuarioEjemplo" class="form-control" id="input-text" autofocus required />
+			</div>
+			<div class="input-group">
+				<span class="input-group-addon">Opción:</span>
+				<input type="text" name="preg[opcion2]" title="Solo letras. Ej.: UsuarioEjemplo" class="form-control" id="input-text"  autofocus />
+			</div>
+			<div class="input-group">
+				<span class="input-group-addon">Opción:</span>
+				<input type="text" name="preg[opcion3]" title="Solo letras. Ej.: UsuarioEjemplo" class="form-control" id="input-text"  autofocus />
+			</div>
+			<input type="submit" name="registrar" value="Guardar" class="btn btn-success"/>
+			<input type="reset" value="Borrar" class="btn btn-danger" />
+    	</form>
+    ';
+
+    print $template->getPage("Preguntas de Examen", $html);
+?>

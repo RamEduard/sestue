@@ -127,8 +127,8 @@ class BootstrapSbAdmin extends Templates {
                         <div class="col-lg-12">
                             <h1>' . $pageTitle . '<small></small></h1>
                             <ol class="breadcrumb">
-                            <li><a href="'.DIR_ADMIN.'index.sestue"><i class="icon-dashboard"></i>Inicio</a></li>
-                            <li class="active"><i class="icon-file-alt"></i> ' . $pageTitle . '</li>
+                                <li><a href="'.DIR_ADMIN.'index.sestue"><i class="icon-dashboard"></i>Inicio</a></li>
+                                <li class="active"><i class="icon-file-alt"></i> ' . $pageTitle . '</li>
                             </ol>
                         </div>
                         </div>
