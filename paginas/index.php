@@ -33,17 +33,7 @@
             <div class="item active">
               <img src="'.DIR_PAGES.'upload/slides/1/slide1.png" alt="">
               <div class="container">
-                <div class="carousel-caption">
-                  <h1>¡Bienvenido!</h1>
-                  <p class="lead">¡Hola! Bienvenidos al Software Educativo: Soporte Técnico a Usuarios y Equipos (SESTUE).</p>
-                  <a class="btn btn-large btn-primary" href="#">Learn more</a>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <img src="'.DIR_PAGES.'upload/slides/2/slide2.jpg" alt="">
-              <div class="container">
-                <div class="carousel-caption">
+                <div class="carousel-caption" style="background-color:#ffffff">
                   <h1>¡Bienvenido!</h1>
                   <p class="lead">¡Hola! Bienvenidos al Software Educativo: Soporte Técnico a Usuarios y Equipos (SESTUE).</p>
                   <a class="btn btn-large btn-primary" href="#">Learn more</a>

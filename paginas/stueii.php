@@ -50,7 +50,7 @@
 	                			</div>
 	                			<div id="buen-problema" class="panel-collapse collapse in">
 		                			<div class="panel-body">
-		                				<div class="col-md-3 col-sm-5">
+		                				<div class="col-md-3 col-sm-5 col-xs-4">
 											<img src="'.DIR_PAGES.'upload/images/trimestre2/unidad1/problema.png" class="col-xs-12 col-sm-12 col-md-12"/>
 										</div>
 										<div class="col-md-9 ">
@@ -96,7 +96,7 @@
 				                			</div>
 				                			<div id="etapa1" class="panel-collapse collapse">
 					                			<div class="panel-body">
-					                				<div class="col-md-3 col-sm-5">
+					                				<div class="col-md-3 col-sm-5 col-xs-4">
 														<img src="'.DIR_PAGES.'upload/images/trimestre2/unidad1/mapa-conceptual.png" class="col-xs-12 col-sm-12 col-md-12"/>
 													</div>
 					                				<div class="col-md-9 ">
@@ -131,7 +131,7 @@
 				                			</div>
 				                			<div id="trazar" class="panel-collapse collapse">
 					                			<div class="panel-body">
-					                				<div class="col-md-3 col-sm-5">
+					                				<div class="col-md-3 col-sm-5 col-xs-4">
 														<img src="'.DIR_PAGES.'upload/images/trimestre2/unidad1/plan.png" class="col-xs-12 col-sm-12 col-md-12"/>
 													</div>
 													<div class="col-md-9 ">
@@ -165,7 +165,7 @@
 				                			</div>
 				                			<div id="poner-practica" class="panel-collapse collapse">
 					                			<div class="panel-body">
-					                				<div class="col-md-3 col-sm-5">
+					                				<div class="col-md-3 col-sm-5 col-xs-4">
 														<img src="'.DIR_PAGES.'upload/images/trimestre2/unidad1/practica_plan.png" class="col-xs-12 col-sm-12 col-md-12"/>
 													</div>
 					                				<div class="col-md-9 ">
@@ -199,7 +199,7 @@
 				                			</div>
 				                			<div id="comprobar-result" class="panel-collapse collapse">
 					                			<div class="panel-body">
-					                				<div class="col-md-3 col-sm-5">
+					                				<div class="col-md-3 col-sm-5 col-xs-4">
 														<img src="'.DIR_PAGES.'upload/images/trimestre2/unidad1/resultados.png" class="col-xs-12 col-sm-12 col-md-12"/>
 													</div>
 													<div class="col-md-9 ">
@@ -376,7 +376,7 @@
 				                			</div>
 				                			<div id="ambiente-certeza" class="panel-collapse collapse">
 					                			<div class="panel-body">
-					                				<div class="col-md-3 col-sm-5">
+					                				<div class="col-md-3 col-sm-5 col-xs-4">
 														<img src="'.DIR_PAGES.'upload/images/trimestre2/unidad1/certeza.png" class="col-xs-12 col-sm-12 col-md-12"/>
 													</div>
 													<div class="col-md-9 ">
@@ -414,7 +414,7 @@
 				                			</div>
 				                			<div id="ambiente-incertidumbre" class="panel-collapse collapse">
 					                			<div class="panel-body">
-					                				<div class="col-md-3 col-sm-5">
+					                				<div class="col-md-3 col-sm-5 col-xs-4">
 														<img src="'.DIR_PAGES.'upload/images/trimestre2/unidad1/incertidumbre.png" class="col-xs-12 col-sm-12 col-md-12"/>
 													</div>
 					                				<div class="col-md-9 ">
@@ -471,7 +471,7 @@
 							                			</div>
 							                			<div id="identificar-analizar" class="panel-collapse collapse">
 								                			<div class="panel-body">
-								                				<div class="col-md-3 col-sm-5">
+								                				<div class="col-md-3 col-sm-5 col-xs-4">
 																	<img src="'.DIR_PAGES.'upload/images/trimestre2/unidad1/identificar-analizar-problema.png" class="col-xs-12 col-sm-12 col-md-12"/>
 																</div>
 																<div class="col-md-9 ">
@@ -489,7 +489,7 @@
 							                			</div>
 							                			<div id="identificar-criterios" class="panel-collapse collapse">
 								                			<div class="panel-body">
-								                				<div class="col-md-3 col-sm-5">
+								                				<div class="col-md-3 col-sm-5 col-xs-4">
 																	<img src="'.DIR_PAGES.'upload/images/trimestre2/unidad1/identificar-criterios.png" class="col-xs-12 col-sm-12 col-md-12"/>
 																</div>
 																<div class="col-md-9 ">
@@ -508,7 +508,7 @@
 							                			</div>
 							                			<div id="definir-prioridad" class="panel-collapse collapse">
 								                			<div class="panel-body">
-								                				<div class="col-md-3 col-sm-5">
+								                				<div class="col-md-3 col-sm-5 col-xs-4">
 																	<img src="'.DIR_PAGES.'upload/images/trimestre2/unidad1/definir-prioridad.png" class="col-xs-12 col-sm-12 col-md-12"/>
 																</div>
 																<div class="col-md-9 ">
@@ -526,7 +526,7 @@
 							                			</div>
 							                			<div id="generar-alternativas" class="panel-collapse collapse">
 								                			<div class="panel-body">
-								                				<div class="col-md-3 col-sm-5">
+								                				<div class="col-md-3 col-sm-5 col-xs-4">
 																	<img src="'.DIR_PAGES.'upload/images/trimestre2/unidad1/generar-alternativas.png" class="col-xs-12 col-sm-12 col-md-12"/>
 																</div>
 																<div class="col-md-9 ">
@@ -545,7 +545,7 @@
 							                			</div>
 							                			<div id="evaluar-alternativas" class="panel-collapse collapse">
 								                			<div class="panel-body">
-								                				<div class="col-md-3 col-sm-5">
+								                				<div class="col-md-3 col-sm-5 col-xs-4">
 																	<img src="'.DIR_PAGES.'upload/images/trimestre2/unidad1/evaluar-alternativas.png" class="col-xs-12 col-sm-12 col-md-12"/>
 																</div>
 																<div class="col-md-9 ">
@@ -1081,7 +1081,7 @@
                 			<div id="fundament-legal" class="panel-collapse collapse">
 	                			<div class="panel-body">
 	                				<div class="row">
-		                				<div class="col-md-3 col-sm-5">
+		                				<div class="col-md-3 col-sm-5 col-xs-4">
 		                					<div class="panel panel-success">
 					                			<div class="panel-heading">
 						                			<a data-toggle="collapse" data-parent="#paneles" href="#constitucion">
@@ -1106,7 +1106,7 @@
 						                		</div>
 					                		</div>
 		                				</div>
-		                				<div class="col-md-3 col-sm-5">
+		                				<div class="col-md-3 col-sm-5 col-xs-4">
 		                					<div class="panel panel-success">
 					                			<div class="panel-heading">
 						                			<a data-toggle="collapse" data-parent="#paneles" href="#ley-cti">
@@ -1132,7 +1132,7 @@
 					                		</div>
 		                					
 		                				</div>
-		                				<div class="col-md-3 col-sm-5">
+		                				<div class="col-md-3 col-sm-5 col-xs-4">
 		                					<div class="panel panel-success">
 					                			<div class="panel-heading">
 						                			<a data-toggle="collapse" data-parent="#paneles" href="#ley-edu">
@@ -1151,7 +1151,7 @@
 					                		</div>
 		                					
 		                				</div>
-		                				<div class="col-md-3 col-sm-5">
+		                				<div class="col-md-3 col-sm-5 col-xs-4">
 		                					<div class="panel panel-success">
 					                			<div class="panel-heading">
 						                			<a data-toggle="collapse" data-parent="#paneles" href="#decreto-825">
