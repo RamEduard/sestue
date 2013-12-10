@@ -11,6 +11,7 @@
 		//Armar el html
 		$mensaje = '
 <<<<<<< HEAD
+<<<<<<< HEAD
 		<script>
 			$(document).ready(function(){
 				$(".panel-heading a").each(function(){
@@ -18,6 +19,8 @@
 				});
 			});
 		</script>
+=======
+>>>>>>> 38914a169559c33f7985be1bf4a4bd8b8dbd239d
 =======
 >>>>>>> 38914a169559c33f7985be1bf4a4bd8b8dbd239d
         <div class="page-header">
@@ -59,7 +62,11 @@
 	        						</a>
 	        					</div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 	        					<div id="aplicacion-metodologia" class="panel-collapse collapse">
+=======
+	        					<div id="aplicacion-metodologia" class="panel-collapse collapse in">
+>>>>>>> 38914a169559c33f7985be1bf4a4bd8b8dbd239d
 =======
 	        					<div id="aplicacion-metodologia" class="panel-collapse collapse in">
 >>>>>>> 38914a169559c33f7985be1bf4a4bd8b8dbd239d
@@ -315,7 +322,11 @@
 	        						</a>
 	        					</div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 	        					<div id="estrategia-implantacion" class="panel-collapse collapse">
+=======
+	        					<div id="estrategia-implantacion" class="panel-collapse collapse in">
+>>>>>>> 38914a169559c33f7985be1bf4a4bd8b8dbd239d
 =======
 	        					<div id="estrategia-implantacion" class="panel-collapse collapse in">
 >>>>>>> 38914a169559c33f7985be1bf4a4bd8b8dbd239d
@@ -680,7 +691,11 @@
 	        						</a>
 	        					</div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 	        					<div id="establecimiento-indicadores" class="panel-collapse collapse">
+=======
+	        					<div id="establecimiento-indicadores" class="panel-collapse collapse in">
+>>>>>>> 38914a169559c33f7985be1bf4a4bd8b8dbd239d
 =======
 	        					<div id="establecimiento-indicadores" class="panel-collapse collapse in">
 >>>>>>> 38914a169559c33f7985be1bf4a4bd8b8dbd239d
@@ -693,7 +708,11 @@
 				        						</a>
 				        					</div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 				        					<div id="indicadores-definicion" class="panel-collapse collapse">
+=======
+				        					<div id="indicadores-definicion" class="panel-collapse collapse in">
+>>>>>>> 38914a169559c33f7985be1bf4a4bd8b8dbd239d
 =======
 				        					<div id="indicadores-definicion" class="panel-collapse collapse in">
 >>>>>>> 38914a169559c33f7985be1bf4a4bd8b8dbd239d
@@ -1023,7 +1042,11 @@
 	        						</a>
 	        					</div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 	        					<div id="plan-optimizacion" class="panel-collapse collapse">
+=======
+	        					<div id="plan-optimizacion" class="panel-collapse collapse in">
+>>>>>>> 38914a169559c33f7985be1bf4a4bd8b8dbd239d
 =======
 	        					<div id="plan-optimizacion" class="panel-collapse collapse in">
 >>>>>>> 38914a169559c33f7985be1bf4a4bd8b8dbd239d
@@ -1039,7 +1062,11 @@
 					        						</a>
 					        					</div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 					        					<div id="optimizacion-software" class="panel-collapse collapse">
+=======
+					        					<div id="optimizacion-software" class="panel-collapse collapse in">
+>>>>>>> 38914a169559c33f7985be1bf4a4bd8b8dbd239d
 =======
 					        					<div id="optimizacion-software" class="panel-collapse collapse in">
 >>>>>>> 38914a169559c33f7985be1bf4a4bd8b8dbd239d
@@ -1058,7 +1085,11 @@
 					        						</a>
 					        					</div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 					        					<div id="optimizacion-hardware" class="panel-collapse collapse">
+=======
+					        					<div id="optimizacion-hardware" class="panel-collapse collapse in">
+>>>>>>> 38914a169559c33f7985be1bf4a4bd8b8dbd239d
 =======
 					        					<div id="optimizacion-hardware" class="panel-collapse collapse in">
 >>>>>>> 38914a169559c33f7985be1bf4a4bd8b8dbd239d
@@ -1098,7 +1129,11 @@
 	        						</a>
 	        					</div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 	        					<div id="manuales-requeridos" class="panel-collapse collapse">
+=======
+	        					<div id="manuales-requeridos" class="panel-collapse collapse in">
+>>>>>>> 38914a169559c33f7985be1bf4a4bd8b8dbd239d
 =======
 	        					<div id="manuales-requeridos" class="panel-collapse collapse in">
 >>>>>>> 38914a169559c33f7985be1bf4a4bd8b8dbd239d
@@ -1111,7 +1146,11 @@
 				        						</a>
 				        					</div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 				        					<div id="manual-usuario" class="panel-collapse collapse">
+=======
+				        					<div id="manual-usuario" class="panel-collapse collapse in">
+>>>>>>> 38914a169559c33f7985be1bf4a4bd8b8dbd239d
 =======
 				        					<div id="manual-usuario" class="panel-collapse collapse in">
 >>>>>>> 38914a169559c33f7985be1bf4a4bd8b8dbd239d
