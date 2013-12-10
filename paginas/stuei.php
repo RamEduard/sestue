@@ -334,7 +334,7 @@
 							</div>
 							<div id="proyecto-definicion" class="panel-collapse collapse in">
 								<div class="panel-body">
-									<img src="'.DIR_PAGES.'upload/images/trimestre1/unidad1rimestre1/unidad2/proyecto.png" class="col-xs-8 col-sm-3 col-md-2"/>
+									<img src="'.DIR_PAGES.'upload/images/trimestre1/unidad2/proyecto.png" class="col-xs-8 col-sm-3 col-md-2"/>
 									<p>En el Manual de Formulación de Proyectos Sociales del programa de capacitación y desarrollo del taller acreditado por la Universidad Católica Andrés Bello, se refiere a este tipo de proyectos como el conjunto organizado de acciones, realizadas ordenadamente durante un periodo determinado, que responden a una demanda o problema, con el propósito de ofrecer una solución, que generalmente es la presentación de un servicio.</p>
 								</div>
 							</div>
@@ -372,7 +372,7 @@
 													</div>
 													<div id="viabilidad" class="panel-collapse collapse">
 														<div class="panel-body">
-															<img src="'.DIR_PAGES.'upload/images/trimestre1/unidad1rimestre1/unidad2/viabilidad.png" class="col-xs-8 col-sm-3 col-md-1"/>
+															<img src="'.DIR_PAGES.'upload/images/trimestre1/unidad2/viabilidad.png" class="col-xs-8 col-sm-3 col-md-1"/>
 															<p>Lo importante es que el investigador debe verificar la posibilidad de conseguir fuentes de datos para el desarrollo de su estudio, ya sean del grado primario o secundario.</p>
 														</div>
 													</div>
@@ -385,7 +385,7 @@
 													</div>
 													<div id="lugar-espacio" class="panel-collapse collapse">
 														<div class="panel-body">
-															<img src="'.DIR_PAGES.'upload/images/trimestre1/unidad1rimestre1/unidad2/lugar-espacio.png" class="col-xs-8 col-sm-3 col-md-1"/>
+															<img src="'.DIR_PAGES.'upload/images/trimestre1/unidad2/lugar-espacio.png" class="col-xs-8 col-sm-3 col-md-1"/>
 															<p>Lugar o espacio donde se llevará a cabo la investigación.</p>
 														</div>
 													</div>
@@ -398,7 +398,7 @@
 													</div>
 													<div id="tiempo" class="panel-collapse collapse">
 														<div class="panel-body">
-															<img src="'.DIR_PAGES.'upload/images/trimestre1/unidad1rimestre1/unidad2/tiempo.png" class="col-xs-8 col-sm-3 col-md-1"/>
+															<img src="'.DIR_PAGES.'upload/images/trimestre1/unidad2/tiempo.png" class="col-xs-8 col-sm-3 col-md-1"/>
 															<p>Si el asignado da la cobertura del estudio o debo disponer de uno en caso de imprevistos.</p>
 														</div>
 													</div>
@@ -411,7 +411,7 @@
 													</div>
 													<div id="financiacion" class="panel-collapse collapse">
 														<div class="panel-body">
-															<img src="'.DIR_PAGES.'upload/images/trimestre1/unidad1rimestre1/unidad2/financiacion.png" class="col-xs-8 col-sm-3 col-md-1"/>
+															<img src="'.DIR_PAGES.'upload/images/trimestre1/unidad2/financiacion.png" class="col-xs-8 col-sm-3 col-md-1"/>
 															<p>Si se va a implementar algo. Qué cantidad de dinero dispongo para ello o si solo será un estudio de factibilidad.</p>
 														</div>
 													</div>
@@ -549,7 +549,7 @@
 										</div>
 										<div id="identificacion-problema" class="panel-collapse collapse">
 											<div class="panel-body">
-												<img src="'.DIR_PAGES.'upload/images/trimestre1/unidad1rimestre1/unidad2/identificacion-problema.png" class="col-xs-8 col-sm-3 col-md-2"/>
+												<img src="'.DIR_PAGES.'upload/images/trimestre1/unidad2/identificacion-problema.png" class="col-xs-8 col-sm-3 col-md-2"/>
 												<p>En esta fase se determina cuál es el problema que se quiere resolver, a quienes afecta, y cuál es la nueva situación que queremos alcanzar con nuestra actuación. Además, se concreta el modo en que vamos a lograrlo y se valoran las posibilidades de ello. Todos estos aspectos dependen de la realización de un buen diagnóstico de la situación problemática inicial.</p>
 											</div>
 										</div>
@@ -563,7 +563,7 @@
 										</div>
 										<div id="diseno-formulacion-proyecto" class="panel-collapse collapse">
 											<div class="panel-body">
-												<img src="'.DIR_PAGES.'upload/images/trimestre1/unidad1rimestre1/unidad2/diseno-formulacion-problema.png" class="col-xs-8 col-sm-3 col-md-2"/>
+												<img src="'.DIR_PAGES.'upload/images/trimestre1/unidad2/diseno-formulacion-problema.png" class="col-xs-8 col-sm-3 col-md-2"/>
 												<p>Después de que se identifica la situación que se quiere modificar, los objetivos que se desean alcanzar y los recursos necesarios para lograrlo se inicia la fase de diseño o formulación del proyecto. En general, se trata de una fase en la que se organiza y formaliza la información obtenida en la fase previa.</p>
 											</div>
 										</div>
@@ -577,7 +577,7 @@
 										</div>
 										<div id="ejecucion-proyecto" class="panel-collapse collapse">
 											<div class="panel-body">
-												<img src="'.DIR_PAGES.'upload/images/trimestre1/unidad1rimestre1/unidad2/ejecucion-proyecto.png" class="col-xs-8 col-sm-3 col-md-2"/>
+												<img src="'.DIR_PAGES.'upload/images/trimestre1/unidad2/ejecucion-proyecto.png" class="col-xs-8 col-sm-3 col-md-2"/>
 												<p>En esta fase se diseñan los planes operativos y se clarifican las funciones y roles de cada uno de los participantes en el proyecto, es una fase en la que la buena comunicación entre las partes se convierte en una fortaleza para el proyecto y en garantía de éxito para el mismo.</p>
 											</div>
 										</div>
@@ -591,7 +591,7 @@
 										</div>
 										<div id="fase-seguimiento-evaluacion" class="panel-collapse collapse">
 											<div class="panel-body">
-												<img src="'.DIR_PAGES.'upload/images/trimestre1/unidad1rimestre1/unidad2/seguimiento-evaluacion.png" class="col-xs-8 col-sm-3 col-md-1"/>
+												<img src="'.DIR_PAGES.'upload/images/trimestre1/unidad2/seguimiento-evaluacion.png" class="col-xs-8 col-sm-3 col-md-1"/>
 												<p>La fase de seguimiento y evaluación incluyen, como su nombre lo indica actividades de seguimiento que no es más que el análisis continuado de la ejecución del proyecto en todos sus aspectos, vigilando que se ajuste a lo planificado y, actividades de evaluación que permiten comparar la situación inicial con la final y sacar las conclusiones sobre el éxito o no del proyecto.</p>
 												<p>La duración del proyecto, los roles y los responsables de cada actividad ya queda de parte del propio grupo de investigación, ellos mismo se asignaran y se repartirán las distintas tareas para poder llevar a cabo el objetivo de su proyecto socio tecnológico.</p>
 											</div>
@@ -619,7 +619,7 @@
 										</div>
 										<div id="upel" class="panel-collapse collapse">
 											<div class="panel-body">
-												<img src="'.DIR_PAGES.'upload/images/trimestre1/unidad1rimestre1/unidad2/upel.png" class="col-xs-8 col-sm-3 col-md-1"/>
+												<img src="'.DIR_PAGES.'upload/images/trimestre1/unidad2/upel.png" class="col-xs-8 col-sm-3 col-md-1"/>
 												<p>Son normas venezolanas para la elaboración  de trabajos especiales de grado, trabajos de grado y tesis.</p>
 											</div>
 										</div>
@@ -633,7 +633,7 @@
 										</div>
 										<div id="apa" class="panel-collapse collapse">
 											<div class="panel-body">
-												<img src="'.DIR_PAGES.'upload/images/trimestre1/unidad1rimestre1/unidad2/apa.png" class="col-xs-8 col-sm-3 col-md-2"/>
+												<img src="'.DIR_PAGES.'upload/images/trimestre1/unidad2/apa.png" class="col-xs-8 col-sm-3 col-md-2"/>
 												<p>Son un conjunto de estándares creados por la American Psychological Association con el fin de unificar la forma de presentar trabajos escritos a nivel internacional, diseñadas especialmente para proyectos de grado o cualquier tipo de documentos de investigación.</p>
 											</div>
 										</div>
