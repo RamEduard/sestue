@@ -5,19 +5,25 @@
     # y hacer session_start()
     require("../lib/config/config.php");
 
+    $file = fopen("actividad1.html", "r");
+    $contenido = fread($file, 36864);
+    fclose($file);
+
+    $random = rand(1,5);
+    print $random;
+
     $html = '
         <div class="page-header">
-            <h2 class="text-warning">Preguntas Frecuentes</h2>
+            <h2 class="text-warning">Actividad del Trimestre I</h2>
         </div>
+        
+                '.$contenido.'
+        
     ';
-
-    $file = fopen(DIR_PAGES."preguntasRespuestasInc.html", 'r');
-    $contenido = fread($file, 8192);
-    fclose($file);
 
     $template = Templates::getInstance('bootstrap');
 
     //Armar el formulario
     
-    print $template->getPage('SESTUE | Preguntas', $html.'<br>'.$contenido);
+    print $template->getPage('SESTUE | Archivos de interés', $html);
 ?>

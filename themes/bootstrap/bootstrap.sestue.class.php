@@ -62,9 +62,6 @@ class BootstrapSestue extends Templates {
                 <!-- Bootswatch min css -->
                 <link href="' . $this->dir_path . 'css/bootswatch.min.css" rel="stylesheet">
 
-						    <!-- Custom styles for this template -->
-						    <link href="' . $this->dir_path . 'css/starter-template.css" rel="stylesheet">
-
 						    <!-- Just for debugging purposes. Don\'t actually copy this line! -->
 						    <!--[if lt IE 9]><script src="' . $this->dir_path . 'js/ie8-responsive-file-warning.js"></script><![endif]-->
 
@@ -107,7 +104,7 @@ class BootstrapSestue extends Templates {
                             <ul class="dropdown-menu">
                               <li><a href="' . DIR_PAGES . 'stuei.php">Ver Módulo</a></li>
                               <li class="divider"></li>
-                              <li><a href="' . DIR_PAGES . '">Hacer Actividades</a></li>
+                              <li><a href="' . DIR_PAGES . 'actividadT1.php">Hacer Actividades</a></li>
                             </ul>
                           </li>
 							            <li class="dropdown" title="Soporte Técnico a Usuarios y Equipos II">
@@ -115,7 +112,7 @@ class BootstrapSestue extends Templates {
                             <ul class="dropdown-menu">
                               <li><a href="' . DIR_PAGES . 'stueii.php">Ver Módulo</a></li>
                               <li class="divider"></li>
-                              <li><a href="' . DIR_PAGES . '">Hacer Actividades</a></li>
+                              <li><a href="' . DIR_PAGES . 'actividadT2.php">Hacer Actividades</a></li>
                             </ul>
                           </li>
 							            <li class="dropdown" title="Soporte Técnico a Usuarios y Equipos III">
@@ -123,10 +120,10 @@ class BootstrapSestue extends Templates {
                             <ul class="dropdown-menu">
                               <li><a href="' . DIR_PAGES . 'stueiii.php">Ver Módulo</a></li>
                               <li class="divider"></li>
-                              <li><a href="' . DIR_PAGES . '">Hacer Actividades</a></li>
+                              <li><a href="' . DIR_PAGES . 'actividadT3.php">Hacer Actividades</a></li>
                             </ul>
                           </li>
-                          <li title="Buscar..."><a href="' . DIR_PAGES . 'preg-resp.php">Preguntas frecuentes</a></li>
+                          <li title="Buscar..."><a href="' . DIR_PAGES . 'interes.php">Archivos de interés</a></li>
                         </ul>
                      </div><!--/.nav-collapse -->
 		          </div>

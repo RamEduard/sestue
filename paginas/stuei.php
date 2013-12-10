@@ -11,6 +11,13 @@
 	
 	//Armar el html
 	$mensaje = '
+		<script>
+			$(document).ready(function(){
+				$(".panel-heading a").each(function(){
+					$(this).tooltip({title:"Haz click aquí para ver este contenido."});
+				});
+			});
+		</script>
 		<div class="page-header">
 			<h2 class="text-warning">Soporte Técnico a Usuarios y Equipos I</h2>
 		</div>
@@ -40,7 +47,7 @@
 							</div>
 							<div class="panel-body">
 								<div class="col-md-3">
-									<img src="'.DIR_PAGES.'upload/images/1/comunidad.gif" width="200" height="160" />
+									<img src="'.DIR_PAGES.'upload/images/trimestre1/unidad1/comunidad.gif" width="200" height="160" />
 								</div>
 								<div class="col-md-9">
 									<p>Se refiere a la necesidad de efectuar una investigación de la situación actual de comunidad.</p>
@@ -71,7 +78,7 @@
 										<div id="entrevista" class="panel-collapse collapse">
 											<div class="panel-body">
 												<div class="col-md-3">
-													<img src="'.DIR_PAGES.'upload/images/2/entrevista.jpg" width="200" height="160" />
+													<img src="'.DIR_PAGES.'upload/images/trimestre1/unidad1/entrevista.jpg" width="200" height="160" />
 												</div>
 												<div class="col-md-9">
 													<p>Una entrevista es un diálogo en el que la persona (entrevistador), generalmente un periodista hace una serie de preguntas a otra persona (entrevistado), con el fin de conocer mejor sus ideas, sus sentimientos o su forma de actuar.</p>
@@ -113,7 +120,7 @@
 													</ul>
 												</div>
 												<div class="col-md-3">
-													<img src="'.DIR_PAGES.'upload/images/3/encuestas.jpg" width="200" height="160" />
+													<img src="'.DIR_PAGES.'upload/images/trimestre1/unidad1/encuestas.jpg" width="200" height="160" />
 												</div>
 											</div>
 										</div>
@@ -127,7 +134,7 @@
 										<div id="observacion" class="panel-collapse collapse">
 											<div class="panel-body">
 												<div class="col-md-3">
-													<img src="'.DIR_PAGES.'upload/images/4/observacion.gif" width="200" height="160" />
+													<img src="'.DIR_PAGES.'upload/images/trimestre1/unidad1/observacion.gif" width="200" height="160" />
 												</div>
 												<div class="col-md-9">
 													<p>La observación es una actividad realizada por un ser vivo (como un ser humano), que detecta y asimila la información de un hecho, o el registro de los datos utilizando los sentidos como instrumentos principales. El término también puede referirse a cualquier dato recogido durante esta actividad.</p>
@@ -170,7 +177,7 @@
 							<div class="panel-body">
 								<p>Más allá de la popular definición hardware es lo que golpeas cuando falla el software, el Hardware son todos los componentes y dispositivos físicos y tangibles que forman una computadora como la CPU o la placa base, mientras que el Software es el equipamiento lógico e intangible como los programas y datos que almacena la computadora.</p>
 								<div class="col-md-3">
-									<img src="'.DIR_PAGES.'upload/images/5/software-y-hardware.png" width="200" height="200" />
+									<img src="'.DIR_PAGES.'upload/images/trimestre1/unidad1/software-y-hardware.png" width="200" height="200" />
 								</div>
 								<div class="col-md-9">
 									<div class="panel-group" id="hardware-softwarek">
@@ -244,7 +251,7 @@
 										<div id="minci" class="panel-collapse collapse">
 											<div class="panel-body">
 												<div class="col-md-3">
-													<img src="'.DIR_PAGES.'upload/images/7/minci.jpg" width="200" height="160" />
+													<img src="'.DIR_PAGES.'upload/images/trimestre1/unidad1/minci.jpg" width="200" height="160" />
 												</div>
 												<div class="col-md-9">
 													<p>El Gobierno Bolivariano ha colocado las herramientas de las tecnologías de la información y comunicación al servicio del pueblo venezolano. Esta visión soberana ha conseguido grandes logros en sólo una década: la recuperación de la Compañía Nacional de Teléfonos a manos del pueblo venezolano, la articulación de una vasta red de acceso a internet en sectores populares y el lanzamiento del primer satélite venezolano, colocando en lo más alto el nombre de nuestro Libertador Simón Bolívar.</p>
@@ -274,7 +281,7 @@
 										<div id="cnti" class="panel-collapse collapse">
 											<div class="panel-body">
 												<div class="col-md-3">
-													<img src="'.DIR_PAGES.'upload/images/8/cnti.jpg" width="200" height="200" />
+													<img src="'.DIR_PAGES.'upload/images/trimestre1/unidad1/cnti.jpg" width="200" height="200" />
 												</div>
 												<div class="col-md-9">
 													<p>El CNTI es una institución adscrita al Ministerio del Poder Popular para Ciencia, Tecnología e Industrias Intermedias que tiene como razón de ser potenciar los esfuerzos que en materia de informática se desarrollen en el Sector Gobierno y en las Comunidades Organizadas, con el fin de contribuir a la eficiencia y efectividad del Estado, así como impulsar el desarrollo y fortalecimiento de la capacidad nacional del sector de las Tecnologías de Información.</p>
@@ -291,7 +298,7 @@
 										<div id="iuteb" class="panel-collapse collapse">
 											<div class="panel-body">
 												<div class="col-md-3">
-													<img src="'.DIR_PAGES.'upload/images/9/iuteb.jpg" width="200" height="200" />
+													<img src="'.DIR_PAGES.'upload/images/trimestre1/unidad1/iuteb.jpg" width="200" height="200" />
 												</div>
 												<div class="col-md-9">
 													<p>Institución Universitaria de excelencia académica que enmarcada en las políticas del Estado venezolano y teniendo como eje fundamental el bienestar del hombre, está destinada a formar las generaciones de profesionales en el sector técnico que requiere la región Guayana en particular y Venezuela en general, garantizando un alto nivel de desempeño en las funciones de Investigación y Extensión, con acciones específicas destinadas a vincularse con el sector productivo, de gestión local y de desarrollo comunal, para que de manera conjunta enfrentar los retos tecnológicos y socio- económicos que promuevan de manera sustentable y en armonía con el medio ambiente el desarrollo armónico de la región y el país.</p>					  

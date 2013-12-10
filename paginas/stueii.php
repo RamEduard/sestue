@@ -11,6 +11,13 @@
 	//Obtener array con datos del usuario
 	//Armar el html
 	$mensaje = '
+		<script>
+			$(document).ready(function(){
+				$(".panel-heading a").each(function(){
+					$(this).tooltip({title:"Haz click aquí para ver este contenido."});
+				});
+			});
+		</script>
 	    <div class="page-header">
 			<h2 class="text-warning">Soporte Técnico a Usuarios y Equipos II</h2>
 		</div>
