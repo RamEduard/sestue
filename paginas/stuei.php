@@ -40,7 +40,7 @@
 							</div>
 							<div class="panel-body">
 								<div class="col-md-3">
-									<img src="'.DIR_PAGES.'upload/images/1/comunidad.gif" width="200" height="160" />
+									<img src="'.DIR_PAGES.'upload/images/trimestre1/unidad1/comunidad.gif" width="200" height="160" />
 								</div>
 								<div class="col-md-9">
 									<p>Se refiere a la necesidad de efectuar una investigación de la situación actual de comunidad.</p>
@@ -71,7 +71,7 @@
 										<div id="entrevista" class="panel-collapse collapse">
 											<div class="panel-body">
 												<div class="col-md-3">
-													<img src="'.DIR_PAGES.'upload/images/2/entrevista.jpg" width="200" height="160" />
+													<img src="'.DIR_PAGES.'upload/images/trimestre1/unidad1/entrevista.jpg" width="200" height="160" />
 												</div>
 												<div class="col-md-9">
 													<p>Una entrevista es un diálogo en el que la persona (entrevistador), generalmente un periodista hace una serie de preguntas a otra persona (entrevistado), con el fin de conocer mejor sus ideas, sus sentimientos o su forma de actuar.</p>
@@ -113,7 +113,7 @@
 													</ul>
 												</div>
 												<div class="col-md-3">
-													<img src="'.DIR_PAGES.'upload/images/3/encuestas.jpg" width="200" height="160" />
+													<img src="'.DIR_PAGES.'upload/images/trimestre1/unidad1/encuestas.jpg" width="200" height="160" />
 												</div>
 											</div>
 										</div>
@@ -127,7 +127,7 @@
 										<div id="observacion" class="panel-collapse collapse">
 											<div class="panel-body">
 												<div class="col-md-3">
-													<img src="'.DIR_PAGES.'upload/images/4/observacion.gif" width="200" height="160" />
+													<img src="'.DIR_PAGES.'upload/images/trimestre1/unidad1/observacion.gif" width="200" height="160" />
 												</div>
 												<div class="col-md-9">
 													<p>La observación es una actividad realizada por un ser vivo (como un ser humano), que detecta y asimila la información de un hecho, o el registro de los datos utilizando los sentidos como instrumentos principales. El término también puede referirse a cualquier dato recogido durante esta actividad.</p>
@@ -170,7 +170,7 @@
 							<div class="panel-body">
 								<p>Más allá de la popular definición hardware es lo que golpeas cuando falla el software, el Hardware son todos los componentes y dispositivos físicos y tangibles que forman una computadora como la CPU o la placa base, mientras que el Software es el equipamiento lógico e intangible como los programas y datos que almacena la computadora.</p>
 								<div class="col-md-3">
-									<img src="'.DIR_PAGES.'upload/images/5/software-y-hardware.png" width="200" height="200" />
+									<img src="'.DIR_PAGES.'upload/images/trimestre1/unidad1/software-y-hardware.png" width="200" height="200" />
 								</div>
 								<div class="col-md-9">
 									<div class="panel-group" id="hardware-softwarek">
@@ -244,7 +244,7 @@
 										<div id="minci" class="panel-collapse collapse">
 											<div class="panel-body">
 												<div class="col-md-3">
-													<img src="'.DIR_PAGES.'upload/images/7/minci.jpg" width="200" height="160" />
+													<img src="'.DIR_PAGES.'upload/images/trimestre1/unidad1/minci.jpg" width="200" height="160" />
 												</div>
 												<div class="col-md-9">
 													<p>El Gobierno Bolivariano ha colocado las herramientas de las tecnologías de la información y comunicación al servicio del pueblo venezolano. Esta visión soberana ha conseguido grandes logros en sólo una década: la recuperación de la Compañía Nacional de Teléfonos a manos del pueblo venezolano, la articulación de una vasta red de acceso a internet en sectores populares y el lanzamiento del primer satélite venezolano, colocando en lo más alto el nombre de nuestro Libertador Simón Bolívar.</p>
@@ -274,7 +274,7 @@
 										<div id="cnti" class="panel-collapse collapse">
 											<div class="panel-body">
 												<div class="col-md-3">
-													<img src="'.DIR_PAGES.'upload/images/8/cnti.jpg" width="200" height="200" />
+													<img src="'.DIR_PAGES.'upload/images/trimestre1/unidad1/cnti.jpg" width="200" height="200" />
 												</div>
 												<div class="col-md-9">
 													<p>El CNTI es una institución adscrita al Ministerio del Poder Popular para Ciencia, Tecnología e Industrias Intermedias que tiene como razón de ser potenciar los esfuerzos que en materia de informática se desarrollen en el Sector Gobierno y en las Comunidades Organizadas, con el fin de contribuir a la eficiencia y efectividad del Estado, así como impulsar el desarrollo y fortalecimiento de la capacidad nacional del sector de las Tecnologías de Información.</p>
@@ -291,7 +291,7 @@
 										<div id="iuteb" class="panel-collapse collapse">
 											<div class="panel-body">
 												<div class="col-md-3">
-													<img src="'.DIR_PAGES.'upload/images/9/iuteb.jpg" width="200" height="200" />
+													<img src="'.DIR_PAGES.'upload/images/trimestre1/unidad1/iuteb.jpg" width="200" height="200" />
 												</div>
 												<div class="col-md-9">
 													<p>Institución Universitaria de excelencia académica que enmarcada en las políticas del Estado venezolano y teniendo como eje fundamental el bienestar del hombre, está destinada a formar las generaciones de profesionales en el sector técnico que requiere la región Guayana en particular y Venezuela en general, garantizando un alto nivel de desempeño en las funciones de Investigación y Extensión, con acciones específicas destinadas a vincularse con el sector productivo, de gestión local y de desarrollo comunal, para que de manera conjunta enfrentar los retos tecnológicos y socio- económicos que promuevan de manera sustentable y en armonía con el medio ambiente el desarrollo armónico de la región y el país.</p>					  
@@ -327,7 +327,7 @@
 							</div>
 							<div id="proyecto-definicion" class="panel-collapse collapse in">
 								<div class="panel-body">
-									<img src="'.DIR_PAGES.'upload/images/trimestre1/unidad2/proyecto.png" class="col-xs-8 col-sm-3 col-md-2"/>
+									<img src="'.DIR_PAGES.'upload/images/trimestre1/unidad1rimestre1/unidad2/proyecto.png" class="col-xs-8 col-sm-3 col-md-2"/>
 									<p>En el Manual de Formulación de Proyectos Sociales del programa de capacitación y desarrollo del taller acreditado por la Universidad Católica Andrés Bello, se refiere a este tipo de proyectos como el conjunto organizado de acciones, realizadas ordenadamente durante un periodo determinado, que responden a una demanda o problema, con el propósito de ofrecer una solución, que generalmente es la presentación de un servicio.</p>
 								</div>
 							</div>
@@ -365,7 +365,7 @@
 													</div>
 													<div id="viabilidad" class="panel-collapse collapse">
 														<div class="panel-body">
-															<img src="'.DIR_PAGES.'upload/images/trimestre1/unidad2/viabilidad.png" class="col-xs-8 col-sm-3 col-md-1"/>
+															<img src="'.DIR_PAGES.'upload/images/trimestre1/unidad1rimestre1/unidad2/viabilidad.png" class="col-xs-8 col-sm-3 col-md-1"/>
 															<p>Lo importante es que el investigador debe verificar la posibilidad de conseguir fuentes de datos para el desarrollo de su estudio, ya sean del grado primario o secundario.</p>
 														</div>
 													</div>
@@ -378,7 +378,7 @@
 													</div>
 													<div id="lugar-espacio" class="panel-collapse collapse">
 														<div class="panel-body">
-															<img src="'.DIR_PAGES.'upload/images/trimestre1/unidad2/lugar-espacio.png" class="col-xs-8 col-sm-3 col-md-1"/>
+															<img src="'.DIR_PAGES.'upload/images/trimestre1/unidad1rimestre1/unidad2/lugar-espacio.png" class="col-xs-8 col-sm-3 col-md-1"/>
 															<p>Lugar o espacio donde se llevará a cabo la investigación.</p>
 														</div>
 													</div>
@@ -391,7 +391,7 @@
 													</div>
 													<div id="tiempo" class="panel-collapse collapse">
 														<div class="panel-body">
-															<img src="'.DIR_PAGES.'upload/images/trimestre1/unidad2/tiempo.png" class="col-xs-8 col-sm-3 col-md-1"/>
+															<img src="'.DIR_PAGES.'upload/images/trimestre1/unidad1rimestre1/unidad2/tiempo.png" class="col-xs-8 col-sm-3 col-md-1"/>
 															<p>Si el asignado da la cobertura del estudio o debo disponer de uno en caso de imprevistos.</p>
 														</div>
 													</div>
@@ -404,7 +404,7 @@
 													</div>
 													<div id="financiacion" class="panel-collapse collapse">
 														<div class="panel-body">
-															<img src="'.DIR_PAGES.'upload/images/trimestre1/unidad2/financiacion.png" class="col-xs-8 col-sm-3 col-md-1"/>
+															<img src="'.DIR_PAGES.'upload/images/trimestre1/unidad1rimestre1/unidad2/financiacion.png" class="col-xs-8 col-sm-3 col-md-1"/>
 															<p>Si se va a implementar algo. Qué cantidad de dinero dispongo para ello o si solo será un estudio de factibilidad.</p>
 														</div>
 													</div>
@@ -542,7 +542,7 @@
 										</div>
 										<div id="identificacion-problema" class="panel-collapse collapse">
 											<div class="panel-body">
-												<img src="'.DIR_PAGES.'upload/images/trimestre1/unidad2/identificacion-problema.png" class="col-xs-8 col-sm-3 col-md-2"/>
+												<img src="'.DIR_PAGES.'upload/images/trimestre1/unidad1rimestre1/unidad2/identificacion-problema.png" class="col-xs-8 col-sm-3 col-md-2"/>
 												<p>En esta fase se determina cuál es el problema que se quiere resolver, a quienes afecta, y cuál es la nueva situación que queremos alcanzar con nuestra actuación. Además, se concreta el modo en que vamos a lograrlo y se valoran las posibilidades de ello. Todos estos aspectos dependen de la realización de un buen diagnóstico de la situación problemática inicial.</p>
 											</div>
 										</div>
@@ -556,7 +556,7 @@
 										</div>
 										<div id="diseno-formulacion-proyecto" class="panel-collapse collapse">
 											<div class="panel-body">
-												<img src="'.DIR_PAGES.'upload/images/trimestre1/unidad2/diseno-formulacion-problema.png" class="col-xs-8 col-sm-3 col-md-2"/>
+												<img src="'.DIR_PAGES.'upload/images/trimestre1/unidad1rimestre1/unidad2/diseno-formulacion-problema.png" class="col-xs-8 col-sm-3 col-md-2"/>
 												<p>Después de que se identifica la situación que se quiere modificar, los objetivos que se desean alcanzar y los recursos necesarios para lograrlo se inicia la fase de diseño o formulación del proyecto. En general, se trata de una fase en la que se organiza y formaliza la información obtenida en la fase previa.</p>
 											</div>
 										</div>
@@ -570,7 +570,7 @@
 										</div>
 										<div id="ejecucion-proyecto" class="panel-collapse collapse">
 											<div class="panel-body">
-												<img src="'.DIR_PAGES.'upload/images/trimestre1/unidad2/ejecucion-proyecto.png" class="col-xs-8 col-sm-3 col-md-2"/>
+												<img src="'.DIR_PAGES.'upload/images/trimestre1/unidad1rimestre1/unidad2/ejecucion-proyecto.png" class="col-xs-8 col-sm-3 col-md-2"/>
 												<p>En esta fase se diseñan los planes operativos y se clarifican las funciones y roles de cada uno de los participantes en el proyecto, es una fase en la que la buena comunicación entre las partes se convierte en una fortaleza para el proyecto y en garantía de éxito para el mismo.</p>
 											</div>
 										</div>
@@ -584,7 +584,7 @@
 										</div>
 										<div id="fase-seguimiento-evaluacion" class="panel-collapse collapse">
 											<div class="panel-body">
-												<img src="'.DIR_PAGES.'upload/images/trimestre1/unidad2/seguimiento-evaluacion.png" class="col-xs-8 col-sm-3 col-md-1"/>
+												<img src="'.DIR_PAGES.'upload/images/trimestre1/unidad1rimestre1/unidad2/seguimiento-evaluacion.png" class="col-xs-8 col-sm-3 col-md-1"/>
 												<p>La fase de seguimiento y evaluación incluyen, como su nombre lo indica actividades de seguimiento que no es más que el análisis continuado de la ejecución del proyecto en todos sus aspectos, vigilando que se ajuste a lo planificado y, actividades de evaluación que permiten comparar la situación inicial con la final y sacar las conclusiones sobre el éxito o no del proyecto.</p>
 												<p>La duración del proyecto, los roles y los responsables de cada actividad ya queda de parte del propio grupo de investigación, ellos mismo se asignaran y se repartirán las distintas tareas para poder llevar a cabo el objetivo de su proyecto socio tecnológico.</p>
 											</div>
@@ -612,7 +612,7 @@
 										</div>
 										<div id="upel" class="panel-collapse collapse">
 											<div class="panel-body">
-												<img src="'.DIR_PAGES.'upload/images/trimestre1/unidad2/upel.png" class="col-xs-8 col-sm-3 col-md-1"/>
+												<img src="'.DIR_PAGES.'upload/images/trimestre1/unidad1rimestre1/unidad2/upel.png" class="col-xs-8 col-sm-3 col-md-1"/>
 												<p>Son normas venezolanas para la elaboración  de trabajos especiales de grado, trabajos de grado y tesis.</p>
 											</div>
 										</div>
@@ -626,7 +626,7 @@
 										</div>
 										<div id="apa" class="panel-collapse collapse">
 											<div class="panel-body">
-												<img src="'.DIR_PAGES.'upload/images/trimestre1/unidad2/apa.png" class="col-xs-8 col-sm-3 col-md-2"/>
+												<img src="'.DIR_PAGES.'upload/images/trimestre1/unidad1rimestre1/unidad2/apa.png" class="col-xs-8 col-sm-3 col-md-2"/>
 												<p>Son un conjunto de estándares creados por la American Psychological Association con el fin de unificar la forma de presentar trabajos escritos a nivel internacional, diseñadas especialmente para proyectos de grado o cualquier tipo de documentos de investigación.</p>
 											</div>
 										</div>

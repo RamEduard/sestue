@@ -36,13 +36,12 @@
                 <div class="carousel-caption" style="background-color:#ffffff">
                   <h1>¡Bienvenido!</h1>
                   <p class="lead">¡Hola! Bienvenidos al Software Educativo: Soporte Técnico a Usuarios y Equipos (SESTUE).</p>
-                  <a class="btn btn-large btn-primary" href="#">Learn more</a>
                 </div>
               </div>
             </div>
           </div>
-          <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-          <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
+          <a class="left carousel-control" href="#myCarousel" data-slide="prev" style="font-size:200px;">&lsaquo;</a>
+          <a class="right carousel-control" href="#myCarousel" data-slide="next" style="font-size:200px;">&rsaquo;</a>
         </div><!-- /.carousel -->
         
         <!-- Example row of columns -->
