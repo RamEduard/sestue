@@ -123,7 +123,8 @@ class BootstrapSestue extends Templates {
                               <li><a href="' . DIR_PAGES . 'actividadT3.php">Hacer Actividades</a></li>
                             </ul>
                           </li>
-                          <li title="Buscar..."><a href="' . DIR_PAGES . 'interes.php">Archivos de interés</a></li>
+                          <li title="Archivos de interés"><a href="' . DIR_PAGES . 'interes.php">Archivos de interés</a></li>
+                          <li title="Preguntas frecuentes"><a href="' . DIR_PAGES . 'preg-resp.php">Archivos de interés</a></li>
                         </ul>
                      </div><!--/.nav-collapse -->
 		          </div>

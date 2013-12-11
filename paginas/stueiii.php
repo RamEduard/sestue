@@ -10,8 +10,6 @@
 	
 		//Armar el html
 		$mensaje = '
-<<<<<<< HEAD
-<<<<<<< HEAD
 		<script>
 			$(document).ready(function(){
 				$(".panel-heading a").each(function(){
@@ -19,10 +17,6 @@
 				});
 			});
 		</script>
-=======
->>>>>>> 38914a169559c33f7985be1bf4a4bd8b8dbd239d
-=======
->>>>>>> 38914a169559c33f7985be1bf4a4bd8b8dbd239d
         <div class="page-header">
 			<h2 class="text-warning">Soporte Técnico a Usuarios y Equipos III</h2>
 		</div>
@@ -61,15 +55,7 @@
 	        							Aplicación de la metodología seleccionada según el área de saberes: hardware y software.
 	        						</a>
 	        					</div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 	        					<div id="aplicacion-metodologia" class="panel-collapse collapse">
-=======
-	        					<div id="aplicacion-metodologia" class="panel-collapse collapse in">
->>>>>>> 38914a169559c33f7985be1bf4a4bd8b8dbd239d
-=======
-	        					<div id="aplicacion-metodologia" class="panel-collapse collapse in">
->>>>>>> 38914a169559c33f7985be1bf4a4bd8b8dbd239d
 	        						<div class="panel-body">
 	        							<p>Desarrollar el método de implantación de cómo se realizar el soporte o propuesta del proyecto en sus áreas correspondientes donde se llevará a cabo a nivel de hardware y/o software. Puede guiarse o tomar el ejemplo de referencia que se muestra a continuación:</p>
 
@@ -321,15 +307,7 @@
 	        							Estrategia de implantación del proyecto
 	        						</a>
 	        					</div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 	        					<div id="estrategia-implantacion" class="panel-collapse collapse">
-=======
-	        					<div id="estrategia-implantacion" class="panel-collapse collapse in">
->>>>>>> 38914a169559c33f7985be1bf4a4bd8b8dbd239d
-=======
-	        					<div id="estrategia-implantacion" class="panel-collapse collapse in">
->>>>>>> 38914a169559c33f7985be1bf4a4bd8b8dbd239d
 	        						<div class="panel-body">
 	        							<p>Se debe realizar el plan de implantación: ¿Cómo?, ¿Cuando?, ¿Donde?.</p>
 										<p>De acuerdo a la Unidad I en su ejemplo anterior, cada una de las actividades poseen distintas tareas, estas deben ser descritas detalladamente como serán implementadas.</p>
@@ -690,15 +668,7 @@
 	        							Establecimiento de los indicadores de evaluación del proyecto
 	        						</a>
 	        					</div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 	        					<div id="establecimiento-indicadores" class="panel-collapse collapse">
-=======
-	        					<div id="establecimiento-indicadores" class="panel-collapse collapse in">
->>>>>>> 38914a169559c33f7985be1bf4a4bd8b8dbd239d
-=======
-	        					<div id="establecimiento-indicadores" class="panel-collapse collapse in">
->>>>>>> 38914a169559c33f7985be1bf4a4bd8b8dbd239d
 	        						<div class="panel-body">
 	        							
 										<div class="panel panel-success">
@@ -707,15 +677,7 @@
 				        							Indicadores
 				        						</a>
 				        					</div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 				        					<div id="indicadores-definicion" class="panel-collapse collapse">
-=======
-				        					<div id="indicadores-definicion" class="panel-collapse collapse in">
->>>>>>> 38914a169559c33f7985be1bf4a4bd8b8dbd239d
-=======
-				        					<div id="indicadores-definicion" class="panel-collapse collapse in">
->>>>>>> 38914a169559c33f7985be1bf4a4bd8b8dbd239d
 				        						<div class="panel-body">
 				        							<p>Son medidas objetivamente verificables de hechos y acontecimientos económicos y sociales, el indicador constituye entonces la medición del resultado generado en la intervención social atribuible al programa o proyecto. </p>
 				        						</div>
@@ -1041,15 +1003,7 @@
 	        							Realizar Plan de Optimización
 	        						</a>
 	        					</div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 	        					<div id="plan-optimizacion" class="panel-collapse collapse">
-=======
-	        					<div id="plan-optimizacion" class="panel-collapse collapse in">
->>>>>>> 38914a169559c33f7985be1bf4a4bd8b8dbd239d
-=======
-	        					<div id="plan-optimizacion" class="panel-collapse collapse in">
->>>>>>> 38914a169559c33f7985be1bf4a4bd8b8dbd239d
 	        						<div class="panel-body">
 	        							<p>En cómputo, la optimización es el proceso de modificar un sistema para mejorar su eficiencia y el uso de los recursos disponibles (rendimiento).</p>
 										<p>Dependiendo del tipo de optimización que vayas a realizar tienes 2 opciones:</p>
@@ -1061,15 +1015,7 @@
 					        							La optimización de software
 					        						</a>
 					        					</div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 					        					<div id="optimizacion-software" class="panel-collapse collapse">
-=======
-					        					<div id="optimizacion-software" class="panel-collapse collapse in">
->>>>>>> 38914a169559c33f7985be1bf4a4bd8b8dbd239d
-=======
-					        					<div id="optimizacion-software" class="panel-collapse collapse in">
->>>>>>> 38914a169559c33f7985be1bf4a4bd8b8dbd239d
 					        						<div class="panel-body">
 					        							<p>Es el proceso de modificación de un software para hacer que algún aspecto del mismo funcione de manera más eficiente y/o utilizar menos recursos (mayor rendimiento). En general, un programa puede ser optimizado para que se ejecute más rápidamente, o sea capaz de operar con menos memoria u otros recursos, o consuman menos energía.</p>
 					        						</div>
@@ -1084,15 +1030,7 @@
 					        							El modding, del inglés "modify" (modificar el hardware)
 					        						</a>
 					        					</div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 					        					<div id="optimizacion-hardware" class="panel-collapse collapse">
-=======
-					        					<div id="optimizacion-hardware" class="panel-collapse collapse in">
->>>>>>> 38914a169559c33f7985be1bf4a4bd8b8dbd239d
-=======
-					        					<div id="optimizacion-hardware" class="panel-collapse collapse in">
->>>>>>> 38914a169559c33f7985be1bf4a4bd8b8dbd239d
 					        						<div class="panel-body">
 					        							<p>Es el arte o técnica de modificar estética o funcionalmente partes de las computadoras, ya sea el gabinete, mouse, teclado o monitor, y los componentes de los videojuegos, como pueden ser las consolas.</p>
 					        						</div>
@@ -1128,15 +1066,7 @@
 	        							Desarrollo de los manuales requeridos en el proyecto y entrenamiento a usuarios
 	        						</a>
 	        					</div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 	        					<div id="manuales-requeridos" class="panel-collapse collapse">
-=======
-	        					<div id="manuales-requeridos" class="panel-collapse collapse in">
->>>>>>> 38914a169559c33f7985be1bf4a4bd8b8dbd239d
-=======
-	        					<div id="manuales-requeridos" class="panel-collapse collapse in">
->>>>>>> 38914a169559c33f7985be1bf4a4bd8b8dbd239d
 	        						<div class="panel-body">
 	        							
 	        							<div class="panel panel-success">
@@ -1145,15 +1075,7 @@
 				        							Manual de Usuario
 				        						</a>
 				        					</div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 				        					<div id="manual-usuario" class="panel-collapse collapse">
-=======
-				        					<div id="manual-usuario" class="panel-collapse collapse in">
->>>>>>> 38914a169559c33f7985be1bf4a4bd8b8dbd239d
-=======
-				        					<div id="manual-usuario" class="panel-collapse collapse in">
->>>>>>> 38914a169559c33f7985be1bf4a4bd8b8dbd239d
 				        						<div class="panel-body">
 				        							<img src="' . DIR_PAGES . 'upload/images/trimestre3/unidad5/manual-usuario.png" class="col-xs-5 col-ms-3 col-md-2" />
 				        							<p>Es un documento de comunicación técnica destinado a dar asistencia a las personas que utilizan un sistema en particular. Por lo general, este documento está redactado por un escritor técnico, como por ejemplo los programadores del sistema o los directores de proyectos implicados en su desarrollo, o el personal técnico, especialmente en las empresas más pequeñas.</p>

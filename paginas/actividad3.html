@@ -10,10 +10,6 @@
 
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
 
-<title>
-Actividades del Trimestre III
-</title>
-
 <!-- Made with executable version 6.3 Release 0 Build 5 -->
 
 <!-- The following insertion allows you to add your own code directly to this head tag from the configuration screen -->
@@ -1061,17 +1057,17 @@ var IncorrectIndicator = 'X';
 var YourScoreIs = 'Su puntuacion es:';
 
 //New for 6.2.2.0
-var CompletedSoFar = 'Questions completed so far: ';
-var ExerciseCompleted = 'You have completed the exercise.';
+var CompletedSoFar = 'Preguntas completadas: ';
+var ExerciseCompleted = 'Has completado el ejercicio.';
 var ShowCompletedSoFar = true;
 
 var ContinuousScoring = true;
-var CorrectFirstTime = 'Questions answered correctly first time: ';
+var CorrectFirstTime = 'Preguntas correctamente contestadas la primera vez: ';
 var ShowCorrectFirstTime = true;
 var ShuffleQs = false;
 var ShuffleAs = false;
-var DefaultRight = 'Correct!';
-var DefaultWrong = 'Sorry! Try again.';
+var DefaultRight = 'Correcto!';
+var DefaultWrong = 'Intenta de nuevo.';
 var QsToShow = 6;
 var Score = 0;
 var Finished = false;
@@ -1614,7 +1610,7 @@ function CheckFinished(){
 	
 //Report final score and submit if necessary
 		CalculateOverallScore();
-		FB = YourScoreIs + ' ' + Score + '%.';
+		FB = '<font color="white">' + YourScoreIs + ' ' + Score + '%. </font>';
 		if (ShowCorrectFirstTime == true){
 			var CFT = 0;
 			for (QNum=0; QNum<State.length; QNum++){
@@ -1624,11 +1620,11 @@ function CheckFinished(){
 					}
 				}
 			}
-			FB += '<br />' + CorrectFirstTime + ' ' + CFT + '/' + QsToShow;
+			FB += '<br />' + '<font color="white">' + CorrectFirstTime + ' ' + CFT + '/' + QsToShow + '</font>';
 		}
 		
 //New for 6.2.2.0
-		FB += '<br />' + ExerciseCompleted;
+		FB += '<br />' + '<font color="white">' + ExerciseCompleted + '</font>';
 		
 		WriteToInstructions(FB);
 		
@@ -1684,22 +1680,17 @@ function CheckFinished(){
 <!-- EndTopNavButtons -->
 
 <div class="Titles">
-	<h2 class="ExerciseTitle">Actividades del Trimestre III</h2>
-
 	<h3 class="ExerciseSubtitle">Preguntas (Seleccion Simple)</h3>
-
-
-
 </div>
 
-<div id="InstructionsDiv" class="StdDiv">
-	<div id="Instructions">Selecciona con un "click" a respuesta que consideres correcta </div>
+<div id="InstructionsDiv" class="StdDiv navbar navbar-default">
+	<div id="Instructions" style="color:#fff;font-size:16px;font-weight:bold">Selecciona con un "click" a respuesta que consideres correcta </div>
 </div>
 
 
 
 
-<div id="MainDiv" class="StdDiv">
+<div id="MainDiv" class="StdDiv panel panel-info">
  
 <div id="QNav" class="QuestionNavigation">
 
@@ -1732,7 +1723,7 @@ function CheckFinished(){
 
 
 
-<div class="Feedback" id="FeedbackDiv">
+<div class="Feedback panel panel-info" id="FeedbackDiv">
 <div class="FeedbackText" id="FeedbackContent"></div>
 <button id="FeedbackOKButton" class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)" onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" onclick="HideFeedback(); return false;">&nbsp;OK&nbsp;</button>
 </div>

@@ -14,7 +14,7 @@
 
     $html = '
         <div class="page-header">
-            <h2 class="text-warning">Actividad del Trimestre I</h2>
+            <h2 class="text-warning">Actividad del Trimestre III</h2>
         </div>
         
                 '.$contenido.'
