@@ -33,7 +33,7 @@
             <div class="item active">
               <img src="'.DIR_PAGES.'upload/slides/1/slide1.png" alt="">
               <div class="container">
-                <div class="carousel-caption panel panel-info" style="background-color:#ffffff">
+                <div class="carousel-caption panel panel-info" style="background-color:#fff">
                   <h1>¡Bienvenido!</h1>
                   <p class="lead" style="color:#000">¡Hola! Bienvenidos al Software Educativo: Soporte Técnico a Usuarios y Equipos (SESTUE).</p>
                 </div>
