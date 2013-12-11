@@ -58,7 +58,7 @@
            </div>
             <div class="col-md-4">
               <h2>Trimestre III</h2>
-              <p>En el trimestre II se describen las cosas que se realizan en la materia Soporte Técnico a Usuarios y Equipos II.</p>
+              <p>En el trimestre III se describen las cosas que se realizan en la materia Soporte Técnico a Usuarios y Equipos III.</p>
               <p><a class="btn btn-success" href="stueiii.php">Entrar &raquo;</a></p>
             </div>
         </div>    
