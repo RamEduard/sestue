@@ -1,5 +1,6 @@
-<?php
+﻿<?php
     include "../lib/config/config.php";
     $template = Templates::getInstance("sb-admin");
-    print $template->getPage( "Administración", "Contenido" );
+    $html = 'Actualmente sólo se modifican las preguntas frecuentes del software educativo.';	
+    print $template->getPage( "Administración", $html );
 ?>

@@ -6,7 +6,7 @@
  * @author Ramon Serrano <ramon_calle-88@hotmail.com>
  */
 //No ver errores de PHP
-error_reporting(E_ALL);
+error_reporting(0);
 //Variables de Base de Datos
 defined("DIR")                    || define('DIR', $_SERVER['DOCUMENT_ROOT'] . "/sestue/");
 defined("DIR_PAGES")              || define('DIR_PAGES', "http://".$_SERVER['HTTP_HOST']."/sestue/paginas/");
@@ -26,7 +26,7 @@ defined("BD")                     || define('BD', 'n260m_13975387_sestuebd');*/
 
 defined("SERVIDOR_BD")            || define("SERVIDOR_BD", "localhost");
 defined("USUARIO_BD")             || define("USUARIO_BD", "root");
-defined("PASS_BD")                || define('PASS_BD', 'ramon');
+defined("PASS_BD")                || define('PASS_BD', '');
 defined("BD")                     || define('BD', 'sestuebd');
 
 require_once DIR . 'lib/clases/db.class.php';
